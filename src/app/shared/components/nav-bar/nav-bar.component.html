@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <img id="logo" src="assets/svg/logo.svg" alt="Gartrell logo image">
+
+    <div>
+      Telefone: (62) 3086-3600 | Email: institutogartrell@gmail.com
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <i class="bi bi-facebook"></i>
+      </div>
+      <div class="col">
+        <i class="bi bi-instagram"></i>
+      </div>
+      <div class="col">
+        <i class="bi bi-youtube"></i>
+      </div>
+    </div>
+
+    <div class="input-group w-25">
+      <div class="input-group-prepend">
+        <i class="input-group-text bi bi-search"></i>
+      </div>
+      <input class="form-control w-25" type="search" placeholder="buscar">
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-between">
+        <ng-container *ngFor="let item of menu">
+          <ng-container [ngTemplateOutlet]="item.subMenus.length? NavItemComplex : NavItemSimple"  [ngTemplateOutletContext]="{link:item}"></ng-container>
+        </ng-container>
+        <li class="nav-item">
+          <button type="button" class="btn btn-light">
+            <i class="bi bi-heart-fill"></i>Terapia Online
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ng-template #NavItemSimple let-link="link">
+  <li class="nav-item">
+    <a class="nav-link" [href]="link.link">{{ link.name }}</a>
+  </li>
+</ng-template>
+
+<ng-template #NavItemComplex let-link="link">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ link.name }}</a>
+    <ng-container [ngTemplateOutlet]="NavMenu" [ngTemplateOutletContext]="{subMenus:link.subMenus}"></ng-container>
+  </li>
+</ng-template>
+
+<ng-template #NavItemDropdown let-link="link">
+  <li>
+    <a class="dropdown-item" [href]="link.link">
+      {{ link.name }}<i class="bi bi-chevron-right" *ngIf="link.subMenus?.length"></i>
+    </a>
+    <ng-container *ngIf="link.subMenus?.length">
+      <ng-container [ngTemplateOutlet]="NavSubMenu" [ngTemplateOutletContext]="{subMenus:link.subMenus}"></ng-container>
+    </ng-container>
+  </li>
+</ng-template>
+
+<ng-template #NavMenu let-subMenus="subMenus">
+  <ul class="dropdown-menu">
+    <ng-container *ngFor="let item of subMenus">
+      <ng-container [ngTemplateOutlet]="NavItemDropdown" [ngTemplateOutletContext]="{link:item}"></ng-container>
+    </ng-container>
+  </ul>
+</ng-template>
+
+<ng-template #NavSubMenu let-subMenus="subMenus">
+  <ul class="submenu dropdown-menu">
+    <ng-container *ngFor="let item of subMenus">
+      <ng-container [ngTemplateOutlet]="NavItemDropdown" [ngTemplateOutletContext]="{link:item}"></ng-container>
+    </ng-container>
+  </ul>
+</ng-template>
