@@ -4,9 +4,6 @@ import { EquipeComponent } from './equipe/equipe.component';
 
 const routes: Routes = [
   { 
-    path: '', redirectTo: 'equipe', pathMatch: 'full'
-  },
-  { 
     path: 'equipe', component: EquipeComponent
   }
 ];
