@@ -15,7 +15,7 @@
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'serviços'}"></ng-container>
         <div class="d-flex justify-content-center flex-wrap">
-            <ng-container *ngFor="let cat of servicesCategory" [ngTemplateOutlet]="ServicosIcones"  [ngTemplateOutletContext]="{categoria:cat}"></ng-container>
+            <app-servico-circle *ngFor="let cat of servicesCategory" [categoria]="cat"></app-servico-circle>
         </div>
     </article>
 
@@ -50,15 +50,6 @@
 <ng-template #SessionHeader let-title="title">
     <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
     <div class="line mt-1 mb-4 w-75"></div>
-</ng-template>
-
-<ng-template #ServicosIcones let-categoria="categoria">
-    <div class="servicos d-flex justify-content-center align-items-center flex-column">
-        <div class="circle d-flex justify-content-center align-items-center">
-            <img src="assets/svg/brain.svg" />
-        </div>  
-        <h6>{{ categoria.nome }}</h6>
-    </div>
 </ng-template>
 
 <ng-template #Self let-url="url">

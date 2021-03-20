@@ -8,6 +8,6 @@ import { ServicoCircleComponent } from './servico-circle/servico-circle.componen
   imports: [
     CommonModule
   ],
-  exports: [ SelfImageComponent ]
+  exports: [ SelfImageComponent, ServicoCircleComponent ]
 })
 export class ComponentsModule { }

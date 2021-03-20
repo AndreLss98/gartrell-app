@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-servico-circle',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servico-circle.component.scss']
 })
 export class ServicoCircleComponent implements OnInit {
+
+  @Input() categoria: any;
 
   constructor() { }
 
