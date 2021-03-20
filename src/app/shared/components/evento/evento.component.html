@@ -1,0 +1,22 @@
+<div class="evento-container">
+    <div>
+        <img [src]="evento.banner" />
+    </div>
+
+    <div>
+        <div class="evento-info">
+            <div>
+                <span>{{ evento.dia }}</span>
+                <p>{{ evento.mes }}</p>
+            </div>
+            <div>
+                <h4>{{ evento.titulo }}</h4>
+                <h6>{{ evento.descricao }}</h6>
+            </div>
+        </div>
+
+        <button class="btn btn-light">
+            <i class="bi bi-plus-circle"></i> Ver mais
+        </button>
+    </div>
+</div>

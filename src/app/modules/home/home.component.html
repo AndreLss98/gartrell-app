@@ -43,7 +43,7 @@
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Acontece'}"></ng-container>
-        
+        <app-evento *ngFor="let event of eventos" [evento]="event"></app-evento>
     </article>
 </section>
 
