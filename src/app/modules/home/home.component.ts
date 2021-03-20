@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
   private _servicesCategory: any[] = [];
   private _equipe: any[] = [];
 
+  private _eventos: any[] = [];
+
   constructor() {}
 
   ngOnInit(): void {
@@ -54,5 +56,13 @@ export class HomeComponent implements OnInit {
 
   public set equipe(value: any[]) {
     this._equipe = value;
+  }
+
+  public get eventos(): any[] {
+    return this._eventos;
+  }
+  
+  public set eventos(value: any[]) {
+    this._eventos = value;
   }
 }
