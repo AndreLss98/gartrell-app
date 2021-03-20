@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-servicos',
-  templateUrl: './servicos.component.html',
-  styleUrls: ['./servicos.component.scss']
+  selector: 'app-psiquiatria',
+  templateUrl: './psiquiatria.component.html',
+  styleUrls: ['./psiquiatria.component.scss']
 })
-export class ServicosComponent implements OnInit {
+export class PsiquiatriaComponent implements OnInit {
 
   constructor() { }
   private _servicesCategory: any[] = [];

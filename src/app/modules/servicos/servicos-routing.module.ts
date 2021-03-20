@@ -1,10 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ServicosComponent } from './servicos.component';
+import { PsiquiatriaComponent } from './psiquiatria/psiquiatria.component';
 
 const routes: Routes = [
-  { path: '', component: ServicosComponent }
+  { 
+    path: 'psiquiatria', component: PsiquiatriaComponent
+  },
+  // { 
+  //   path: 'psicologia', component: COMPONENT
+  // },
+  // { 
+  //   path: 'neuropsicologia', component: EquipeComponent
+  //  }
+  // { 
+  //   path: 'grupo-suporte-crescimento-pessoal', component: COMPONENT
+  // },
+  // { 
+  //   path: 'capacitacoes', component: COMPONENT
+  // },
+  // { 
+  //   path: 'consultoria', component: COMPONENT
+  // },
+  // { 
+  //   path: 'parceria-acordos', component: COMPONENT
+  // },
 ];
 
 @NgModule({

@@ -23,13 +23,13 @@ export class NavBarComponent implements OnInit {
         { name: "Links úteis", link: "", subMenus: [] }
       ]},
       { name: "Serviços", link: "", subMenus: [
-        { name: "Psiquiatria", link: "servico", subMenus: [] },
-        { name: "Psicologia", link: "servico", subMenus: [] },
-        { name: "Neuropsicologia", link: "servico", subMenus: [] },
-        { name: "Grupos de suporte e crescimento pessoal", link: "servico", subMenus: [] },
-        { name: "Capacitações", link: "servico", subMenus: [] },
-        { name: "Consultoria", link: "servico", subMenus: [] },
-        { name: "Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos", link: "servico", subMenus: [] }
+        { name: "Psiquiatria", link: "servico/psiquiatria", subMenus: [] },
+        { name: "Psicologia", link: "servico/psicologia", subMenus: [] },
+        { name: "Neuropsicologia", link: "servico/neuropsicologia", subMenus: [] },
+        { name: "Grupos de suporte e crescimento pessoal", link: "servico/grupo-suporte-crescimento-pessoal", subMenus: [] },
+        { name: "Capacitações", link: "servico/capacitacoes", subMenus: [] },
+        { name: "Consultoria", link: "servico/consultoria", subMenus: [] },
+        { name: "Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos", link: "servico/parceria-acordos", subMenus: [] }
       ]},
       { name: "Acontece", link: "acontece", subMenus: [] },
       { name: "Notícias", link: "", subMenus: [] },
