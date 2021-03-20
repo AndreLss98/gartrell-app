@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
     this.menu = [
       { name: "Institucional", link: "", subMenus: [
         { name: "Identidade Nominal", link: "", subMenus: [] },
-        { name: "Quem somos", link: "", subMenus: []},
+        { name: "Quem somos", link: "institucional/quem-somos", subMenus: []},
         { name: "Equipe", link: "", subMenus: [
           { name: "Instituto Gartrell", link: "institucional/equipe", subMenus: []},
           { name: "Parceiros e Colaboradores", link: "institucional/equipe", subMenus: []}
