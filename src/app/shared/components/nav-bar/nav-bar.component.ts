@@ -20,7 +20,7 @@ export class NavBarComponent implements OnInit {
           { name: "Parceiros e Colaboradores", link: "institucional/equipe", subMenus: []}
         ] },
         { name: "Galeria de Fotos", link: "", subMenus: [] },
-        { name: "Equipe", link: "", subMenus: [] }
+        { name: "Links úteis", link: "", subMenus: [] }
       ]},
       { name: "Serviços", link: "", subMenus: [
         { name: "Psiquiatria", link: "servico", subMenus: [] },
