@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 
 import { HomeRoutingModule } from './home-routing.module';
+import { ComponentsModule } from 'src/app/shared/components/components.module';
 
 @NgModule({
   declarations: [ HomeComponent ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ComponentsModule
   ]
 })
 export class HomeModule { }
