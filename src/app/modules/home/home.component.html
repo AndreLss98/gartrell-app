@@ -1,7 +1,7 @@
 <section class="container">
-    <!-- <article class="mb-2">
+    <article class="mb-2">
         <img src="assets/home/banner.jpg" alt="Image banner of home" />
-    </article> -->
+    </article>
     <article class="d-flex justify-content-center align-items-center flex-column mb-2 secondary">
         <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Identidade Nominal'}"></ng-container>
         <p>
@@ -48,9 +48,10 @@
 </ng-template>
 
 <ng-template #Membro let-membro="membro">
-    <div>
-        <ng-container [ngTemplateOutlet]="Self"  [ngTemplateOutletContext]="{url: membro.url}"></ng-container>
-        <div class="d-inline-block">
+    <div class="member-container">
+        <app-self-image [url]="'assets/home/equipe/' + membro.img"></app-self-image>
+
+        <div class="d-flex justify-content-center flex-column">
             <h6>{{ membro.name }}</h6>
             <p>{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
             <p>{{ membro.bio }}</p>

@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
         Capelã Evangélica TÍt. Do I. I. Emílio Ribas-SP e HSPE
         Diretora geral da ACS
         Atualmente, Diretora Geral da ACS e Capelã - Missionária pelo Supremo Concilio da I. P. B`,
-        url: 'eleny_vassao.jpg'
+        img: 'eleny_vassao.jpg'
       }
     ]
   }
