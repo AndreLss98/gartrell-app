@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ComponentsModule } from 'src/app/shared/components/components.module';
-import { EquipeComponent } from './equipe.component';
-import { EquipeRoutingModule } from './equipe-routing.module';
+import { EquipeComponent } from './equipe/equipe.component';
+import { InstitucionalRoutingModule } from './institucional-routing.module';
 
 @NgModule({
   declarations: [ EquipeComponent ],
   imports: [
     CommonModule,
-    EquipeRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    InstitucionalRoutingModule
   ]
 })
-export class EquipeModule { }
+export class InstitucionalModule { }
