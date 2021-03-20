@@ -16,11 +16,11 @@ export class NavBarComponent implements OnInit {
         { name: "Identidade Nominal", link: "", subMenus: [] },
         { name: "Quem somos", link: "", subMenus: []},
         { name: "Equipe", link: "", subMenus: [
-          { name: "Instituto Gatrell", link: "", subMenus: []},
-          { name: "Parceiros e Colaboradores", link: "", subMenus: []}
+          { name: "Instituto Gartrell", link: "institucional/equipe", subMenus: []},
+          { name: "Parceiros e Colaboradores", link: "institucional/equipe", subMenus: []}
         ] },
         { name: "Galeria de Fotos", link: "", subMenus: [] },
-        { name: "Equipe", link: "", subMenus: [] }
+        { name: "Links úteis", link: "", subMenus: [] }
       ]},
       { name: "Serviços", link: "", subMenus: [
         { name: "Psiquiatria", link: "servico", subMenus: [] },

@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   private _servicesCategory: any[] = [];
   private _equipe: any[] = [];
   private _eventos: any[] = [];
+  private _noticias: any[] = [];
 
   constructor() {}
 
@@ -46,6 +47,10 @@ export class HomeComponent implements OnInit {
       { dia: 27, mes: 'Dezembro', titulo: 'Nome do Evento aqui!', descricao: 'Descrição do evento aqui.', banner: 'assets/home/evento/evento_banner.jpg' },
       { dia: 31, mes: 'Dezembro', titulo: 'Nome do Evento aqui!', descricao: 'Descrição do evento aqui.', banner: 'assets/home/evento/evento_banner.jpg' }
     ]
+
+    this.noticias = [
+      { img: 'assets/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' }
+    ]
   }
 
   public get servicesCategory(): any[] {
@@ -70,5 +75,13 @@ export class HomeComponent implements OnInit {
   
   public set eventos(value: any[]) {
     this._eventos = value;
+  }
+
+  public get noticias(): any[] {
+    return this._noticias;
+  }
+
+  public set noticias(value: any[]) {
+    this._noticias = value;
   }
 }
