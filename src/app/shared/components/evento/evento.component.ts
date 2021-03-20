@@ -10,6 +10,9 @@ export class EventoComponent implements OnInit {
   @Input()
   public evento: any;
 
+  @Input()
+  public inverse: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

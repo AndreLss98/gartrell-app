@@ -1,22 +1,52 @@
-<div class="evento-container">
-    <div>
-        <img [src]="evento.banner" />
-    </div>
-
-    <div>
-        <div class="evento-info">
-            <div>
-                <span>{{ evento.dia }}</span>
-                <p>{{ evento.mes }}</p>
-            </div>
-            <div>
-                <h4>{{ evento.titulo }}</h4>
-                <h6>{{ evento.descricao }}</h6>
-            </div>
+<ng-container [ngTemplateOutlet]="inverse? inverted: normal"></ng-container>
+<ng-template #normal>
+    <div class="evento-container">
+        <div>
+            <img [src]="evento.banner" />
         </div>
-
-        <button class="btn btn-light">
-            <i class="bi bi-plus-circle"></i> Ver mais
-        </button>
+    
+        <div>
+            <div class="evento-info">
+                <div class="data d-flex align-items-center flex-column">
+                    <span>{{ evento.dia }}</span>
+                    <p>{{ evento.mes }}</p>
+                </div>
+    
+                <div>
+                    <h4>{{ evento.titulo }}</h4>
+                    <h6>{{ evento.descricao }}</h6>
+                </div>
+            </div>
+    
+            <button class="btn btn-light p-2">
+                <i class="bi bi-plus-circle"></i> Ver mais
+            </button>
+        </div>
     </div>
-</div>
+</ng-template>
+
+<ng-template #inverted>
+    <div class="evento-container-reverse">
+        <div>
+            <div class="evento-info">
+                <div class="data d-flex align-items-center flex-column">
+                    <span>{{ evento.dia }}</span>
+                    <p>{{ evento.mes }}</p>
+                </div>
+    
+                <div>
+                    <h4>{{ evento.titulo }}</h4>
+                    <h6>{{ evento.descricao }}</h6>
+                </div>
+            </div>
+    
+            <button class="btn btn-light p-2">
+                <i class="bi bi-plus-circle"></i> Ver mais
+            </button>
+        </div>
+    
+        <div>
+            <img [src]="evento.banner" />
+        </div>
+    </div>
+</ng-template>
