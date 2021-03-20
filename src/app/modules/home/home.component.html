@@ -45,6 +45,11 @@
         <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Acontece'}"></ng-container>
         <app-evento *ngFor="let event of eventos; let i = index" [evento]="event" [inverse]="i % 2 == 0"></app-evento>
     </article>
+
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Notícias'}"></ng-container>
+        
+    </article>
 </section>
 
 <ng-template #SessionHeader let-title="title">
@@ -65,7 +70,7 @@
         <div class="d-flex justify-content-center flex-column">
             <h6>{{ membro.name }}</h6>
             <p>{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
-            <p>{{ membro.bio }}</p>
+            <p>{{ membro.bio }}</p> 
         </div>
     </div>
 </ng-template>

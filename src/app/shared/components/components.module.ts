@@ -5,9 +5,10 @@ import { ServicoCircleComponent } from './servico-circle/servico-circle.componen
 import { ContatoFormComponent } from './contato-form/contato-form.component';
 import { PostComponent } from './post/post.component';
 import { EventoComponent } from './evento/evento.component';
+import { ImageHoverComponent } from './image-hover/image-hover.component';
 
 @NgModule({
-  declarations: [ SelfImageComponent, ServicoCircleComponent, ContatoFormComponent, EventoComponent, PostComponent ],
+  declarations: [ SelfImageComponent, ServicoCircleComponent, ContatoFormComponent, EventoComponent, PostComponent, ImageHoverComponent ],
   imports: [
     CommonModule
   ],
