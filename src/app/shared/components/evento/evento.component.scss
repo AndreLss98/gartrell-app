@@ -3,12 +3,53 @@ div.evento-container {
     grid-template-columns: 1fr 3fr;
 }
 
-div.evento-container div img {
+div.evento-container-reverse {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+div.evento-container div img, div.evento-container-reverse div img {
     width: 350px;
     height: 200px;
 }
 
 div.evento-info {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
 }
+
+div.evento-info-reverse {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+div.evento-info div.data {
+    border: 2px solid gray;
+    width: 100px;
+    height: 100px;
+
+    span {
+        font-size: 2.6rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+div.evento-info-reverse div.data {
+    border: 2px solid gray;
+    width: 100px;
+    height: 100px;
+
+    span {
+        font-size: 2.6rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+    
