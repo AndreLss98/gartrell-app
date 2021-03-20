@@ -1,0 +1,59 @@
+<section class="container">
+    <!-- <article class="mb-2">
+        <img src="assets/home/banner.jpg" alt="Image banner of home" />
+    </article> -->
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2 secondary">
+        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Identidade Nominal'}"></ng-container>
+        <p>
+            O Instituto Gartrell, tem esta identidade nominal como forma distinta de expressão gratidão, homenagear e honrar o casal de missionários americanos Rev. Ethelbert Hopkins Gartrell e Catherine Yates Gartrell (Sra. Sandy Gartrell) pelos valiosos serviços prestados no Brasil em várias regiões do país, nos anos de 1951 a 1982.
+        </p>
+        <a href="" type="button" class="btn">
+            <i class="bi bi-plus-circle"></i> Ver mais
+        </a>
+    </article>
+
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'serviços'}"></ng-container>
+        <div class="d-flex justify-content-center flex-wrap">
+            <ng-container *ngFor="let cat of servicesCategory" [ngTemplateOutlet]="ServicosIcones"  [ngTemplateOutletContext]="{categoria:cat}"></ng-container>
+        </div>
+    </article>
+
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Nossa equipe'}"></ng-container>
+        <div>
+            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
+        </div>
+    </article>
+</section>
+
+<ng-template #SessionHeader let-title="title">
+    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
+    <div class="line mt-1 mb-4 w-75"></div>
+</ng-template>
+
+<ng-template #ServicosIcones let-categoria="categoria">
+    <div class="servicos d-flex justify-content-center align-items-center flex-column">
+        <div class="circle d-flex justify-content-center align-items-center">
+            <img src="assets/svg/brain.svg" />
+        </div>  
+        <h6>{{ categoria.nome }}</h6>
+    </div>
+</ng-template>
+
+<ng-template #Self let-url="url">
+    <div class="self-container d-inline-block">
+        <img [src]="'assets/home/equipe/' + url" alt="Self de um membro da equipe"/>
+    </div>
+</ng-template>
+
+<ng-template #Membro let-membro="membro">
+    <div>
+        <ng-container [ngTemplateOutlet]="Self"  [ngTemplateOutletContext]="{url: membro.url}"></ng-container>
+        <div class="d-inline-block">
+            <h6>{{ membro.name }}</h6>
+            <p>{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
+            <p>{{ membro.bio }}</p>
+        </div>
+    </div>
+</ng-template>
