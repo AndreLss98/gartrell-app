@@ -1,0 +1,16 @@
+<article class="mb-2">
+    <img src="assets/home/banner.jpg" alt="Image banner of home" />
+</article>
+
+<section class="container">
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2 secondary">
+        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Acontece'}"></ng-container>
+    </article>
+    <app-evento></app-evento>
+</section>
+
+
+<ng-template #SessionHeader let-title="title">
+    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
+    <div class="line mt-1 mb-4 w-75"></div>
+</ng-template>
