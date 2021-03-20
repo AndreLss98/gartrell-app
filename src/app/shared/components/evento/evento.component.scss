@@ -1,0 +1,14 @@
+div.evento-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+div.evento-container div img {
+    width: 350px;
+    height: 200px;
+}
+
+div.evento-info {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}

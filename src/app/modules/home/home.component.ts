@@ -9,7 +9,6 @@ export class HomeComponent implements OnInit {
 
   private _servicesCategory: any[] = [];
   private _equipe: any[] = [];
-
   private _eventos: any[] = [];
 
   constructor() {}
@@ -39,6 +38,10 @@ export class HomeComponent implements OnInit {
         Atualmente, Diretora Geral da ACS e Capelã - Missionária pelo Supremo Concilio da I. P. B`,
         img: 'eleny_vassao.jpg'
       }
+    ]
+
+    this.eventos = [
+      { dia: 22, mes: 'Dezembro', titulo: 'IV Jornada de Saúde Mental', descricao: 'Pandemia Global e Fé Crisã', banner: 'assets/home/evento/evento_banner.jpg' }
     ]
   }
 
