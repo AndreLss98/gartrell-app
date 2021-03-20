@@ -1,1 +1,59 @@
-<p>equipe works!</p>
+<section class="container">
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'equipe'}"></ng-container>
+    </article>
+    <article class="mb-2">
+        <!-- <img src="assets/home/banner.jpg" alt="Image banner of home" /> -->
+        INSTITUTO GARTRELL
+    </article>
+
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <div class="row">
+            <div class="col">
+                <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- PARCEIROS E COLABORADORES -->
+
+<section class="container">
+    <article class="mb-2">
+        <!-- <img src="assets/home/banner.jpg" alt="Image banner of home" /> -->
+        PARCEIROS E COLABORADORES
+    </article>
+
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <div class="row">
+            <div class="col">
+                <ng-container *ngFor="let membro of colaboradores" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
+            </div>
+        </div>
+    </article>
+</section>
+
+<ng-template #SessionHeader let-title="title">
+    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
+    <div class="line mt-1 mb-4 w-75"></div>
+</ng-template>
+
+<ng-template #Self let-url="url">
+    <div class="self-container d-inline-block">
+        <img [src]="'assets/home/equipe/' + url" alt="Self de um membro da equipe"/>
+    </div>
+</ng-template>
+
+<ng-template #Membro let-membro="membro">
+    <div class="member-container">
+        <app-self-image [url]="'assets/home/equipe/' + membro.img"></app-self-image>
+        <div class="d-flex justify-content-center flex-column">
+            <h6>{{ membro.name }}</h6>
+            <p>{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
+            <p>{{ membro.bio }}</p> 
+        </div>
+    </div>
+    
+    <div class="line mt-1 mb-4 w-100"></div>
+
+</ng-template>
