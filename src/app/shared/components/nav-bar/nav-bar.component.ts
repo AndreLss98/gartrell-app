@@ -31,7 +31,7 @@ export class NavBarComponent implements OnInit {
         { name: "Consultoria", link: "", subMenus: [] },
         { name: "Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos", link: "", subMenus: [] }
       ]},
-      { name: "Acontece", link: "", subMenus: [] },
+      { name: "Acontece", link: "acontece", subMenus: [] },
       { name: "Notícias", link: "", subMenus: [] },
       { name: "Reflexões", link: "", subMenus: [] },
       { name: "Fique por Dentro", link: "", subMenus: [
