@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'institucional',
     loadChildren: () => import('./modules/institucional/institucional.module').then(m => m.InstitucionalModule)
+  },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./modules/noticias/noticias.module').then(m => m.NoticiasModule)
   }
 ];
 
