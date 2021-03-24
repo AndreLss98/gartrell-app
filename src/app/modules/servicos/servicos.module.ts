@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ServicosRoutingModule } from './servicos-routing.module';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
-import { PsiquiatriaComponent } from './psiquiatria/psiquiatria.component';
 
+import { ServicosComponent } from './servicos.component';
 
 @NgModule({
-  declarations: [ PsiquiatriaComponent ],
+  declarations: [ServicosComponent ],
   imports: [
     CommonModule,
     ComponentsModule,
-    ServicosRoutingModule,
-
+    ServicosRoutingModule
   ]
 })
 export class HomeModule { }
