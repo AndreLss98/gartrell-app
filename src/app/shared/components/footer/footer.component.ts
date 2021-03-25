@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { }
 
   ngOnInit(): void {
+    
+  }
+
+  backToTop(): string {
+    return `${window.location.pathname}#navbar`;
   }
 
 }
