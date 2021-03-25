@@ -40,7 +40,7 @@ export class NavBarComponent implements OnInit {
         { name: "Desenvolvimento humano", link: "fique-por-dentro/desenvolvimento-humano", subMenus: [] },
         { name: "Sociedade", link: "fique-por-dentro/sociedade", subMenus: [] }
       ]},
-      { name: "Contato", link: "", subMenus: [] }
+      { name: "Contato", link: this.goToContactForm(), subMenus: [] }
     ]
   }
 
@@ -66,5 +66,9 @@ export class NavBarComponent implements OnInit {
 
   printAny(trash: any) {
     console.log('É oq tem: ', trash);
+  }
+
+  goToContactForm(): string {
+    return `${window.location.pathname}#contactForm`
   }
 }
