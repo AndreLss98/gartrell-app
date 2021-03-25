@@ -8,6 +8,7 @@ import { SubHeaderComponent } from './sub-header/sub-header.component';
 import { SelfImageComponent } from './self-image/self-image.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { ServicoCircleComponent } from './servico-circle/servico-circle.component';
+import { WhatsappComponent } from './icons/whatsapp/whatsapp.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServicoCircleComponent } from './servico-circle/servico-circle.componen
     SelfImageComponent,
     ImageHoverComponent,
     ServicoCircleComponent,
+    WhatsappComponent,
   ],
   imports: [
     CommonModule
@@ -30,6 +32,7 @@ import { ServicoCircleComponent } from './servico-circle/servico-circle.componen
     SelfImageComponent,
     ImageHoverComponent,
     ServicoCircleComponent,
+    WhatsappComponent,
   ]
 })
 export class ComponentsModule { }
