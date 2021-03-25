@@ -1,32 +1,13 @@
-<article class="mb-2">
-    <img src="assets/home/banner.jpg" alt="Image banner of home" />
-</article>
+<div class="container p-0 contentImage">
+  <img src="assets/home/banner.jpg" width="100%" height="100%" alt="banner of page" />
+</div>
 
-<section class="container">
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2 secondary">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Acontece'}"></ng-container>
-    </article>
-    <app-evento></app-evento>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1"><</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">></a>
-          </li>
-        </ul>
-      </nav>
+<section class="container mt-4 pb-2 bg-light">
+  <app-sub-header [title]="'Acontece'"></app-sub-header>
+  <div class="px-5">
+    <app-evento class="my-4" *ngFor="let event of acontecimentos; let i = index" [evento]="event"></app-evento>
+  </div>
+   <app-paginator></app-paginator>
 </section>
 
-<section class="container">
 <app-contato-form></app-contato-form>
-</section>
-
-<ng-template #SessionHeader let-title="title">
-    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
-    <div class="line mt-1 mb-4 w-75"></div>
-</ng-template>

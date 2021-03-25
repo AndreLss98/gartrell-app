@@ -8,11 +8,13 @@ import { SelfImageComponent } from './self-image/self-image.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { ContatoFormComponent } from './contato-form/contato-form.component';
 import { ServicoCircleComponent } from './servico-circle/servico-circle.component';
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
     PostComponent,
     EventoComponent,
+    PaginatorComponent,
     SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
@@ -25,6 +27,7 @@ import { ServicoCircleComponent } from './servico-circle/servico-circle.componen
   exports: [
     PostComponent,
     EventoComponent,
+    PaginatorComponent,
     SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,

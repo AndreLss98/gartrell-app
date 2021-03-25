@@ -1,6 +1,6 @@
 <ng-container [ngTemplateOutlet]="inverse? inverted: normal"></ng-container>
 <ng-template #normal>
-    <div class="evento-container">
+    <div class="evento-container my-4">
         <div>
             <img [src]="evento.banner" />
         </div>
@@ -26,7 +26,7 @@
 </ng-template>
 
 <ng-template #inverted>
-    <div class="evento-container-reverse">
+    <div class="evento-container-reverse my-4">
         <div>
             <div class="evento-info">
                 <div class="data d-flex align-items-center flex-column">
