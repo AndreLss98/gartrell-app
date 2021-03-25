@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicosService } from '../servicos/servicos.service';
 
 @Component({
   selector: 'app-home',
@@ -7,24 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  private _servicesCategory: any[] = [];
   private _equipe: any[] = [];
   private _eventos: any[] = [];
   private _noticias: any[] = [];
   private _reflexoes: any[] = [];
 
-  constructor() {}
+  constructor(
+    public servicosService: ServicosService
+  ) { }
 
   ngOnInit(): void {
-    this.servicesCategory = [
-      { nome: 'Psiquiatria' },
-      { nome: 'Psicologia' },
-      { nome: 'Neuropsicologia' },
-      { nome: 'Grupos de Suporte e Crescimento Pessoal' },
-      { nome: 'Capacitações' },
-      { nome: 'Consultoria' },
-      { nome: 'Parcerias ou Acordo de Cooperação em Serviços, Atividades e Projetos' }
-    ]
 
     this.equipe = [
       {
@@ -79,14 +72,6 @@ export class HomeComponent implements OnInit {
         banner: 'assets/home/noticias/image_placeholder.jpg'
       }
     ]
-  }
-
-  public get servicesCategory(): any[] {
-    return this._servicesCategory;
-  }
-
-  public set servicesCategory(value: any[]) {
-    this._servicesCategory = value;
   }
 
   public get equipe(): any[] {
