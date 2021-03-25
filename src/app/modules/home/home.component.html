@@ -68,7 +68,7 @@
         </div>
     </article>
 
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2 bg-light">
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <app-sub-header [title]="'Fique por Dentro'" class="w-100"></app-sub-header>
         <div id="stayInside">
             <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
@@ -89,6 +89,9 @@
                 resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
             }"></ng-container>
         </div>
+    </article>
+    <article>
+        <app-contato-form></app-contato-form>
     </article>
 </section>
 
