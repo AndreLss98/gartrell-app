@@ -6,9 +6,10 @@ import { EquipeComponent } from './equipe/equipe.component';
 import { InstitucionalRoutingModule } from './institucional-routing.module';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { IdentidadeNominalComponent } from './identidade-nominal/identidade-nominal.component';
+import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 
 @NgModule({
-  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent],
+  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent, GaleriaFotosComponent],
   imports: [
     CommonModule,
     ComponentsModule,

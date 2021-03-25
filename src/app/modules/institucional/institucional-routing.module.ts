@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EquipeComponent } from './equipe/equipe.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import {IdentidadeNominalComponent}from './identidade-nominal/identidade-nominal.component'
+import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 
 const routes: Routes = [
   { 
@@ -14,9 +15,9 @@ const routes: Routes = [
   { 
     path: 'equipe', component: EquipeComponent
   },
-  // { 
-  //   path: 'galeria-fotos', component: COMPONENT
-  // },
+  { 
+    path: 'galeria-fotos', component: GaleriaFotosComponent
+  },
   // { 
   //   path: 'links-uteis', component: COMPONENT
   // },
