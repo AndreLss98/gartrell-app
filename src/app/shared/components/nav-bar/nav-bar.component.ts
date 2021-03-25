@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,7 +10,7 @@ export class NavBarComponent implements OnInit {
 
   private _menu: any[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
 
     this.menu = [
       { name: "Institucional", link: "", subMenus: [
@@ -50,6 +51,10 @@ export class NavBarComponent implements OnInit {
         event.stopPropagation();
       })
     }
+  }
+
+  goToTerapiaOnline(){
+    this.router.navigateByUrl("/terapia-online")
   }
 
   public get menu(): any[] {

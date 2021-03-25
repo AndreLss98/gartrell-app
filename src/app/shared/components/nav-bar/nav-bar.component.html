@@ -41,7 +41,7 @@
           <ng-container [ngTemplateOutlet]="item.subMenus.length? NavItemComplex : NavItemSimple"  [ngTemplateOutletContext]="{link:item}"></ng-container>
         </ng-container>
         <li class="nav-item">
-          <button type="button" class="btn btn-light text-primary">
+          <button (click)="goToTerapiaOnline()" type="button" class="btn btn-light text-primary">
             <i class="bi bi-heart-fill"></i>Terapia Online
           </button>
         </li>
