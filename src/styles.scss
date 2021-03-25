@@ -13,6 +13,11 @@ $navbar-dark-color: white !default;
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
 @import '~bootstrap/scss/bootstrap';
 
 * {
@@ -29,4 +34,12 @@ div.line {
     height: 1px;
     width: 100%;
     background-color: #DCDCDC;
+}
+
+.fw-lighter {
+    font-weight: 100;
+}
+
+.border-5 {
+    border-width: 5px;
 }

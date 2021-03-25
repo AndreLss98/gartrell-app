@@ -1,16 +1,16 @@
 <div class="row px-2 py-4" style="background-color: white;">
     <div class="col-5">
-        <img src="assets/home/banner.jpg" width="100%" height="100%" alt="post image">
+        <img [src]="banner" width="100%" height="100%" alt="post image">
     </div>
     <div class="col-7 d-flex flex-column justify-content-between">
-        <h1>Lorem ipsumn dolor sit amet, consecutur adipiscing elit.</h1>
+        <h1>{{ titulo }}</h1>
         <div class="line"></div>
-        <h6> Classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia</h6>
+        <h6>{{ resumo }}</h6>
         
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center icon">
                 <i class="bi bi-box-arrow-in-down-right text-primary mr-1"></i>
-                <p class="m-0">Por Karina Queiroz - 02/01/2021</p>
+                <p class="m-0">Por {{ autor }} - {{ dataPost | date: 'dd/MM/yyyy' }}</p>
             </div>
 
             <div class="social-media-container text-primary icon">

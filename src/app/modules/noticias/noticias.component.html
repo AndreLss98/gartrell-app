@@ -6,7 +6,8 @@
   <app-sub-header [title]="'Notícias'" class="w-100"></app-sub-header>
   
   <div class="w-100 px-2 mb-2">
-    <app-post></app-post>
+    <app-post *ngFor="let post of noticias"
+      [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
   </div>
   
   <nav aria-label="Page navigation example">

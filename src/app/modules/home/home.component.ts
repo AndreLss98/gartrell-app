@@ -55,6 +55,30 @@ export class HomeComponent implements OnInit {
       { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },
       { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' }
     ]
+
+    this.reflexoes = [
+      { 
+        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
+        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
+        autor: 'Karina Queiroz',
+        dataPost: new Date(2020, 1, 22),
+        banner: 'assets/home/noticias/image_placeholder.jpg'
+      },
+      { 
+        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
+        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
+        autor: 'Karina Queiroz',
+        dataPost: new Date(2020, 3, 9),
+        banner: 'assets/home/noticias/image_placeholder.jpg'
+      },
+      { 
+        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
+        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
+        autor: 'Karina Queiroz',
+        dataPost: new Date(2020, 11, 25),
+        banner: 'assets/home/noticias/image_placeholder.jpg'
+      }
+    ]
   }
 
   public get servicesCategory(): any[] {
