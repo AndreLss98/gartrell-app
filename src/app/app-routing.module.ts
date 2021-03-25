@@ -38,7 +38,7 @@ const routes: Routes = [
   {
     path:"terapia-online",
     loadChildren: () => import('./modules/terapia-online/terapia-online.module').then(m => m.TerapiaOnlineModule)
-  }
+  },
 ];
 
 @NgModule({
