@@ -1,10 +1,29 @@
+@import '~bootstrap/scss/bootstrap';
+
 .img-container {
     position: relative;
+    height: 300px;
 
-    div {
+    background-size: 120% !important;
+    background-position: center !important;
+    transition-duration: 500ms;
+
+    div.hover-content {
+        div {
+            border-left: 5px solid $primary;
+        }
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 0px;
+        left: 0px;
+
+        background-image: linear-gradient(transparent, black);
     }
+
+    div.bar {
+        width: 5px;
+    }
+}
+
+.img-container:hover {
+    background-size: 170% !important;
 }

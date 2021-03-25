@@ -48,7 +48,9 @@
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Notícias'}"></ng-container>
-        
+        <div id="noticiasContainer" class="w-100">
+            <app-image-hover *ngFor="let noticia of noticias" [titulo]="noticia.titulo" [subTitulo]="noticia.subTitulo" [bgImg]="noticia.img"></app-image-hover>
+        </div>
     </article>
 </section>
 

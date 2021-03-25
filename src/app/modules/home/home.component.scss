@@ -22,3 +22,9 @@ div.member-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+
+#noticiasContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}

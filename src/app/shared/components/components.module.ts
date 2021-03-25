@@ -8,10 +8,24 @@ import { EventoComponent } from './evento/evento.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 
 @NgModule({
-  declarations: [ SelfImageComponent, ServicoCircleComponent, ContatoFormComponent, EventoComponent, PostComponent, ImageHoverComponent ],
+  declarations: [
+    PostComponent,
+    EventoComponent,
+    SelfImageComponent,
+    ImageHoverComponent,
+    ContatoFormComponent,
+    ServicoCircleComponent,
+  ],
   imports: [
     CommonModule
   ],
-  exports: [ SelfImageComponent, ServicoCircleComponent, ContatoFormComponent, EventoComponent, PostComponent ]
+  exports: [
+    PostComponent,
+    EventoComponent,
+    SelfImageComponent,
+    ImageHoverComponent,
+    ContatoFormComponent,
+    ServicoCircleComponent,
+  ]
 })
 export class ComponentsModule { }

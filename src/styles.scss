@@ -8,9 +8,12 @@ $theme-colors: (
   "dark": #223854,
 );
 
+$navbar-dark-color: white !default;
 
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
 @import '~bootstrap/scss/bootstrap';
-
 
 * {
     margin: 0;

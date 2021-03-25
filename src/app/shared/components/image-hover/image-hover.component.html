@@ -1,7 +1,8 @@
-<div class="img-container">
-    <img [src]="bgImg" />
-    <div>
-        <h4>{{ titulo }}</h4>
-        <h6>{{ subTitulo }}</h6>
+<div class="img-container" [ngStyle]="{'background' : 'url(' + bgImg + ')'}">
+    <div class="hover-content w-100 px-4 pt-3">
+        <div class="pl-1">
+            <h4 class="text-light">{{ titulo }}</h4>
+        </div>
+        <p class="text-light">{{ subTitulo }}</p>
     </div>
 </div>
