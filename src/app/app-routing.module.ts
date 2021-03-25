@@ -5,7 +5,7 @@ const routes: Routes = [
   { 
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'noticias',
     loadChildren: () => import('./modules/noticias/noticias.module').then(m => m.NoticiasModule)
+  },
+  {
+    path:"fique-por-dentro",
+    loadChildren: () => import('./modules/fique-por-dentro/fique-por-dentro.module').then(m => m.FiquePorDentroModule)
   }
 ];
 

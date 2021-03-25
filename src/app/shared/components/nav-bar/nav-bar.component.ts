@@ -35,9 +35,9 @@ export class NavBarComponent implements OnInit {
       { name: "Notícias", link: "noticias", subMenus: [] },
       { name: "Reflexões", link: "reflexoes", subMenus: [] },
       { name: "Fique por Dentro", link: "", subMenus: [
-        { name: "Saúde Integral", link: "", subMenus: [] },
-        { name: "Desenvolvimento humano", link: "", subMenus: [] },
-        { name: "Sociedade", link: "", subMenus: [] }
+        { name: "Saúde Integral", link: "fique-por-dentro/saude-integral", subMenus: [] },
+        { name: "Desenvolvimento humano", link: "fique-por-dentro/desenvolvimento-humano", subMenus: [] },
+        { name: "Sociedade", link: "fique-por-dentro/sociedade", subMenus: [] }
       ]},
       { name: "Contato", link: "", subMenus: [] }
     ]
