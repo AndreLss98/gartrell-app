@@ -14,6 +14,18 @@ div.member-container {
     grid-gap: 25px;
 }
 
+#stayInside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.stayInsideComponent {
+    width: 300px;
+    img {
+        width: 60px;
+    }
+}
+
 @media (max-width: 991px) {
     #noticiasContainer {
         justify-items: center;

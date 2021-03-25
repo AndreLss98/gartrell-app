@@ -67,6 +67,32 @@
                 [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
         </div>
     </article>
+
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
+        <app-sub-header [title]="'Fique por Dentro'" class="w-100"></app-sub-header>
+        <div id="stayInside">
+            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
+                icone: 'assets/home/fique_por_dentro/health_icon_placeholder.svg',
+                titulo: 'Saúde Integral',
+                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
+            }"></ng-container>
+
+            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
+                icone: 'assets/home/fique_por_dentro/health_icon_placeholder.svg',
+                titulo: 'Desenvolvimento Humano',
+                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
+            }"></ng-container>
+
+            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
+                icone: 'assets/home/fique_por_dentro/health_icon_placeholder.svg',
+                titulo: 'Sociedade',
+                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
+            }"></ng-container>
+        </div>
+    </article>
+    <article>
+        <app-contato-form></app-contato-form>
+    </article>
 </section>
 
 <!-- Todos os templates utilizado obs: Podem virar componentes para serem reaproveitados -->
@@ -79,5 +105,16 @@
             <p style="color: #00acec;">{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
             <p class="text-light">{{ membro.bio }}</p> 
         </div>
+    </div>
+</ng-template>
+
+<ng-template #StayInSideCP let-icone="icone" let-titulo="titulo" let-resumo="resumo">
+    <div class="d-flex flex-column align-items-center stayInsideComponent">
+        <img [src]="icone" alt="sub section icon">
+        <h5 class="text-center text-dark">{{ titulo }}</h5>
+        <p class="text-center">{{ resumo }}</p>
+        <a href="" type="button" class="btn btn-light px-4 py-2">
+            <i class="bi bi-plus-circle"></i> Ver mais
+        </a>
     </div>
 </ng-template>
