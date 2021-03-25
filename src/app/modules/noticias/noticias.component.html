@@ -1,10 +1,10 @@
-<div class="contentImage">
-    <!-- <img src="assets/home/banner.jpg" width="100%" height="100%" alt=""> -->
+<div class="container">
+    <img src="assets/home/banner.jpg" width="100%" height="100%" alt="banner img">
 </div>
 
 <div class="container bgContainer d-flex justify-content-center align-items-center flex-column mb-2 secondary" style="margin-top: 20px;">
-    <ng-container [ngTemplateOutlet]="SessionHeader" [ngTemplateOutletContext]="{title:'Notícias'}">
-    </ng-container>
+
+    <app-sub-header [title]="'Notícias'" class="w-100"></app-sub-header>
     
     <div class="col-8" style="background-color: white;">
         <app-post></app-post>
@@ -25,8 +25,3 @@
 </div>
 
 <app-contato-form></app-contato-form>
-
-<ng-template #SessionHeader let-title="title">
-    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
-    <div class="line mt-1 mb-4 w-75"></div>
-</ng-template>

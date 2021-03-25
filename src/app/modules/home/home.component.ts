@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   private _equipe: any[] = [];
   private _eventos: any[] = [];
   private _noticias: any[] = [];
+  private _reflexoes: any[] = [];
 
   constructor() {}
 
@@ -86,5 +87,13 @@ export class HomeComponent implements OnInit {
 
   public set noticias(value: any[]) {
     this._noticias = value;
+  }
+
+  public get reflexoes(): any[] {
+    return this._reflexoes;
+  }
+  
+  public set reflexoes(value: any[]) {
+    this._reflexoes = value;
   }
 }

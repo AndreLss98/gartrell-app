@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SelfImageComponent } from './self-image/self-image.component';
-import { ServicoCircleComponent } from './servico-circle/servico-circle.component';
-import { ContatoFormComponent } from './contato-form/contato-form.component';
+
 import { PostComponent } from './post/post.component';
 import { EventoComponent } from './evento/evento.component';
+import { SubHeaderComponent } from './sub-header/sub-header.component';
+import { SelfImageComponent } from './self-image/self-image.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
+import { ContatoFormComponent } from './contato-form/contato-form.component';
+import { ServicoCircleComponent } from './servico-circle/servico-circle.component';
 
 @NgModule({
   declarations: [
     PostComponent,
     EventoComponent,
+    SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
     ContatoFormComponent,
@@ -22,6 +25,7 @@ import { ImageHoverComponent } from './image-hover/image-hover.component';
   exports: [
     PostComponent,
     EventoComponent,
+    SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
     ContatoFormComponent,

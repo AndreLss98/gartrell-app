@@ -3,7 +3,7 @@
 .img-container {
     position: relative;
     height: 300px;
-
+    max-width: 550px;
     background-size: 120% !important;
     background-position: center !important;
     transition-duration: 500ms;
@@ -26,4 +26,17 @@
 
 .img-container:hover {
     background-size: 170% !important;
+}
+
+@media (max-width: 991px) {
+    .img-container {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 530px) {
+    .img-container {
+        min-width: 350px;
+        height: 200px;
+    }
 }

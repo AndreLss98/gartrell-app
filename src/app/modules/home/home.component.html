@@ -3,7 +3,7 @@
         <img src="assets/home/banner.jpg" alt="Image banner of home" />
     </article>
     <article class="d-flex justify-content-center align-items-center flex-column mb-2 secondary">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Identidade Nominal'}"></ng-container>
+        <app-sub-header [title]="'Identidade Nominal'" class="w-100"></app-sub-header>
         <p>
             O Instituto Gartrell, tem esta identidade nominal como forma distinta de expressão gratidão, homenagear e honrar o casal de missionários americanos Rev. Ethelbert Hopkins Gartrell e Catherine Yates Gartrell (Sra. Sandy Gartrell) pelos valiosos serviços prestados no Brasil em várias regiões do país, nos anos de 1951 a 1982.
         </p>
@@ -13,14 +13,14 @@
     </article>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'serviços'}"></ng-container>
+        <app-sub-header [title]="'serviços'" class="w-100"></app-sub-header>
         <div class="d-flex justify-content-center flex-wrap">
             <app-servico-circle *ngFor="let cat of servicesCategory" [categoria]="cat"></app-servico-circle>
         </div>
     </article>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Nossa equipe'}"></ng-container>
+        <app-sub-header [title]="'Nossa equipe'" class="w-100"></app-sub-header>
         <div class="row">
             <div class="col-1 d-flex align-items-center">
                 <button class="btn btn-light  rounded-circle">
@@ -42,12 +42,12 @@
     </article>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Acontece'}"></ng-container>
+        <app-sub-header [title]="'Acontece'" class="w-100"></app-sub-header>
         <app-evento *ngFor="let event of eventos; let i = index" [evento]="event" [inverse]="i % 2 == 0"></app-evento>
     </article>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'Notícias'}"></ng-container>
+        <app-sub-header [title]="'Notícias'" class="w-100"></app-sub-header>
         <div id="noticiasContainer" class="w-100">
             <app-image-hover *ngFor="let noticia of noticias" [titulo]="noticia.titulo" [subTitulo]="noticia.subTitulo" [bgImg]="noticia.img"></app-image-hover>
         </div>
@@ -55,17 +55,6 @@
 </section>
 
 <!-- Todos os templates utilizado obs: Podem virar componentes para serem reaproveitados -->
-<ng-template #SessionHeader let-title="title">
-    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
-    <div class="line mt-1 mb-4 w-75"></div>
-</ng-template>
-
-<ng-template #Self let-url="url">
-    <div class="self-container d-inline-block">
-        <img [src]="'assets/home/equipe/' + url" alt="Self de um membro da equipe"/>
-    </div>
-</ng-template>
-
 <ng-template #Membro let-membro="membro">
     <div class="member-container">
         <app-self-image [url]="'assets/home/equipe/' + membro.img"></app-self-image>
