@@ -1,32 +1,13 @@
-<div class="contentImage">
-    <!-- <img src="assets/home/banner.jpg" width="100%" height="100%" alt=""> -->
+<div class="container p-0 contentImage">
+  <img src="assets/home/banner.jpg" width="100%" height="100%" alt="banner of page">
 </div>
 
-<div class="container bgContainer d-flex justify-content-center align-items-center flex-column mb-2 secondary" style="margin-top: 20px;">
-    <ng-container [ngTemplateOutlet]="SessionHeader" [ngTemplateOutletContext]="{title:'Reflexões'}">
-    </ng-container>
+<div class="container bg-light d-flex justify-content-center align-items-center flex-column my-2">
+  <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
     
-    <div class="col-8" style="background-color: white;">
-        <app-post></app-post>
-    </div>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1"><</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">></a>
-          </li>
-        </ul>
-      </nav>
+  <app-post *ngFor="let post of reflexoes" class="mx-2"
+    [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
+  <app-paginator></app-paginator>
 </div>
 
 <app-contato-form></app-contato-form>
-
-<ng-template #SessionHeader let-title="title">
-    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
-    <div class="line mt-1 mb-4 w-75"></div>
-</ng-template>
