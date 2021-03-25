@@ -61,9 +61,9 @@
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2 bg-light">
         <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
-        <div class="w-100">
+        <div class="w-100 px-5">
             
-            <app-post *ngFor="let post of reflexoes"
+            <app-post *ngFor="let post of reflexoes" class="mx-2"
                 [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
         </div>
     </article>
