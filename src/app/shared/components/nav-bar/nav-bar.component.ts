@@ -20,7 +20,7 @@ export class NavBarComponent implements OnInit {
           { name: "Instituto Gartrell", link: "institucional/equipe#equipe", subMenus: []},
           { name: "Parceiros e Colaboradores", link: "institucional/equipe#parceiros", subMenus: []}
         ] },
-        { name: "Galeria de Fotos", link: "", subMenus: [] },
+        { name: "Galeria de Fotos", link: "institucional/galeria-fotos", subMenus: [] },
         { name: "Links úteis", link: "", subMenus: [] }
       ]},
       { name: "Serviços", link: "", subMenus: [
