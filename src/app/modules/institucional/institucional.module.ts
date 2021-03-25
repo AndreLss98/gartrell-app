@@ -5,9 +5,10 @@ import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { EquipeComponent } from './equipe/equipe.component';
 import { InstitucionalRoutingModule } from './institucional-routing.module';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { IdentidadeNominalComponent } from './identidade-nominal/identidade-nominal.component';
 
 @NgModule({
-  declarations: [ EquipeComponent, QuemSomosComponent ],
+  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent],
   imports: [
     CommonModule,
     ComponentsModule,
