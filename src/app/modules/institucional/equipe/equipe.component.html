@@ -1,11 +1,14 @@
-<section class="container">
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2">
-        <ng-container [ngTemplateOutlet]="SessionHeader"  [ngTemplateOutletContext]="{title:'equipe'}"></ng-container>
-    </article>
+<img src="assets/home/banner.jpg" alt="Image banner of home" />
+
+<section class="container bg-light mt-4">
+
+    <app-sub-header title="Equipe"></app-sub-header>
+   
     <article class="mb-2">
-        <!-- <img src="assets/home/banner.jpg" alt="Image banner of home" /> -->
         INSTITUTO GARTRELL
     </article>
+    <span class="letraForma">GARTRELL</span>
+
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <div class="row">
@@ -19,10 +22,12 @@
 <!-- PARCEIROS E COLABORADORES -->
 
 <section class="container">
-    <article class="mb-2">
+    <article class="mb-2" style="position: absolute;">
         <!-- <img src="assets/home/banner.jpg" alt="Image banner of home" /> -->
         PARCEIROS E COLABORADORES
     </article>
+
+    <span class="letraForma">PARCEIROS</span>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <div class="row">
