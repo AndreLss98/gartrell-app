@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GaleriaFotosComponent implements OnInit {
 
+  cards = ["assets/home/banner.jpg", "assets/home/banner.jpg", 
+           "assets/home/banner.jpg", "assets/home/banner.jpg", 
+           "assets/home/banner.jpg","assets/home/banner.jpg"];
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
