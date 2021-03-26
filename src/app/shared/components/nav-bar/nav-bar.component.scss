@@ -35,3 +35,39 @@ nav.navbar div.container div.input-group div i {
 nav.navbar div.container div.input-group input {
     border-left: none;
 }
+
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    border: 1px solid #37639E;
+
+    &:active {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+    }
+    
+    
+    i {
+      position: relative;
+      top: 1px;
+    }
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+}

@@ -1,22 +1,33 @@
-<nav #navbar id="navbar" class="navbar navbar-expand-lg navbar-light">
+<nav #navbar id="navbar" class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 1%; padding-top: 1.5%;">
   <div class="container">
     <a href="/home">
-      <img id="logo" src="assets/svg/logo.svg" alt="Gartrell logo image">
+      <img id="logo" src="assets/icones/logo.png" alt="Gartrell logo image">
     </a>
 
     <div class="text-primary">
-      Telefone: (62) 3086-3600 | Email: institutogartrell@gmail.com
+      <label style="font-weight: 500; padding-right: 12px;">
+        Telefone: (62) 3086-3600
+      </label>
+      |
+      <label style="font-weight: 500; padding-left: 12px;">
+        Email: institutogartrell@gmail.com
+      </label>
     </div>
 
     <div class="row text-primary">
-      <div class="col">
-        <i class="bi bi-facebook"></i>
-      </div>
-      <div class="col">
-        <i class="bi bi-instagram"></i>
-      </div>
-      <div class="col">
-        <i class="bi bi-youtube"></i>
+      <div class="social-icons">
+        <a class="social-icon social-icon--facebook">
+          <i class="bi bi-facebook"></i>
+          <div class="tooltip">Facebook</div>
+        </a>
+        <a class="social-icon social-icon--instagram">
+          <i class="bi bi-instagram"></i>
+          <div class="tooltip">Instagram</div>
+        </a>
+        <a class="social-icon social-icon--youtube">
+          <i class="bi bi-youtube"></i>
+          <div class="tooltip">Youtube</div>
+        </a>
       </div>
     </div>
 
@@ -38,7 +49,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-between">
         <ng-container *ngFor="let item of menu">
-          <ng-container [ngTemplateOutlet]="item.subMenus.length? NavItemComplex : NavItemSimple"  [ngTemplateOutletContext]="{link:item}"></ng-container>
+          <ng-container [ngTemplateOutlet]="item.subMenus.length? NavItemComplex : NavItemSimple"
+            [ngTemplateOutletContext]="{link:item}"></ng-container>
         </ng-container>
         <li class="nav-item">
           <button (click)="goToTerapiaOnline()" type="button" class="btn btn-light text-primary">
@@ -52,13 +64,19 @@
 
 <ng-template #NavItemSimple let-link="link">
   <li class="nav-item">
-    <a class="nav-link" [href]="link.link">{{ link.name }}</a>
+    <a class="nav-link" [href]="link.link" style="font-weight: 500; font-size: 75%;">{{ link.name }}</a>
   </li>
 </ng-template>
 
 <ng-template #NavItemComplex let-link="link">
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ link.name }}</a>
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+      style="font-weight: 500; font-size: 75%;">
+      {{ link.name }}
+      <img
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4="
+        height="100%" width="10px" style="padding-bottom: 5%;">
+    </a>
     <ng-container [ngTemplateOutlet]="NavMenu" [ngTemplateOutletContext]="{subMenus:link.subMenus}"></ng-container>
   </li>
 </ng-template>
