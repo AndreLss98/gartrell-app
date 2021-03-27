@@ -9,17 +9,19 @@ import { SelfImageComponent } from './self-image/self-image.component';
 import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { ServicoCircleComponent } from './servico-circle/servico-circle.component';
 import { WhatsappComponent } from './icons/whatsapp/whatsapp.component';
+import { HeaderBannerComponent } from './header-banner/header-banner.component';
 
 @NgModule({
   declarations: [
     PostComponent,
     EventoComponent,
+    WhatsappComponent,
     PaginatorComponent,
     SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
+    HeaderBannerComponent,
     ServicoCircleComponent,
-    WhatsappComponent,
   ],
   imports: [
     CommonModule
@@ -27,12 +29,13 @@ import { WhatsappComponent } from './icons/whatsapp/whatsapp.component';
   exports: [
     PostComponent,
     EventoComponent,
+    WhatsappComponent,
     PaginatorComponent,
     SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
+    HeaderBannerComponent,
     ServicoCircleComponent,
-    WhatsappComponent,
   ]
 })
 export class ComponentsModule { }
