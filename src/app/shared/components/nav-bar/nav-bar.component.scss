@@ -1,73 +1,69 @@
 .dropdown-menu .dropdown-toggle:after{
-    border-top: .3em solid transparent;
-    border-right: 0;
-    border-bottom: .3em solid transparent;
-    border-left: .3em solid;
+  border-top: .3em solid transparent;
+  border-right: 0;
+  border-bottom: .3em solid transparent;
+  border-left: .3em solid;
 }
 
 .dropdown-menu .dropdown-menu{
-    margin-left:0; margin-right: 0;
+  margin-left:0; margin-right: 0;
 }
 
 .dropdown-menu li{
-    position: relative;
+  position: relative;
 }
 
 .nav-item .submenu{ 
-    display: none;
-    position: absolute;
-    left:100%; top:-7px;
+  display: none;
+  position: absolute;
+  left:100%; top:-7px;
 }
 
 .nav-item .submenu-left{ 
-    right:100%; left:auto;
+  right:100%; left:auto;
 }
 
 .dropdown-menu > li:hover{ background-color: #f1f1f1 }
 .dropdown-menu > li:hover > .submenu{
-    display: block;
+  display: block;
 }
 
-nav.navbar div.container div.input-group div i {
-    background-color: white;
+input {
+  border-left: none;
 }
 
-nav.navbar div.container div.input-group input {
-    border-left: none;
+/* Social Icons */
+.social-icons {
+  display: flex;
 }
 
-  /* Social Icons */
-  .social-icons {
-    display: flex;
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border: 1px solid #37639E;
+
+  &:active {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
   }
   
-  .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  i {
     position: relative;
-    width: 30px;
-    height: 30px;
-    margin: 0 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 17px;
-    text-decoration: none;
-    transition: all 0.15s ease;
-    border: 1px solid #37639E;
-
-    &:active {
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
-    }
-    
-    
-    i {
-      position: relative;
-      top: 1px;
-    }
+    top: 1px;
   }
+}
   
-  .dropdown-toggle::after {
-    display: none;
+.dropdown-toggle::after {
+  display: none;
 }

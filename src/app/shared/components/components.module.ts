@@ -10,6 +10,7 @@ import { ImageHoverComponent } from './image-hover/image-hover.component';
 import { ServicoCircleComponent } from './servico-circle/servico-circle.component';
 import { WhatsappComponent } from './icons/whatsapp/whatsapp.component';
 import { HeaderBannerComponent } from './header-banner/header-banner.component';
+import { SocialMediaContainerComponent } from './social-media-container/social-media-container.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HeaderBannerComponent } from './header-banner/header-banner.component';
     ImageHoverComponent,
     HeaderBannerComponent,
     ServicoCircleComponent,
+    SocialMediaContainerComponent,
   ],
   imports: [
     CommonModule
@@ -36,6 +38,7 @@ import { HeaderBannerComponent } from './header-banner/header-banner.component';
     ImageHoverComponent,
     HeaderBannerComponent,
     ServicoCircleComponent,
+    SocialMediaContainerComponent,
   ]
 })
 export class ComponentsModule { }
