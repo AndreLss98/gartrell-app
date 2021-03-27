@@ -3,3 +3,11 @@
   padding: 5px 80px 5px 80px;
   line-height: 2.7rem;
 }
+
+@media(max-width: 800px) {
+  .title {
+    padding: 5px 20px 5px 20px;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+  } 
+}
