@@ -5,7 +5,7 @@
         <p>
             O Instituto Gartrell, tem esta identidade nominal como forma distinta de expressão gratidão, homenagear e honrar o casal de missionários americanos Rev. Ethelbert Hopkins Gartrell e Catherine Yates Gartrell (Sra. Sandy Gartrell) pelos valiosos serviços prestados no Brasil em várias regiões do país, nos anos de 1951 a 1982.
         </p>
-        <a href="" type="button" class="btn">
+        <a href="institucional/identidade-nominal" type="button" class="btn">
             <i class="bi bi-plus-circle"></i> Ver mais
         </a>
     </article>
@@ -20,16 +20,16 @@
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <app-sub-header [title]="'Nossa equipe'" class="w-100"></app-sub-header>
         <div class="w-100 bg-dark px-5 py-4">
-            <div class="row ">
-                <div class="col-1 d-flex align-items-center">
-                    <button class="btn btn-light  rounded-circle">
+            <div class="row">
+                <div class="col-2 col-md-1 d-flex align-items-center">
+                    <button class="btn btn-light rounded-circle">
                         <i class="bi bi-chevron-left"></i>
                     </button>
                 </div>
                 <div class="col">
                     <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
                 </div>
-                <div class="col-1 d-flex align-items-center">
+                <div class="col-2 col-md-1 d-flex align-items-center">
                     <button class="btn btn-light rounded-circle">
                         <i class="bi bi-chevron-right"></i>
                     </button>
@@ -93,7 +93,7 @@
 <!-- Todos os templates utilizado obs: Podem virar componentes para serem reaproveitados -->
 <ng-template #Membro let-membro="membro">
     <div class="member-container">
-        <app-self-image [url]="'assets/home/equipe/' + membro.img"></app-self-image>
+        <app-self-image [url]="'assets/home/equipe/' + membro.img" class="mx-2"></app-self-image>
 
         <div class="d-flex justify-content-center flex-column">
             <h6 class="text-light">{{ membro.name }}</h6>
