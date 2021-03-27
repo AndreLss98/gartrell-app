@@ -15,7 +15,9 @@
     }
 }
 
-.servicos .circle:hover {
-    border-color: var(--primary);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.servicos:hover {
+    .circle {
+        border-color: var(--secondary);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 }
