@@ -1,15 +1,13 @@
 <ng-container [ngTemplateOutlet]="inverse? inverted: normal"></ng-container>
 <ng-template #normal>
     <div class="evento-container my-4">
-        <div>
-            <img [src]="evento.banner" />
-        </div>
+        <div class="eventBanner" [ngStyle]="{backgroundImage: 'url(' + evento.banner + ')' }"></div>
     
         <div>
             <div class="evento-info">
-                <div class="data d-flex align-items-center flex-column">
-                    <span>{{ evento.dia }}</span>
-                    <p>{{ evento.mes }}</p>
+                <div class="data border border-3 d-flex align-items-center flex-column mb-2">
+                    <span class="text-secondary">{{ evento.dia }}</span>
+                    <p class="text-dark">{{ evento.mes }}</p>
                 </div>
     
                 <div>
@@ -18,7 +16,7 @@
                 </div>
             </div>
     
-            <button class="btn btn-light p-2">
+            <button class="btn btn-light btn-lg">
                 <i class="bi bi-plus-circle"></i> Ver mais
             </button>
         </div>
@@ -29,9 +27,9 @@
     <div class="evento-container-reverse my-4">
         <div>
             <div class="evento-info">
-                <div class="data d-flex align-items-center flex-column">
-                    <span>{{ evento.dia }}</span>
-                    <p>{{ evento.mes }}</p>
+                <div class="data border border-3 d-flex align-items-center flex-column">
+                    <span class="text-secondary">{{ evento.dia }}</span>
+                    <p class="text-dark">{{ evento.mes }}</p>
                 </div>
     
                 <div>
@@ -40,13 +38,11 @@
                 </div>
             </div>
     
-            <button class="btn btn-light p-2">
+            <button class="btn btn-light btn-lg">
                 <i class="bi bi-plus-circle"></i> Ver mais
             </button>
         </div>
     
-        <div>
-            <img [src]="evento.banner" />
-        </div>
+        <div class="eventBanner" [ngStyle]="{backgroundImage: 'url(' + evento.banner + ')' }"></div>
     </div>
 </ng-template>
