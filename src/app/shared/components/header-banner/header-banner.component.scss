@@ -6,3 +6,21 @@ header {
     background-position-y: bottom;
     background-repeat: no-repeat;
 }
+
+@media (max-width: 960px) {
+    header {
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        height: 200px;
+    }
+}
