@@ -106,7 +106,7 @@
 
         <div class="d-flex justify-content-center flex-column">
             <h6 class="text-light">{{ membro.name }}</h6>
-            <p style="color: #00acec;">{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
+            <p style="color: #00acec;">{{ membro.cargo? membro.cargo : '' }}{{ membro.cod? ' ' + membro.cod : '' }}</p>
             <p class="text-light">{{ membro.bio }}</p> 
         </div>
     </div>
