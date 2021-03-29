@@ -12,7 +12,7 @@
         </a>
     </article>
 
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2 px-4 pb-2">
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2 pb-2">
         <app-sub-header [title]="'Serviços'" class="w-100"></app-sub-header>
         <div class="d-flex justify-content-center flex-wrap">
             <app-servico-circle *ngFor="let cat of servicosService.servicos" [categoria]="cat"></app-servico-circle>
@@ -22,7 +22,7 @@
 
 <section>
     <div class="container">
-        <app-sub-header [title]="'Nossa equipe'" class="w-100 px-4" style="padding-bottom: 0 !important;"></app-sub-header>
+        <app-sub-header [title]="'Nossa equipe'" class="w-100" style="padding-bottom: 0 !important;"></app-sub-header>
     </div>
     <div class="w-100 bg-dark py-4 mt-n4">
         <div class="container">
@@ -55,7 +55,7 @@
 </section>
 
 <section class="container">
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2 bg-light">
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2 px-4 pb-2 bg-light">
         <app-sub-header [title]="'Acontece'" class="w-100"></app-sub-header>
         <app-evento *ngFor="let event of eventos; let i = index" [evento]="event" [inverse]="i % 2 == 0"></app-evento>
     </article>
@@ -67,10 +67,9 @@
         </div>
     </article>
 
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2 bg-light">
+    <article class="d-flex justify-content-center align-items-center flex-column mb-2 px-4 pb-2 bg-light">
         <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
-        <div class="w-100 px-5">
-            
+        <div class="w-100">
             <app-post *ngFor="let post of reflexoes" class="mx-2"
                 [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
         </div>
