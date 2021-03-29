@@ -29,15 +29,15 @@
             <article class="d-flex justify-content-center align-items-center flex-column mb-2 pb-2">
                 <div class="row">
                     <div class="col-2 col-md-1 d-none d-sm-flex align-items-center justify-content-center">
-                        <button class="btn btn-light rounded-circle btn-team">
+                        <button class="btn btn-light rounded-circle btn-team" (click)="previousMember()" [disabled]="selectedMember == 0">
                             <i class="bi bi-chevron-left"></i>
                         </button>
                     </div>
                     <div class="col">
-                        <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
+                        <ng-container [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: equipe[selectedMember]}"></ng-container>
                     </div>
                     <div class="col-2 col-md-1 d-none d-sm-flex align-items-center justify-content-center">
-                        <button class="btn btn-light rounded-circle btn-team">
+                        <button class="btn btn-light rounded-circle btn-team" (click)="nextMember()" [disabled]="selectedMember == equipe.length">
                             <i class="bi bi-chevron-right"></i>
                         </button>
                     </div>
@@ -78,19 +78,19 @@
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <app-sub-header [title]="'Fique por Dentro'" class="w-100"></app-sub-header>
         <div id="stayInside">
-            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
+            <ng-container [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
                 icone: 'assets/home/fique_por_dentro/health_icon_placeholder.svg',
                 titulo: 'Saúde Integral',
                 resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
             }"></ng-container>
 
-            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
+            <ng-container [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
                 icone: 'assets/home/fique_por_dentro/health_icon_placeholder.svg',
                 titulo: 'Desenvolvimento Humano',
                 resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
             }"></ng-container>
 
-            <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
+            <ng-container [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
                 icone: 'assets/home/fique_por_dentro/health_icon_placeholder.svg',
                 titulo: 'Sociedade',
                 resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
@@ -102,7 +102,7 @@
 <!-- Todos os templates utilizado obs: Podem virar componentes para serem reaproveitados -->
 <ng-template #Membro let-membro="membro">
     <div class="member-container">
-        <app-self-image [url]="'assets/home/equipe/' + membro.img" class="mx-2"></app-self-image>
+        <app-self-image [url]="'assets/home/equipe/' + membro.img" class="mx-2 align-self-center"></app-self-image>
 
         <div class="d-flex justify-content-center flex-column">
             <h6 class="text-light">{{ membro.name }}</h6>

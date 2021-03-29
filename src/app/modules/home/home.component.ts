@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EquipeService } from 'src/app/shared/services/equipe.service';
 import { ServicosService } from '../servicos/servicos.service';
 
 @Component({
@@ -13,27 +14,16 @@ export class HomeComponent implements OnInit {
   private _noticias: any[] = [];
   private _reflexoes: any[] = [];
 
+  private _selectedMember: number = 0;
+
   constructor(
-    public servicosService: ServicosService
+    public equipeService: EquipeService,
+    public servicosService: ServicosService,
   ) { }
 
   ngOnInit(): void {
 
-    this.equipe = [
-      {
-        name: "Eleny Vassão",
-        cargo: "Capelã Evangélica/Consultora em Capelania Cristã",
-        bio: `Formada em Artes Plásticas e Teologia
-        Mestre em Aconselhamento Bíblico
-        Escritora
-        Exerceu capelania na USP/SP por 22 anos
-        Consultora em Capelania
-        Capelã Evangélica TÍt. Do I. I. Emílio Ribas-SP e HSPE
-        Diretora geral da ACS
-        Atualmente, Diretora Geral da ACS e Capelã - Missionária pelo Supremo Concilio da I. P. B`,
-        img: 'eleny_vassao.jpg'
-      }
-    ]
+    this.equipe = this.equipeService.equipeInterna.filter(membro => membro.img);
 
     this.eventos = [
       { dia: 18, mes: 'Novemnbro', titulo: 'IV Jornada de Saúde Mental', descricao: 'Pandemia Global e Fé Crisã', banner: 'assets/home/evento/evento_banner.jpg' },
@@ -104,5 +94,21 @@ export class HomeComponent implements OnInit {
   
   public set reflexoes(value: any[]) {
     this._reflexoes = value;
+  }
+
+  public get selectedMember(): number {
+    return this._selectedMember;
+  }
+
+  public set selectedMember(value: number) {
+    this._selectedMember = value;
+  }
+
+  public nextMember() {
+    if (this.selectedMember < this.equipe.length) ++this.selectedMember;
+  }
+
+  public previousMember() {
+    if (this.selectedMember > 0) --this.selectedMember;
   }
 }
