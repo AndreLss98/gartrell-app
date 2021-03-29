@@ -1,32 +1,25 @@
-<img src="assets/home/banner.jpg" alt="Image banner of home" />
+<app-header-banner [imgBannerUrl]="'assets/banners/equipe_banner.jpg'"></app-header-banner>
 
-<section class="container bg-light mt-4">
-
-    <app-sub-header title="Equipe"></app-sub-header>
+<section #equipe id="equipe" class="container bg-light mt-4">
+    <app-sub-header [title]="'Equipe'"></app-sub-header>
    
-    <article class="mb-2">
-        INSTITUTO GARTRELL
-    </article>
+    <h4 class="mb-n5">INSTITUTO GARTRELL</h4>
     <span class="letraForma">GARTRELL</span>
 
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <div class="row">
             <div class="col">
-                <ng-container *ngFor="let membro of equipe" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
+                
+                <ng-container *ngFor="let membro of internos" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
             </div>
         </div>
     </article>
 </section>
 
 <!-- PARCEIROS E COLABORADORES -->
-
-<section class="container">
-    <article class="mb-2" style="position: absolute;">
-        <!-- <img src="assets/home/banner.jpg" alt="Image banner of home" /> -->
-        PARCEIROS E COLABORADORES
-    </article>
-
+<section #parceiros id="parceiros" class="container">
+    <h5 class="mb-n5">PARCEIROS E COLABORADORES</h5>
     <span class="letraForma">PARCEIROS</span>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
@@ -54,7 +47,7 @@
         <app-self-image [url]="'assets/home/equipe/' + membro.img"></app-self-image>
         <div class="d-flex justify-content-center flex-column">
             <h6>{{ membro.name }}</h6>
-            <p>{{ membro.cargo }}{{ membro.crp? ' - CRP ' + membro.crp : '' }}</p>
+            <p class="text-secondary">{{ membro.cargo }}{{ membro.cod? ' ' + membro.cod : '' }}</p>
             <p>{{ membro.bio }}</p> 
         </div>
     </div>
