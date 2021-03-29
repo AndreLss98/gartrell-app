@@ -24,7 +24,7 @@ export class NavBarComponent implements OnInit {
             ]
           },
           { name: "Galeria de Fotos", link: "institucional/galeria-fotos", subMenus: [] },
-          { name: "Links úteis", link: "", subMenus: [] }
+          { name: "Links úteis", link: this.goToLinksUteis(), subMenus: [] }
         ]
       },
       {
@@ -78,5 +78,9 @@ export class NavBarComponent implements OnInit {
 
   goToContactForm(): string {
     return `${window.location.pathname}#contactForm`
+  }
+
+  goToLinksUteis(): string {
+    return `${window.location.pathname}#linksUteis`
   }
 }
