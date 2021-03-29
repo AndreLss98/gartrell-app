@@ -15,7 +15,9 @@
     <article class="d-flex justify-content-center align-items-center flex-column mb-2 pb-2">
         <app-sub-header [title]="'Serviços'" class="w-100"></app-sub-header>
         <div class="d-flex justify-content-center flex-wrap">
-            <app-servico-circle *ngFor="let cat of servicosService.servicos" [categoria]="cat"></app-servico-circle>
+            <a *ngFor="let cat of servicosService.servicos" [href]="'servicos/' + cat.id">
+                <app-servico-circle [categoria]="cat"></app-servico-circle>
+            </a>
         </div>
     </article>
 </section>
