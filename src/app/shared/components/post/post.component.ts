@@ -28,4 +28,14 @@ export class PostComponent implements OnInit {
     
   }
 
+  onMouseHover(element: HTMLElement) {
+    element.classList.remove('btn-light');
+    element.classList.add('btn-primary');
+  }
+
+  onMouseLeave(element: HTMLElement) {
+    element.classList.remove('btn-primary');
+    element.classList.add('btn-light');
+  }
+
 }
