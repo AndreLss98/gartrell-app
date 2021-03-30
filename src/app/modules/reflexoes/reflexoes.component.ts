@@ -8,11 +8,22 @@ import { ReflexoesService } from './reflexoes.service';
 })
 export class ReflexoesComponent implements OnInit {
 
+  public callFunction: any;
+
   constructor(
     public reflexoesService: ReflexoesService
   ) { }
 
   ngOnInit(): void {
 
+  }
+
+  public createFunction(reflection: any) {
+     return () => {
+      this.reflexoesService.selectedReflection = reflection;
+      setTimeout(() => {
+        window.location.href = `${window.location.pathname}#PostDetail`;
+      }, 200)
+    }
   }
 }

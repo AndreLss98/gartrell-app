@@ -82,6 +82,8 @@ export class ReflexoesService {
     }
   ];
 
+  private _selectedReflection: any;
+
   constructor() { }
 
   public get reflexoes(): any[] {
@@ -96,4 +98,11 @@ export class ReflexoesService {
     return of(this.reflexoes);
   }
 
+  public get selectedReflection(): any {
+    return this._selectedReflection;
+  }
+
+  public set selectedReflection(value: any) {
+    this._selectedReflection = value;
+  }
 }

@@ -1,0 +1,20 @@
+<div #PostDetail id="PostDetail" class="row">
+    <div class="col-12">
+        <h1 class="text-dark">{{ post.titulo }}</h1>
+    </div>
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center flex-wrap w-50">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-box-arrow-in-down-right text-primary mr-1"></i>
+                <p class="m-0">Por {{ post.autor }} - {{ post.dataPost | date: 'dd/MM/yyyy' }}</p>
+            </div>
+            <app-social-media-container></app-social-media-container>
+        </div>
+    </div>
+    <div class="col-12 d-flex justify-content-center my-2">
+        <img [src]="post.banner" width="100%" height="100%" alt="post image">
+    </div>
+    <div class="col-12 mt-2">
+        <p class="text-justify">{{ post.text }}</p>
+    </div>
+</div>

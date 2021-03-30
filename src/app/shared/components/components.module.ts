@@ -12,6 +12,7 @@ import { WhatsappComponent } from './icons/whatsapp/whatsapp.component';
 import { HeaderBannerComponent } from './header-banner/header-banner.component';
 import { SocialMediaContainerComponent } from './social-media-container/social-media-container.component';
 import { SideImgContainerComponent } from './side-img-container/side-img-container.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SideImgContainerComponent } from './side-img-container/side-img-contain
     SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
+    PostDetailsComponent,
     HeaderBannerComponent,
     ServicoCircleComponent,
     SideImgContainerComponent,
@@ -38,6 +40,7 @@ import { SideImgContainerComponent } from './side-img-container/side-img-contain
     SubHeaderComponent,
     SelfImageComponent,
     ImageHoverComponent,
+    PostDetailsComponent,
     HeaderBannerComponent,
     ServicoCircleComponent,
     SideImgContainerComponent,

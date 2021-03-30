@@ -22,6 +22,9 @@ export class PostComponent implements OnInit {
   @Input()
   public banner: string = '';
 
+  @Input()
+  public callFunction: any;
+
   constructor() { }
 
   ngOnInit(): void {
