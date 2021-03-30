@@ -2,11 +2,32 @@
     div {
         z-index: -1;
     }
+    
     img {
         margin-left: 10rem;
         border: 10px solid white;
         border-radius: 5px;
         height: 600px;
         max-width: 400px;
+    }
+}
+
+@media (max-width: 570px) {
+    #sideImgContainer {
+        img {
+            height: 400px;
+            max-width: 300px;
+            margin-left: 5rem;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #sideImgContainer {
+        img {
+            height: 300px;
+            max-width: 200px;
+            margin-left: 3rem;
+        }
     }
 }
