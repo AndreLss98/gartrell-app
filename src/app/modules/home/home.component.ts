@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
+import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { ServicosService } from '../servicos/servicos.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
   constructor(
     public equipeService: EquipeService,
     public servicosService: ServicosService,
+    public reflexoesService: ReflexoesService
   ) { }
 
   ngOnInit(): void {
