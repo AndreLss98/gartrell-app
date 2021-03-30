@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { ServicosService } from '../servicos/servicos.service';
@@ -17,9 +18,10 @@ export class HomeComponent implements OnInit {
   private _selectedMember: number = 0;
 
   constructor(
+    private router: Router,
     public equipeService: EquipeService,
     public servicosService: ServicosService,
-    public reflexoesService: ReflexoesService
+    public reflexoesService: ReflexoesService,
   ) { }
 
   ngOnInit(): void {
@@ -79,5 +81,19 @@ export class HomeComponent implements OnInit {
 
   public previousMember() {
     if (this.selectedMember > 0) --this.selectedMember;
+  }
+
+  viewReflection(post: any) {
+    return () => {
+      this.reflexoesService.selectedReflection = post;
+      setTimeout(() => {
+        // window.location.href = `/reflexoes#PostDetail`;
+        this.router.navigateByUrl('/reflexoes').then(() => {
+          setTimeout(() => {
+            window.location.href = `${window.location.pathname}#PostDetail`;
+          }, 200);
+        })
+      }, 200)
+    }
   }
 }
