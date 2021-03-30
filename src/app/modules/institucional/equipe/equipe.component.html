@@ -3,14 +3,13 @@
 <section #equipe id="equipe" class="container bg-light mt-4">
     <app-sub-header [title]="'Equipe'"></app-sub-header>
    
-    <h4 class="mb-n5">INSTITUTO GARTRELL</h4>
-    <span class="letraForma">GARTRELL</span>
+    <h4 class="mb-n4 mb-md-n5">INSTITUTO GARTRELL</h4>
+    <span class="letraForma text-wrap">GARTRELL</span>
 
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
         <div class="row">
             <div class="col">
-                
                 <ng-container *ngFor="let membro of internos" [ngTemplateOutlet]="Membro"  [ngTemplateOutletContext]="{membro: membro}"></ng-container>
             </div>
         </div>
@@ -19,7 +18,7 @@
 
 <!-- PARCEIROS E COLABORADORES -->
 <section #parceiros id="parceiros" class="container">
-    <h5 class="mb-n5">PARCEIROS E COLABORADORES</h5>
+    <h5 class="mb-n4 mb-md-n5">PARCEIROS E COLABORADORES</h5>
     <span class="letraForma">PARCEIROS</span>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
@@ -30,17 +29,6 @@
         </div>
     </article>
 </section>
-
-<ng-template #SessionHeader let-title="title">
-    <div class="section-title d-inline-block px-4 py-2">{{ title }}</div>
-    <div class="line mt-1 mb-4 w-75"></div>
-</ng-template>
-
-<ng-template #Self let-url="url">
-    <div class="self-container d-inline-block">
-        <img [src]="'assets/home/equipe/' + url" alt="Self de um membro da equipe"/>
-    </div>
-</ng-template>
 
 <ng-template #Membro let-membro="membro">
     <div class="member-container">
@@ -53,5 +41,4 @@
     </div>
     
     <div class="line mt-1 mb-4 w-100"></div>
-
 </ng-template>
