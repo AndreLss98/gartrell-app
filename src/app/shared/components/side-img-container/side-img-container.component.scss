@@ -1,0 +1,12 @@
+#sideImgContainer {
+    div {
+        z-index: -1;
+    }
+    img {
+        margin-left: 10rem;
+        border: 10px solid white;
+        border-radius: 5px;
+        height: 600px;
+        max-width: 400px;
+    }
+}

@@ -11,6 +11,7 @@ import { ServicoCircleComponent } from './servico-circle/servico-circle.componen
 import { WhatsappComponent } from './icons/whatsapp/whatsapp.component';
 import { HeaderBannerComponent } from './header-banner/header-banner.component';
 import { SocialMediaContainerComponent } from './social-media-container/social-media-container.component';
+import { SideImgContainerComponent } from './side-img-container/side-img-container.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SocialMediaContainerComponent } from './social-media-container/social-m
     ImageHoverComponent,
     HeaderBannerComponent,
     ServicoCircleComponent,
+    SideImgContainerComponent,
     SocialMediaContainerComponent,
   ],
   imports: [
@@ -38,6 +40,7 @@ import { SocialMediaContainerComponent } from './social-media-container/social-m
     ImageHoverComponent,
     HeaderBannerComponent,
     ServicoCircleComponent,
+    SideImgContainerComponent,
     SocialMediaContainerComponent,
   ]
 })

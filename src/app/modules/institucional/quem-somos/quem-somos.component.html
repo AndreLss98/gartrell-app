@@ -1,6 +1,6 @@
 <app-header-banner [imgBannerUrl]="'assets/banners/missao_visao_valores_banner.jpg'"></app-header-banner>
 
-<div class="container bg-light px-4">
+<div class="container bg-light px-4 pb-4">
     <app-sub-header [title]="'Quem Somos'" class="w-100"></app-sub-header>
     <h4 class="mt-4 text-primary">QUEM SOMOS, O QUE FAZEMOS, COMO FAZEMOS</h4>
     <p>O Instituto Gartrell, é uma empresa brasileira com endereço fixo em Goiânia/GO,
@@ -76,10 +76,7 @@
 </div>
 
 <div class="d-flex mt-4">
-    <div id="sideImgContainer" class="position-relative">
-        <div class="bg-secondary h-100 w-50 position-absolute"></div>
-        <img src="/assets/institucional/quemSomos/Imgcard.png" class="my-5">
-    </div>
+    <app-side-img-container [imgUrl]="'/assets/institucional/quemSomos/Imgcard.png'"></app-side-img-container>
 
     <div id="textSection" class="ml-5 mt-1 d-flex flex-column justify-content-around">
         <div>
