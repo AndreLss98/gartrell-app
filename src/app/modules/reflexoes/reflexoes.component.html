@@ -3,7 +3,7 @@
 <div class="container bg-light d-flex justify-content-center align-items-center flex-column my-2">
   <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
     
-  <app-post *ngFor="let post of reflexoes" class="mx-2"
+  <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2"
     [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
   <app-paginator></app-paginator>
 </div>
