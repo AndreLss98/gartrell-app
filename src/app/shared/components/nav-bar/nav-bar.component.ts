@@ -62,7 +62,7 @@ export class NavBarComponent implements OnInit {
   }
 
   goToTerapiaOnline() {
-    this.router.navigateByUrl("/terapia-online")
+    this.router.navigateByUrl("/consulte-conosco")
   }
 
   public get menu(): any[] {

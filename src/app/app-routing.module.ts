@@ -36,7 +36,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/fique-por-dentro/fique-por-dentro.module').then(m => m.FiquePorDentroModule)
   },
   {
-    path:"terapia-online",
+    path:"consulte-conosco",
     loadChildren: () => import('./modules/terapia-online/terapia-online.module').then(m => m.TerapiaOnlineModule)
   },
 ];
