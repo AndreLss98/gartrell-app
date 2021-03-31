@@ -83,19 +83,22 @@
             <ng-container [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
                 icone: 'assets/svg/saude_integral.svg',
                 titulo: 'Saúde Integral',
-                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
+                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.',
+                link: 'fique-por-dentro/saude-integral'
             }"></ng-container>
 
             <ng-container [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
                 icone: 'assets/svg/desenvolvimento_humano.svg',
                 titulo: 'Desenvolvimento Humano',
-                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
+                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.',
+                link: 'fique-por-dentro/desenvolvimento-humano'
             }"></ng-container>
 
             <ng-container [ngTemplateOutlet]="StayInSideCP"  [ngTemplateOutletContext]="{
                 icone: 'assets/svg/sociedade.svg',
                 titulo: 'Sociedade',
-                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.'
+                resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit, lorem ipsumn dolor sit amet, consecutur.',
+                link: 'fique-por-dentro/sociedade'
             }"></ng-container>
         </div>
     </article>
@@ -114,12 +117,12 @@
     </div>
 </ng-template>
 
-<ng-template #StayInSideCP let-icone="icone" let-titulo="titulo" let-resumo="resumo">
+<ng-template #StayInSideCP let-icone="icone" let-titulo="titulo" let-resumo="resumo" let-link="link">
     <div class="d-flex flex-column align-items-center stayInsideComponent">
         <img [src]="icone" alt="sub section icon">
         <h5 class="text-center text-dark">{{ titulo }}</h5>
         <p class="text-center">{{ resumo }}</p>
-        <a href="" type="button" class="btn btn-light px-4 py-2">
+        <a [href]="link" type="button" class="btn btn-light px-4 py-2">
             <i class="bi bi-plus-circle"></i> Ver mais
         </a>
     </div>
