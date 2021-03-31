@@ -3,6 +3,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './shared/components/components.module';
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { ContatoFormComponent } from './shared/components/contato-form/contato-f
     BrowserModule,
     ComponentsModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

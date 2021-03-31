@@ -1,6 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import {NgbCalendar, NgbDateAdapter, NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
+import { IbgeService } from '../../services/ibge.service';
 
 @Injectable()
 export class CustomAdapter extends NgbDateAdapter<string> {
@@ -58,18 +59,25 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
 export class RegisterEventFormComponent implements OnInit {
 
   private _model: NgbDateStruct;
+  private _estados: any[] = [];
   private _ageArray = new Array(100);
   private _sexualitys: string[] = [
     'Masculino',
     'Feminino'
   ];
 
-  constructor(private ngbCalendar: NgbCalendar, private dateAdapter: NgbDateAdapter<string>) {
+  constructor(
+    private ngbCalendar: NgbCalendar,
+    private dateAdapter: NgbDateAdapter<string>,
+    private ibgeService: IbgeService
+  ) {
   
   }
 
   ngOnInit(): void {
-
+    this.ibgeService.getAllEstados().subscribe((response: any[]) => {
+      this.estados = response.map(estado => estado.sigla)
+    })
   }
 
   public get model(): NgbDateStruct {
@@ -94,5 +102,13 @@ export class RegisterEventFormComponent implements OnInit {
 
   public set sexualitys(value: string[]) {
     this._sexualitys = value;
+  }
+
+  public get estados(): any[] {
+    return this._estados;
+  }
+
+  public set estados(value: any[]) {
+    this._estados = value;
   }
 }
