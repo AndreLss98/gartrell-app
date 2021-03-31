@@ -2,49 +2,23 @@
 
 <div class="container bg-light mt-2">
   <app-sub-header [title]="title"></app-sub-header>
-  
-  <app-post-details [post]="lastPost"></app-post-details>
+  <app-post-details *ngIf="lastPost" [post]="lastPost"></app-post-details>
 </div>
 
 <div class="d-flex flex-column flex-lg-row mt-4">
   <app-side-img-container [imgUrl]="'/assets/institucional/quemSomos/Imgcard.png'"></app-side-img-container>
 
-  <div class="container-sm  ml-lg-5 mt-1 w-100 w-lg-50 d-flex flex-column justify-content-around">
-    <div>
-      <h2>Missão</h2>
-      <p>“Promover saúde, educação e cidadania por meio do desenvolvimento da pessoa em sua capacidade de ser, saber,
-        fazer e conviver.”</p>
-    </div>
-    <div>
-      <h2>Visão</h2>
-      <p>“Ser referência na sociedade em seus serviços e projetos voltados para o desenvolvimento humano.”</p>
-    </div>
-    <div>
-      <h2>Valores</h2>
-      <p>“Empatia, ética, sigilo profissional, atendimento multidisciplinar e qualificado.”</p>
-    </div>
+  <div class="container-sm ml-lg-5 mt-1 w-100 w-lg-50 d-flex flex-column justify-content-around">
+    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ut quam at nunc finibus luctus. Aliquam dapibus commodo dolor, sit amet mollis quam mattis nec. Fusce nec nunc felis. In in placerat augue. Suspendisse potenti. Sed bibendum nunc maximus maximus aliquet. Ut rutrum sapien est, sit amet varius ex iaculis at. Fusce in fringilla ipsum. Morbi sit amet sapien posuere, scelerisque velit posuere, dictum nulla. Nunc non tellus nec elit interdum luctus.</p>
+    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ut quam at nunc finibus luctus. Aliquam dapibus commodo dolor, sit amet mollis quam mattis nec. Fusce nec nunc felis. In in placerat augue. Suspendisse potenti. Sed bibendum nunc maximus maximus aliquet. Ut rutrum sapien est, sit amet varius ex iaculis at. Fusce in fringilla ipsum. Morbi sit amet sapien posuere, scelerisque velit posuere, dictum nulla. Nunc non tellus nec elit interdum luctus.</p>
+    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ut quam at nunc finibus luctus. Aliquam dapibus commodo dolor, sit amet mollis quam mattis nec. Fusce nec nunc felis. In in placerat augue. Suspendisse potenti. Sed bibendum nunc maximus maximus aliquet. Ut rutrum sapien est, sit amet varius ex iaculis at. Fusce in fringilla ipsum. Morbi sit amet sapien posuere, scelerisque velit posuere, dictum nulla. Nunc non tellus nec elit interdum luctus.</p>
+    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ut quam at nunc finibus luctus. Aliquam dapibus commodo dolor, sit amet mollis quam mattis nec. Fusce nec nunc felis. In in placerat augue. Suspendisse potenti. Sed bibendum nunc maximus maximus aliquet. Ut rutrum sapien est, sit amet varius ex iaculis at. Fusce in fringilla ipsum. Morbi sit amet sapien posuere, scelerisque velit posuere, dictum nulla. Nunc non tellus nec elit interdum luctus.</p>
   </div>
 </div>
 
-<div class="container bg-light mt-5">
+<div *ngIf="lastPost" class="container bg-light mt-5">
   <app-sub-header title="Veja mais"></app-sub-header>
   <app-post *ngFor="let post of posts" [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor"
-    [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1">
-          <i class="bi bi-chevron-left"></i>
-        </a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#">
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
+    [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="callFunction(post)"></app-post>
+  <app-paginator></app-paginator>
 </div>

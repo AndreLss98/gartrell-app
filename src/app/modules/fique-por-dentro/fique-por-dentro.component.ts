@@ -1,5 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { SaudeIntegralService } from './saude-integral.service';
 
 @Component({
   selector: 'app-fique-por-dentro',
@@ -14,46 +15,26 @@ export class FiquePorDentroComponent implements OnInit {
   private _posts: any[] = [];
   private _lastPost: any;
   
-  constructor(private activatedRoute: ActivatedRoute  ) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private saudeIntegralService: SaudeIntegralService
+  ) { }
 
   ngOnInit(): void {
     const route = this.activatedRoute.snapshot.params.item;
-    if(route === 'saude-integral'){
+    if (route === 'saude-integral') {
       this.title = "Saúde Integral";
       this.bannerImg = 'assets/banners/saude_integral_banner.jpg';
-    }else if(route === 'desenvolvimento-humano'){
+      this.posts = this.saudeIntegralService.posts;
+    }else if (route === 'desenvolvimento-humano') {
       this.title = "Desenvolvimento Humano";
       this.bannerImg = 'assets/banners/desenvolvimento_humano_banner.jpg';
-    }else{
+    }else {
       this.title = "Sociedade";
       this.bannerImg = 'assets/banners/sociedade_banner.jpg';
     }
 
-    this.posts = [
-      { 
-        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        autor: 'Karina Queiroz',
-        dataPost: new Date(2020, 1, 22),
-        banner: 'assets/home/noticias/image_placeholder.jpg'
-      },
-      { 
-        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        autor: 'Karina Queiroz',
-        dataPost: new Date(2020, 2, 22),
-        banner: 'assets/home/noticias/image_placeholder.jpg'
-      },
-      { 
-        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        autor: 'Karina Queiroz',
-        dataPost: new Date(2020, 3, 22),
-        banner: 'assets/home/noticias/image_placeholder.jpg'
-      }
-    ]
-
-    this.lastPost = this.posts.pop();
+    this.lastPost = this.posts? this.posts[0] : null;
   }
 
   public get posts(): any[] {
@@ -70,5 +51,12 @@ export class FiquePorDentroComponent implements OnInit {
 
   public set lastPost(value: any) {
     this._lastPost = value;
+  }
+
+  callFunction(post: any) {
+    return () => {
+      this.lastPost = post;
+      window.location.href = `${window.location.pathname}#PostDetail`;
+    }
   }
 }
