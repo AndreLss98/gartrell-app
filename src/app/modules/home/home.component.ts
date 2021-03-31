@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
+import { AconteceService } from '../acontece/acontece.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { ServicosService } from '../servicos/servicos.service';
 
@@ -12,7 +13,6 @@ import { ServicosService } from '../servicos/servicos.service';
 export class HomeComponent implements OnInit {
 
   private _equipe: any[] = [];
-  private _eventos: any[] = [];
   private _noticias: any[] = [];
 
   private _selectedMember: number = 0;
@@ -21,19 +21,13 @@ export class HomeComponent implements OnInit {
     private router: Router,
     public equipeService: EquipeService,
     public servicosService: ServicosService,
+    public aconteceService: AconteceService,
     public reflexoesService: ReflexoesService,
   ) { }
 
   ngOnInit(): void {
 
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.img);
-
-    this.eventos = [
-      { dia: 18, mes: 'Novemnbro', titulo: 'IV Jornada de Saúde Mental', descricao: 'Pandemia Global e Fé Crisã', banner: 'assets/home/evento/evento_banner.jpg' },
-      { dia: 25, mes: 'Dezembro', titulo: 'Nome do Evento aqui!', descricao: 'Descrição do evento aqui.', banner: 'assets/home/evento/evento_banner.jpg' },
-      { dia: 27, mes: 'Dezembro', titulo: 'Nome do Evento aqui!', descricao: 'Descrição do evento aqui.', banner: 'assets/home/evento/evento_banner.jpg' },
-      { dia: 31, mes: 'Dezembro', titulo: 'Nome do Evento aqui!', descricao: 'Descrição do evento aqui.', banner: 'assets/home/evento/evento_banner.jpg' }
-    ]
 
     this.noticias = [
       { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },
@@ -49,14 +43,6 @@ export class HomeComponent implements OnInit {
 
   public set equipe(value: any[]) {
     this._equipe = value;
-  }
-
-  public get eventos(): any[] {
-    return this._eventos;
-  }
-  
-  public set eventos(value: any[]) {
-    this._eventos = value;
   }
 
   public get noticias(): any[] {
