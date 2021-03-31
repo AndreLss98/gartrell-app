@@ -1,78 +1,162 @@
 <form>
-    <div class="row">
-        <div class="col-5">
-            <label for="fullName" class="form-label">Nome Completo *</label>
-            <input type="text" class="form-control" id="fullName" aria-describedby="fullName" required>
+    <div class="container p-5 mb-5 shadow bg-body rounded">
+
+        <div class="row my-2">
+            <div class="col-3">
+                <ng-container [ngTemplateOutlet]="formHeader"  [ngTemplateOutletContext]="{titulo: 'Dados Pessoais'}"></ng-container>
+            </div>
         </div>
-        <div class="col-1">
-            <label for="age" class="form-label">Idade *</label>
-            <select class="form-control" id="age" aria-label="age select">
-                <option *ngFor="let age of ageArray; let i = index">{{ i }}</option>
-            </select>
-        </div>
-        <div class="col-3">
-            <label for="sexo" class="form-label">Sexo *</label>
-            <select class="form-control" id="sexo" aria-label="age select">
-                <option *ngFor="let  sexuality of sexualitys">{{ sexuality }}</option>
-            </select>
-        </div>
-        <div class="col-3">
-            <label for="dataNascimento" class="form-label">Data de Nascimento *</label>
-            <div class="form-group">
-                <div class="input-group">
-                  <input
-                    id="dataNascimento"
-                    class="form-control"
-                    placeholder="dd/mm/yyyy" name="dp"
-                    [minDate]="{year: 1900, month: 1, day: 1}"
-                    [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" />
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
-                        <i class="bi bi-calendar3"></i>
-                    </button>
+        <div class="row">
+            <div class="col-5">
+                <label for="fullName" class="form-label">Nome Completo *</label>
+                <input type="text" class="form-control" id="fullName" aria-describedby="fullName" required>
+            </div>
+            <div class="col-1">
+                <label for="age" class="form-label">Idade *</label>
+                <select class="form-control" id="age" aria-label="age select">
+                    <option *ngFor="let age of ageArray; let i = index">{{ i }}</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <label for="sexo" class="form-label">Sexo *</label>
+                <select class="form-control" id="sexo" aria-label="age select">
+                    <option *ngFor="let  sexuality of sexualitys">{{ sexuality }}</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <label for="dataNascimento" class="form-label">Data de Nascimento *</label>
+                <div class="form-group">
+                    <div class="input-group">
+                      <input
+                        id="dataNascimento"
+                        class="form-control"
+                        placeholder="dd/mm/yyyy" name="dp"
+                        [minDate]="{year: 1900, month: 1, day: 1}"
+                        [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" />
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+                            <i class="bi bi-calendar3"></i>
+                        </button>
+                      </div>
+                    </div>
                   </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-2">
+                <label for="telefone" class="form-label">Telefone *</label>
+                <input type="text" class="form-control" id="telefone" aria-describedby="phoneNumber" required>
+            </div>
+            <div class="col-4">
+                <label for="email" class="form-label">E-mail *</label>
+                <input type="text" class="form-control" id="email" aria-describedby="email" required>
+            </div>
+            <div class="col-2">
+                <label for="cep" class="form-label">CEP *</label>
+                <input type="text" class="form-control" id="cep" aria-describedby="cep" required>
+            </div>
+            <div class="col-4">
+                <label for="address" class="form-label">Endereço *</label>
+                <input type="text" class="form-control" id="address" aria-describedby="fullAddress" required>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-6">
+                <label for="complement" class="form-label">Complemento</label>
+                <input type="text" class="form-control" id="complement" aria-describedby="addressComplement" required>
+            </div>
+            <div class="col-2">
+                <label for="neighborhood" class="form-label">Bairro *</label>
+                <input type="text" class="form-control" id="neighborhood" aria-describedby="neighborhood" required>
+            </div>
+            <div class="col-2">
+                <label for="city" class="form-label">Cidade *</label>
+                <input type="text" class="form-control" id="city" aria-describedby="city" required>
+            </div>
+            <div class="col-2">
+                <label for="uf" class="form-label">UF *</label>
+                <select class="form-control" id="uf" aria-label="uf select">
+                    <option *ngFor="let  uf of estados">{{ uf }}</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-4">
+                <label for="complementChurch" class="form-label">Igreja que é Membro</label>
+                <input type="text" class="form-control" id="complementChurch" aria-describedby="complementChurch" required>
+            </div>
+            <div class="col-2">
+                <label for="ufChurch" class="form-label">UF *</label>
+                <select class="form-control" id="ufChurch" aria-label="uf select">
+                    <option *ngFor="let  uf of estados">{{ uf }}</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="row my-2">
+            <div class="col-12">
+                <div id="pcdContainer" class="input-group">
+                    <div class="d-flex align-items-center border px-2 inputs-container">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Não</label>
+                        </div>
+        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Sim</label>
+                        </div>
+                    </div>
+    
+                    <span class="input-group-text w-50">
+                        <div>
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                        </div>
+                        <small class="text-wrap">Sigla que significa Pessoa com Deficiência. É utilizada para se referir às pessoas que possuem limitações permanentes.</small>
+                    </span>
                 </div>
-              </div>
+            </div>
+        </div>
+    
+        <div class="row my-2">
+            <div class="col-3">
+                <ng-container [ngTemplateOutlet]="formHeader"  [ngTemplateOutletContext]="{titulo: 'Documentação'}"></ng-container>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-2">
+                <label for="rg" class="form-label">RG *</label>
+                <input type="text" class="form-control" id="rg" aria-describedby="rg" required>
+            </div>
+            <div class="col-2">
+                <label for="orgaoExpedidor" class="form-label">Orgão Expedidor *</label>
+                <input type="text" class="form-control" id="orgaoExpedidor" aria-describedby="orgaoExpedidor" required>
+            </div>
+            <div class="col-2">
+                <label for="ufDoc" class="form-label">UF *</label>
+                <select class="form-control" id="ufDoc" aria-label="uf doc select">
+                    <option *ngFor="let  uf of estados">{{ uf }}</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <label for="cpf" class="form-label">CPF *</label>
+                <input type="text" class="form-control" id="cpf" aria-describedby="cpf" required>
+            </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-2">
-            <label for="telefone" class="form-label">Telefone *</label>
-            <input type="text" class="form-control" id="telefone" aria-describedby="phoneNumber" required>
-        </div>
-        <div class="col-4">
-            <label for="email" class="form-label">E-mail *</label>
-            <input type="text" class="form-control" id="email" aria-describedby="email" required>
-        </div>
-        <div class="col-2">
-            <label for="cep" class="form-label">CEP *</label>
-            <input type="text" class="form-control" id="cep" aria-describedby="cep" required>
-        </div>
-        <div class="col-4">
-            <label for="address" class="form-label">Endereço *</label>
-            <input type="text" class="form-control" id="address" aria-describedby="fullAddress" required>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-6">
-            <label for="complement" class="form-label">Complemento</label>
-            <input type="text" class="form-control" id="complement" aria-describedby="addressComplement" required>
-        </div>
-        <div class="col-2">
-            <label for="neighborhood" class="form-label">Bairro *</label>
-            <input type="text" class="form-control" id="neighborhood" aria-describedby="neighborhood" required>
-        </div>
-        <div class="col-3">
-            <label for="city" class="form-label">Cidade *</label>
-            <input type="text" class="form-control" id="city" aria-describedby="city" required>
-        </div>
-        <div class="col-1">
-            <label for="uf" class="form-label">UF *</label>
-            <select class="form-control" id="uf" aria-label="uf select">
-                <option *ngFor="let  uf of estados">{{ uf }}</option>
-            </select>
+        <div class="col-6 mx-auto d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-lg">CONFIRMAR INSCRIÇÃO</button>
         </div>
     </div>
 </form>
+
+<ng-template #formHeader let-titulo="titulo">
+    <h4 class="text-dark">{{ titulo }}</h4>
+    <div class="line w-100"></div>
+</ng-template>
