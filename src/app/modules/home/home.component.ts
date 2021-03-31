@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.equipe = this.equipeService.equipeInterna.filter(membro => membro.img);
+    this.equipe = this.equipeService.equipeInterna.filter(membro => membro.img && membro.interno);
 
     this.noticias = [
       { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   public nextMember() {
-    if (this.selectedMember < this.equipe.length) ++this.selectedMember;
+    if (this.selectedMember < this.equipe.length - 1) ++this.selectedMember;
   }
 
   public previousMember() {
@@ -73,7 +73,6 @@ export class HomeComponent implements OnInit {
     return () => {
       this.reflexoesService.selectedReflection = post;
       setTimeout(() => {
-        // window.location.href = `/reflexoes#PostDetail`;
         this.router.navigateByUrl('/reflexoes').then(() => {
           setTimeout(() => {
             window.location.href = `${window.location.pathname}#PostDetail`;
