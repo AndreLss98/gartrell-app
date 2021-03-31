@@ -1,6 +1,6 @@
 <app-header-banner [imgBannerUrl]="'assets/banners/reflexoes_banner.jpg'"></app-header-banner>
 
-<div class="container bg-light d-flex justify-content-center align-items-center flex-column my-2">
+<div class="container bg-light d-flex justify-content-center align-items-center flex-column my-4">
   <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
   <ng-container *ngIf="reflexoesService.selectedReflection">
     <app-post-details [post]="reflexoesService.selectedReflection"></app-post-details>
@@ -9,6 +9,6 @@
     <app-sub-header [title]="'Mais Reflexões'" class="w-100"></app-sub-header>
   </ng-container>
   <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2"
-    [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="createFunction(post)"></app-post>
+    [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="createFunction(post)" [categoria]="post.categoria"></app-post>
   <app-paginator></app-paginator>
 </div>

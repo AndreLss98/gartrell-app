@@ -78,7 +78,7 @@
         <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
         <div class="w-100">
             <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2"
-                [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="viewReflection(post)"></app-post>
+                [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="viewReflection(post)" [categoria]="post.categoria"></app-post>
         </div>
     </article>
 

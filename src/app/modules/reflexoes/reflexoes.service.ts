@@ -21,7 +21,8 @@ export class ReflexoesService {
       Felizmente, as comunidades online são povoadas por internautas saudáveis, que utilizam as mídias para comunicação, interação e entretenimento inteligente, onde a cultura entre as pessoas é vivenciada e compartilhada de forma construtiva e educativa. 
       Quando devidamente utilizados, tais espaços nos permitem vivenciar à distância experiências impossíveis de ocorrer no plano presencial. Citando um exemplo por mim vivenciado entre os dias 16 a 19 de novembro deste ano. Acompanhei aqui de Goiânia, via Facebook, o XXXIV Congresso Brasileiro de Psiquiatria – CBP, realizado no Transamérica Expo Center em São Paulo. Via web, assisti em tempo real, o que os congressistas assistiram no modo presencial. 
       Nossas comunidades online serão infinitamente melhores, mais interessantes e mais saudáveis, à medida que cada um de nós, aprendermos a submeter todas as nossas postagens gerais e pessoais a uma qualificada análise. Assim evitaremos excessos e exposições, algo quem esvaziando significativamente o valor das nossas praças públicas virtuais.    
-      Encorajo a mim e a você ao zeloso cuidado de praticarmos a Etiqueta Social no Universo Virtual. Nosso mundo será melhor e nossas comunidades online serão de fato uma praça pública que vale a pena frequentar. Ser e fazer diferença nas Redes Sociais, vale a pena e deve começar comigo e com você. Que eu e você, jamais nos incorramos neste grave erro de midiatizar a nossa vida pessoal.`
+      Encorajo a mim e a você ao zeloso cuidado de praticarmos a Etiqueta Social no Universo Virtual. Nosso mundo será melhor e nossas comunidades online serão de fato uma praça pública que vale a pena frequentar. Ser e fazer diferença nas Redes Sociais, vale a pena e deve começar comigo e com você. Que eu e você, jamais nos incorramos neste grave erro de midiatizar a nossa vida pessoal.`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'Fortaleça as Suas Resoluções',
@@ -35,7 +36,8 @@ export class ReflexoesService {
       Para isso separam tempo diário, semanal, mensal, semestral e anual para auto análise, avaliação pessoal de como foi sua trajetória até o momento e como deve seguir para que se assegure seu bem estar geral, qualidade de vida e que seja exitoso (a)  em tudo o que se propôs. 
       O maior desafio deste momento de pandemia, é fortalecer nas nossas resoluções, para que não nos deixemos abalar pelos grandes desafios seja pelo abalo que nosso país vivencia pelas crises citadas, seja pela consternação que nos acomete pelo crescente número de infectados e ceifados pela COVID-19 e por outras condições de saúde.
       A mais segura maneira de fortalecer nossas resoluções, decisões, projetos, ações e mantermos o nosso foco naquilo que é de fato essencial e precioso para nós, evitando distrações, fugas, esquivas, procrastinação. Este período que atravessamos requer que sejamos maiores que o nosso próprio cansaço, abatimento, medo, insegurança, incerteza, desencanto. 
-      Reconhecemos e admitimos que não nos é possível manter sempre e continuamente destacáveis no exercício prático de tais virtudes. Mas, entendemos que jamais devemos desistir de lutar, jamais. Portanto, deixo o desafio a você: FORTALEÇA AS SUAS RESOLUÇÕES E SEPARE TEMPO PARA RENOVAR SUAS FORÇAS E CONVICÇÕES PESSOAIS. Para a pessoa que teme a Deus, o encorajamento é, valorize e cultive as disciplinas espirituais. Elas são toda a diferença neste  momento.`
+      Reconhecemos e admitimos que não nos é possível manter sempre e continuamente destacáveis no exercício prático de tais virtudes. Mas, entendemos que jamais devemos desistir de lutar, jamais. Portanto, deixo o desafio a você: FORTALEÇA AS SUAS RESOLUÇÕES E SEPARE TEMPO PARA RENOVAR SUAS FORÇAS E CONVICÇÕES PESSOAIS. Para a pessoa que teme a Deus, o encorajamento é, valorize e cultive as disciplinas espirituais. Elas são toda a diferença neste  momento.`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'Fortaleça as Suas Resoluções (I/III)',
@@ -48,7 +50,8 @@ export class ReflexoesService {
       Todos nós sabemos que um excelente Projeto e Planejamento pessoal, busca considerar uma série de marcadores, variáveis em amplos aspectos, para que possa de fato tornar-se uma proposta realizável e tangencial. Também sabemos que por mais cuidadosos que sejamos, sempre haverá variáveis que fogem do nosso domínio. E, o que podemos fazer é nos preparar no sentido de saber lidar com o improvável, inevitável, etc.
       A pandemia global, ocasionada pela COVID-19, é um exemplo de que por mais preparado que estejamos, é possível sermos surpreendido com algo inimaginável, surreal. Todavia, quando nos propomos a ser, viver, agir de forma afirmativa, propositiva, confiante, humilde, resiliente, com simplicidade de coração, flexibilidade de pensamento, abertura para a vida, para mudanças e adaptações, situações adversas como a que estamos enfrentando, tem impacto mais reduzido em nosso emocional e são mais rapidamente elaboradas e encaradas. 
       Pense nas resoluções que você firmou em sua mente e coração, tanto as antigas, de passagem de ano e início do isolamento social. Como está seu compromisso em relação à realização de cada uma delas? Está satisfeito com o que tem feito? O que o (a) tem impedido de avançar?
-      Encorajamento: Se por algum motivo, está se distanciando de seus sonhos, projetos e realizações, separe um tempo ainda hoje e retome de onde parou. Jamais desista daquilo que você deseja alcançar e não permita ser neutralizado pelas circunstâncias.`
+      Encorajamento: Se por algum motivo, está se distanciando de seus sonhos, projetos e realizações, separe um tempo ainda hoje e retome de onde parou. Jamais desista daquilo que você deseja alcançar e não permita ser neutralizado pelas circunstâncias.`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'G-Além da medicina',
@@ -61,7 +64,8 @@ export class ReflexoesService {
         A cirurgia transcorreu bem, e a paciente parecia recuperar-se rapidamente.  Mas, a partir do terceiro dia, ao cair da tarde, começou a ter uma grande sonolência, entrando num estado comatoso, que durava até a manhã seguinte. Não se comunicava mais com ninguém.  O período do coma foi se ampliando dia a dia, até que ela parecia que não conseguiria mais voltar à consciência. Psiquiatras, psicólogos, médicos de diversas outras especialidades foram chamados, mas sem qualquer resultado: D. Maria não reagia a nada!
         Eu a visitava diariamente, orando e lendo um pequeno texto bíblico de esperança ao seu ouvido, mas naquela manhã foi diferente.  Ela ouvira a mensagem que eu lhe trouxera sobre o Deus que sabia da sua dor, e que lhe permitia chorar e questionar, aconchegando-se em Seu colo. Então, de repente, uma lágrima escorreu por sua face. Aos poucos, D. Maria abriu os olhos e logo começou a balbuciar, perguntando-me se Ele podia ouvir o seu choro e curar a sua alma ferida.  Eu disse que sim, e lhe contei como ela poderia ter um relacionamento com Deus, através da pessoa de Cristo, e ela decidiu convidá-Lo para assumir o controle da sua vida, pudesse ou não realizar seu maior sonho, que era ir ao casamento da filha.
         Lembro-me do último dia da D. Maria no hospital, toda animada saindo ao lado da filha querida, que conversava com ela sobre a roupa que vestiria em seu casamento. Lançou-me um olhar agradecido, antes de deixar a enfermaria. Que alegria ver que a sua alma havia sido curada, e por isso ela poderia enfrentar o que viesse à frente, com a certeza de que o Senhor caminhava com ela!
-        “Bem-aventurado o homem cuja força está em Ti, em cujo coração estão os caminhos aplanados. Quando passa pelo vale árido, faz dele um manancial; de bênçãos o cobre a primeira chuva... Porque o Senhor Deus é sol e escudo; o Senhor dá graça e glória; não recusa nenhum bem aos que andam retamente. Ó Senhor dos Exércitos, feliz é aquele que em Ti confia.” Sl. 84:5,6,11,12`
+        “Bem-aventurado o homem cuja força está em Ti, em cujo coração estão os caminhos aplanados. Quando passa pelo vale árido, faz dele um manancial; de bênçãos o cobre a primeira chuva... Porque o Senhor Deus é sol e escudo; o Senhor dá graça e glória; não recusa nenhum bem aos que andam retamente. Ó Senhor dos Exércitos, feliz é aquele que em Ti confia.” Sl. 84:5,6,11,12`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'Quando você deve procurar ajuda especializada em saúde mental?',
@@ -78,7 +82,8 @@ export class ReflexoesService {
       Psicologia: Especialidade da saúde mental, voltada para a investigação e compreensão de todos os processos mentais relativos ao funcionamento psíquico e neuropsíquico do ser humano, bem como os processos socioculturais, fisiológicos e biológicos que os acompanham.   
       O psicólogo tem a tarefa de investigar as causas subjacentes que envolvem ou estão na base dos problemas, dificuldades ou adoecimento das pessoas.  Também, busca valorizar, estimular e ampliar todo o potencial humano do paciente ou cliente.  
       SE PRECISAR DE AJUDA, PROCURE UMA DESTAS ESPECIALIDADES!
-      ESTA É UMA SÁBIA DECISÃO, UMA ACERTADA ESCOLHA.`
+      ESTA É UMA SÁBIA DECISÃO, UMA ACERTADA ESCOLHA.`,
+      categoria: 'Nome da Categoria'
     }
   ];
 

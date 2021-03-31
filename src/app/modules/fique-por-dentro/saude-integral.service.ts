@@ -19,7 +19,8 @@ export class SaudeIntegralService {
       Afirmar que a tristeza que a pessoa está manifestando é um sentimento normal e não uma depressão ou que as dificuldades escolares são fruto de dislexia e não preguiça pode permitir uma significativa mudança de curso na vida da pessoa; se a vida humana é preciosa, não devemos tratar com desdém a perícia necessária que evitará um futuro mais sombrio.
       Estranha-me que psiquiatras sejam acusados de “rotular” toda vez que emitem um diagnóstico como, por exemplo, “episódio depressivo único, grau leve, segundo os critérios do DSM – V” e prescrevam “psicoterapia breve ou aconselhamento... medicamentos não seriam necessários”.
       Diagnosticar não é rotular. Diagnosticar é resultado de conhecimento, discernimento e sabedoria acumuladas; permite tratar e cuidar em tempo. Rotular expressa ignorância, visão obtusa e carrega consigo preconceitos.
-      Numa época em que as pessoas se diagnosticam e escolhem seu melhor tratamento via internet, a velha sabedoria acumulada é desprezada. Rotular expressa a superficialidade apressada de nossa época. O diagnosticador é o leigo; o perito virou o rotulador! Isto me espanta! Não estou entendendo nada!`
+      Numa época em que as pessoas se diagnosticam e escolhem seu melhor tratamento via internet, a velha sabedoria acumulada é desprezada. Rotular expressa a superficialidade apressada de nossa época. O diagnosticador é o leigo; o perito virou o rotulador! Isto me espanta! Não estou entendendo nada!`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'Psicologia Cognitiva',
@@ -33,7 +34,8 @@ export class SaudeIntegralService {
       O recadinho simples da chamada Lei de Miller era o seguinte: nossa capacidade de reter informações é limitada e nos impõe limites. 
       É oportuno lembrar-nos desta descoberta nesta época de super-heróis em que vivemos. Muitos estudantes de ensino médio, concurseiros, aspirantes a uma concorrida vaga numa grande empresa sonham alcançar as habilidades extraordinárias de um Sherlock Holmes ou de um Jason Bourne. Sistemas de ensino ou empresas querem um sr. Holmes ou Bourne em seus quadros; ou a Mídia e métodos inovadores de aprendizado fazem-nos acreditar nisso... mas, caiamos na real: as capacidades humanas de trabalho intelectual estão muito aquém das habilidades destes personagens de ficção. Eles nunca existiram (ainda que biografias fantasiosas encham as prateleiras de livros).
       Nossa inteligência é maravilhosamente feita, mas não consegue ser mais extraordinária ou dotada do que originalmente é. Usamos 100% do nosso cérebro e não 10%!!! 
-      Nossa sociedade seria menos doente emocionalmente e menos frustrada se aceitasse os seus limites.`
+      Nossa sociedade seria menos doente emocionalmente e menos frustrada se aceitasse os seus limites.`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'Quando as Expectativas Fazem Adoecer',
@@ -46,7 +48,8 @@ export class SaudeIntegralService {
       A pessoa “estressada” vai ao médico querendo saber se sua insônia, dores de cabeça, mal humor frequente, cansaço e dificuldades de memória tem a ver com o excesso de trabalho ou multitarefas domésticas e sociais. Ela pode ouvir do médico a confirmação (após, espera-se, de cuidadosa avaliação profissional) desse prediagnostico que ela mesma formulou: “não tem nada de errado com você, você só está estressada, precisa de descansar”. Muitas vezes, infelizmente, esta recomendação sábia somente será mais um item de sua longa lista de problemas a resolver; talvez para o ano que vem.
       O primeiro parágrafo deste texto tem um erro fundamental. O culpado para este estado das coisas não é este ente abstrato, onipresente em inúmeros textos semelhantes a este, chamado “sociedade contemporânea do século XXI”. O culpado por eu estar estressado sou eu mesmo. Fui eu mesmo que elaborei minha enorme lista de tarefas e compromissos. Sim, é verdade, que esta lista já era suficientemente grande quando eu alcancei a idade da razão, mas naquela época eu era suficientemente jovem para decidir cortar itens.
       Outra expressão popular em posts de saúde -  “qualidade de vida” – também parece abstrato demais (apesar de proferido de maneira pomposa). Talvez ele já me traga uma lista grande de coisas para aprender e fazer. Ela me cria expectativas, e estas expectativas me enredarão em compromissos e “sonhos” que cobrarão um alto preço. O preço alto é minha vida. Não dá para dividir no cartão de crédito.
-      Certa vez ouvia uma conhecida ativista liberiana e minha memória guardou esta seguinte frase: “nós [africanos] não precisamos de estradas, prédios, crescimento e desenvolvimento econômico... essas coisas para viver; nós estamos a milhares de anos aqui; nós vivemos e fomos felizes por milhares de anos sem essas coisas. Quem nos disse que precisamos dessas coisas para viver e sermos felizes?”`
+      Certa vez ouvia uma conhecida ativista liberiana e minha memória guardou esta seguinte frase: “nós [africanos] não precisamos de estradas, prédios, crescimento e desenvolvimento econômico... essas coisas para viver; nós estamos a milhares de anos aqui; nós vivemos e fomos felizes por milhares de anos sem essas coisas. Quem nos disse que precisamos dessas coisas para viver e sermos felizes?”`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'Transtorno do Pânico',
@@ -57,7 +60,8 @@ export class SaudeIntegralService {
       text: `Segundo o texto do DSM-V (classificação americana dos transtornos psiquiátricos) o agora famoso “transtorno do pânico” é caracterizado por ataques de pânico (ansiedade súbita e intensa) inesperados e recorrentes. Um ataque de pânico é o aparecimento súbito de medo ou desconforto intenso que atinge um pico em poucos minutos e durante o qual pelo menos quatro de uma lista de treze sintomas ocorrem (entre eles palpitações, sensação de coração acelerado, sudorese, tremores, sensação de mal-estar cardíaco ou abdominal, medo de morrer, entre eles). Essas crises podem vir do nada e duram em média vinte minutos. O ataque, como chegou, vai embora deixando como únicas consequências uma preocupação da pessoa em tê-los novamente o que fará recorrer a várias consultas e exames médicos em busca de alguma explicação e o evitamento de lugares ou situações onde ele ocorreu (por exemplo, um lugar público).
       Interessantemente, a prevalência deste transtorno varia bastante entre as populações estudadas. Enquanto ele pode atingir de 2-3% dos povos norte-americanos e europeus, suas estimativas descem para 0,1 para 0,8% em povos asiáticos, africanos e latino-americanos. No Brasil a prevalência estaria em torno de 1,6% da população. Esta diferença aponta para importantes fatores sócio culturais afetando o aparecimento deste problema emocional. 
       Quase não se falava de transtorno do pânico entre os profissionais de saúde mental antes do início dos anos 90, ainda que se constasse nos livros com outros nomes (“neurose de angústia”, “síndrome de da Costa”, etc.), quando a classificação americana de psiquiatria (DSM – III) chegou no Brasil. Talvez por que não fosse reconhecido. De qualquer forma, hoje em dia, é um dos problemas mais comuns que chegam nos consultórios psiquiátricos.
-      Tem tratamento, sim! A maioria dos pacientes melhoram com medicamentos e psicoterapia após alguns meses de acompanhamento. A queixa dos que melhoram é (nas palavras de um paciente): “o danado é que esse troço custoso sempre pode voltar!”.`
+      Tem tratamento, sim! A maioria dos pacientes melhoram com medicamentos e psicoterapia após alguns meses de acompanhamento. A queixa dos que melhoram é (nas palavras de um paciente): “o danado é que esse troço custoso sempre pode voltar!”.`,
+      categoria: 'Nome da Categoria'
     }
   ];
 
