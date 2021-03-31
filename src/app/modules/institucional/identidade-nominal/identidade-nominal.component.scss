@@ -3,9 +3,16 @@ img {
     margin: 0 15px 0 0;
 }
 
+@media (max-width: 1000px) {
+    img {
+        width: 483px;
+        height: 270px;
+    }
+}
+
 @media (max-width: 550px) {
     img {
-        width: 250px;
-        height: 175px;
+        width: 100%;
+        height: auto;
     }
 }
