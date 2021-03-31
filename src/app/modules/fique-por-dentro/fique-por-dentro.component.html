@@ -2,8 +2,8 @@
 
 <div class="container bg-light mt-2">
   <app-sub-header [title]="title"></app-sub-header>
-  <app-post [titulo]="lastPost.titulo" [resumo]="lastPost.resumo" [autor]="lastPost.autor"
-    [dataPost]="lastPost.dataPost" [banner]="lastPost.banner"></app-post>
+  
+  <app-post-details [post]="lastPost"></app-post-details>
 </div>
 
 <div class="d-flex flex-column flex-lg-row mt-4">
