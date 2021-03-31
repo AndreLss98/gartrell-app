@@ -7,3 +7,19 @@
         font-size: 1.4rem;
     }
 }
+
+@media (max-width: 768px) {
+    #pcdContainer {
+        display: flex;
+            flex-direction: column;
+        .inputs-container {
+            width: 100% !important;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+
+        .input-group-text {
+            width: 100% !important;
+        }
+    }
+}
