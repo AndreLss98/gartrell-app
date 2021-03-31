@@ -8,6 +8,7 @@ export class AconteceService {
 
   private _eventos: any[] = [
     {
+      id: 1,
       dia: 18,
       mes: 'Novemnbro',
       titulo: 'IV Jornada de Saúde Mental',
@@ -28,6 +29,7 @@ export class AconteceService {
       ]
     },
     {
+      id: 2,
       dia: 25,
       mes: 'Dezembro',
       titulo: 'Nome do Evento aqui!',
@@ -48,6 +50,7 @@ export class AconteceService {
       ]
     },
     {
+      id: 3,
       dia: 27,
       mes: 'Dezembro',
       titulo: 'Nome do Evento aqui!',
@@ -68,6 +71,7 @@ export class AconteceService {
       ]
     },
     {
+      id: 4,
       dia: 31,
       mes: 'Dezembro',
       titulo: 'Nome do Evento aqui!',
@@ -95,6 +99,10 @@ export class AconteceService {
 
   public getEventos() {
     return of(this.eventos);
+  }
+
+  public getEventoById(id: number) {
+    return of(this.eventos.find(evento => evento.id === id));
   }
 
   public get eventos(): any[] {

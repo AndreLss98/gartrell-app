@@ -16,9 +16,9 @@
                 </div>
             </div>
     
-            <button class="btn btn-light btn-lg">
+            <a [href]="'acontece/details/' + evento.id" class="btn btn-light btn-lg">
                 <i class="bi bi-plus-circle"></i> Ver mais
-            </button>
+            </a>
         </div>
     </div>
 </ng-template>
@@ -38,9 +38,9 @@
                 </div>
             </div>
     
-            <button class="btn btn-light btn-lg">
+            <a [href]="'acontece/details/' + evento.id" class="btn btn-light btn-lg">
                 <i class="bi bi-plus-circle"></i> Ver mais
-            </button>
+            </a>
         </div>
     
         <div class="eventBanner" [ngStyle]="{backgroundImage: 'url(' + evento.banner + ')' }"></div>
