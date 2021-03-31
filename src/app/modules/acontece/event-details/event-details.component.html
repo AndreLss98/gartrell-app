@@ -1,1 +1,29 @@
-<p>event-details works!</p>
+<app-header-banner [imgBannerUrl]="evento.banner"></app-header-banner>
+<div class="container">
+    <app-sub-header [title]="evento.titulo" class="w-100"></app-sub-header>
+    <p class="text-justify">{{ evento.descricao }}</p>
+    <ng-container *ngIf="evento.palestrantes.length">
+        <app-sub-header title="Palestrantes" class="w-100"></app-sub-header>
+        <ng-container *ngFor="let palestrante of evento.palestrantes" [ngTemplateOutlet]="Palestrante" [ngTemplateOutletContext]="{
+            palestrante: palestrante
+        }"></ng-container>
+    </ng-container>
+    <app-paginator></app-paginator>
+</div>
+
+<ng-template #Palestrante let-palestrante="palestrante">
+    <div class="palestrante-container">
+        <app-self-image [url]="palestrante.self"></app-self-image>
+        <div>
+            <h2 class="text-dark">{{ palestrante.nome }}</h2>
+            <h6 class="text-secondary">{{ palestrante.cargo }}</h6>
+            <p>{{ palestrante.bio }}</p>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center data-container">
+            <div>
+                <h2 class="text-dark mb-n4">DATA:</h2>
+                <h2 class="text-secondary m-0">{{ palestrante.dataPalestra | date: 'dd'}}.{{ palestrante.dataPalestra | date: 'MM' }}</h2>
+            </div>
+        </div>
+    </div>
+</ng-template>

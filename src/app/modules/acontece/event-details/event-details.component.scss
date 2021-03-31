@@ -1,0 +1,16 @@
+.palestrante-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-column-gap: .5rem;
+}
+
+.data-container {
+    h2 {
+        font-weight: bolder;
+    }
+
+    h2.text-secondary {
+        font-size: 4.5rem;
+        color: #00acec45 !important;
+    }
+}

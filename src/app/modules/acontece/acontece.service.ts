@@ -22,6 +22,7 @@ export class AconteceService {
       palestrantes: [
         {
           nome: 'Nome Sobrenome Aqui',
+          self: 'assets/home/equipe/eliane_dias_da_paixao.jpg',
           cargo: 'Psicóloga',
           bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique tincidunt odio, id tempus libero euismod eu. Suspendisse at efficitur neque. Etiam dignissim ultrices lacus, quis tristique orci tincidunt eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pellentesque odio sed leo laoreet vehicula vel a nunc. Morbi id gravida erat, at sagittis felis. Proin id tincidunt ipsum, non aliquam nibh.',
           dataPalestra: new Date()
@@ -43,6 +44,7 @@ export class AconteceService {
       palestrantes: [
         {
           nome: 'Nome Sobrenome Aqui',
+          self: 'assets/home/equipe/eliane_dias_da_paixao.jpg',
           cargo: 'Psicóloga',
           bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique tincidunt odio, id tempus libero euismod eu. Suspendisse at efficitur neque. Etiam dignissim ultrices lacus, quis tristique orci tincidunt eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pellentesque odio sed leo laoreet vehicula vel a nunc. Morbi id gravida erat, at sagittis felis. Proin id tincidunt ipsum, non aliquam nibh.',
           dataPalestra: new Date()
@@ -64,6 +66,7 @@ export class AconteceService {
       palestrantes: [
         {
           nome: 'Nome Sobrenome Aqui',
+          self: 'assets/home/equipe/eliane_dias_da_paixao.jpg',
           cargo: 'Psicóloga',
           bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique tincidunt odio, id tempus libero euismod eu. Suspendisse at efficitur neque. Etiam dignissim ultrices lacus, quis tristique orci tincidunt eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pellentesque odio sed leo laoreet vehicula vel a nunc. Morbi id gravida erat, at sagittis felis. Proin id tincidunt ipsum, non aliquam nibh.',
           dataPalestra: new Date()
@@ -85,6 +88,7 @@ export class AconteceService {
       palestrantes: [
         {
           nome: 'Nome Sobrenome Aqui',
+          self: 'assets/home/equipe/eliane_dias_da_paixao.jpg',
           cargo: 'Psicóloga',
           bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique tincidunt odio, id tempus libero euismod eu. Suspendisse at efficitur neque. Etiam dignissim ultrices lacus, quis tristique orci tincidunt eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pellentesque odio sed leo laoreet vehicula vel a nunc. Morbi id gravida erat, at sagittis felis. Proin id tincidunt ipsum, non aliquam nibh.',
           dataPalestra: new Date()
