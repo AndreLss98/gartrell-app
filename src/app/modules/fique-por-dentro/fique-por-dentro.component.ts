@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { SaudeIntegralService } from './saude-integral.service';
+import { DesenvolvimentoHumanoService } from './desenvolvimento-humano.service';
 
 @Component({
   selector: 'app-fique-por-dentro',
@@ -17,7 +18,8 @@ export class FiquePorDentroComponent implements OnInit {
   
   constructor(
     private activatedRoute: ActivatedRoute,
-    private saudeIntegralService: SaudeIntegralService
+    private saudeIntegralService: SaudeIntegralService,
+    private desenvolvimentoHumanoService: DesenvolvimentoHumanoService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +31,7 @@ export class FiquePorDentroComponent implements OnInit {
     }else if (route === 'desenvolvimento-humano') {
       this.title = "Desenvolvimento Humano";
       this.bannerImg = 'assets/banners/desenvolvimento_humano_banner.jpg';
+      this.posts = this.desenvolvimentoHumanoService.posts;
     }else {
       this.title = "Sociedade";
       this.bannerImg = 'assets/banners/sociedade_banner.jpg';
