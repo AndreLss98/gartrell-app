@@ -27,6 +27,16 @@ export class NavBarComponent implements OnInit {
           { name: "Links úteis", link: this.goToLinksUteis(), subMenus: [] }
         ]
       },
+      { name: "ACONTECE", link: "acontece", subMenus: [] },
+      { name: "NOTÍCIAS", link: "noticias", subMenus: [] },
+      { name: "REFLEXÕES", link: "reflexoes", subMenus: [] },
+      {
+        name: "FIQUE POR DENTRO", link: "", subMenus: [
+          { name: "Saúde Integral", link: "fique-por-dentro/saude-integral", subMenus: [] },
+          { name: "Desenvolvimento humano", link: "fique-por-dentro/desenvolvimento-humano", subMenus: [] },
+          { name: "Sociedade", link: "fique-por-dentro/sociedade", subMenus: [] }
+        ]
+      },
       {
         name: "SERVIÇOS", link: "", subMenus: [
           { name: "Psiquiatria", link: "servicos/1", subMenus: [] },
@@ -36,16 +46,6 @@ export class NavBarComponent implements OnInit {
           { name: "Capacitações", link: "servicos/5", subMenus: [] },
           { name: "Consultoria", link: "servicos/6", subMenus: [] },
           { name: "Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos", link: "servicos/7", subMenus: [] }
-        ]
-      },
-      { name: "ACONTECE", link: "acontece", subMenus: [] },
-      { name: "NOTÍCIAS", link: "noticias", subMenus: [] },
-      { name: "REFLEXÕES", link: "reflexoes", subMenus: [] },
-      {
-        name: "FIQUE POR DENTRO", link: "", subMenus: [
-          { name: "Saúde Integral", link: "fique-por-dentro/saude-integral", subMenus: [] },
-          { name: "Desenvolvimento humano", link: "fique-por-dentro/desenvolvimento-humano", subMenus: [] },
-          { name: "Sociedade", link: "fique-por-dentro/sociedade", subMenus: [] }
         ]
       },
       { name: "CONTATO", link: this.goToContactForm(), subMenus: [] }
