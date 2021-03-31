@@ -19,6 +19,6 @@
 <div *ngIf="lastPost" class="container bg-light mt-5">
   <app-sub-header title="Veja mais"></app-sub-header>
   <app-post *ngFor="let post of posts" [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor"
-    [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="callFunction(post)"></app-post>
+    [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="callFunction(post)" [categoria]="post.categoria"></app-post>
   <app-paginator></app-paginator>
 </div>

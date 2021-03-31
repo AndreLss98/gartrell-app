@@ -14,7 +14,8 @@ export class DesenvolvimentoHumanoService {
       dataPost: new Date(),
       banner: 'assets/home/noticias/image_placeholder.jpg',
       text: `Empreender é uma arte, ouvimos por aí. Empreender é fazer acontecer, é arriscar, lemos por aí. Empreender é um desafio diário, também ouvimos e lemos por aí. Todos estes conceitos e insights referentes ao empreendedorismo são válidos e devem ser incorporados à realidade daqueles que os transmitem com propriedade e, completando todos esses conceitos, de forma bem séria e de fundamental importância, empreender é gerenciar. 
-      Gerenciar é saber lidar com pessoas e suas expectativas, processos e seus fluxos, entregas e suas particularidades. Tudo isso com qualidade, contemplando o que é o certo, do jeito certo, no tempo certo, o conhecido overdelivery, ou seja, a arte de entregar mais, buscando sempre agregar valor. Gerenciar é agregar valor.`
+      Gerenciar é saber lidar com pessoas e suas expectativas, processos e seus fluxos, entregas e suas particularidades. Tudo isso com qualidade, contemplando o que é o certo, do jeito certo, no tempo certo, o conhecido overdelivery, ou seja, a arte de entregar mais, buscando sempre agregar valor. Gerenciar é agregar valor.`,
+      categoria: 'Nome da Categoria'
     },
     {
       titulo: 'O diabo não veste pravda (do russo Пра́вда, verdade) ',
@@ -37,7 +38,8 @@ export class DesenvolvimentoHumanoService {
       Venham a mim, vocês que estão cansados e sobrecarregados, e eu lhes darei alívio.
       Sejam meus seguidores e aprendam comigo, e vocês encontrarão descanso.”
       
-      (parafraseando Jesus de Nazaré, citações dos evangelistas João, caps. 8 e 10, e Mateus cap. 11).`
+      (parafraseando Jesus de Nazaré, citações dos evangelistas João, caps. 8 e 10, e Mateus cap. 11).`,
+      categoria: 'Nome da Categoria'
     }
   ]
 

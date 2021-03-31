@@ -25,6 +25,9 @@ export class PostComponent implements OnInit {
   @Input()
   public callFunction: any;
 
+  @Input()
+  public categoria: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
