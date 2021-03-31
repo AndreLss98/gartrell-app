@@ -14,3 +14,10 @@
         color: #00acec45 !important;
     }
 }
+
+@media(max-width: 991px) {
+    .palestrante-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
