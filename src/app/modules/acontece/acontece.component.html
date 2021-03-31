@@ -3,7 +3,7 @@
 <section class="container mt-4 pb-2 bg-light">
   <app-sub-header [title]="'Acontece'"></app-sub-header>
   <div class="px-5">
-    <app-evento class="my-4" *ngFor="let event of acontecimentos; let i = index" [evento]="event"></app-evento>
+    <app-evento class="my-4" *ngFor="let event of aconteceService.eventos; let i = index" [evento]="event"></app-evento>
   </div>
    <app-paginator></app-paginator>
 </section>

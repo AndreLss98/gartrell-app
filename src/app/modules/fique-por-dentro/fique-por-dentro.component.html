@@ -1,51 +1,50 @@
 <app-header-banner [imgBannerUrl]="bannerImg"></app-header-banner>
 
-<div class="container bg-light mt-2" >
-    <app-sub-header [title]="title"></app-sub-header>
-    <app-post [titulo]="lastPost.titulo" [resumo]="lastPost.resumo" [autor]="lastPost.autor" [dataPost]="lastPost.dataPost" [banner]="lastPost.banner"></app-post>
+<div class="container bg-light mt-2">
+  <app-sub-header [title]="title"></app-sub-header>
+  <app-post [titulo]="lastPost.titulo" [resumo]="lastPost.resumo" [autor]="lastPost.autor"
+    [dataPost]="lastPost.dataPost" [banner]="lastPost.banner"></app-post>
 </div>
-<div>
-    <div class="caixaAzul d-flex align-items-center">
-        <div class="contentInfo">
-            <div class="row" style="height: 100%;">
-                <div class="col-lg-4">
-                    <div class="boxImage">
-                        <img src="assets/home/banner.jpg" width="100%" height="100%">
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration in some form, by injected humour, or randomised words which don't look even slightly
-                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
-                        anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the
-                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
-                        the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
-                        sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum
-                        is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                </div>
-            </div>
-        </div>
+
+<div class="d-flex flex-column flex-lg-row mt-4">
+  <app-side-img-container [imgUrl]="'/assets/institucional/quemSomos/Imgcard.png'"></app-side-img-container>
+
+  <div class="container-sm  ml-lg-5 mt-1 w-100 w-lg-50 d-flex flex-column justify-content-around">
+    <div>
+      <h2>Missão</h2>
+      <p>“Promover saúde, educação e cidadania por meio do desenvolvimento da pessoa em sua capacidade de ser, saber,
+        fazer e conviver.”</p>
     </div>
+    <div>
+      <h2>Visão</h2>
+      <p>“Ser referência na sociedade em seus serviços e projetos voltados para o desenvolvimento humano.”</p>
+    </div>
+    <div>
+      <h2>Valores</h2>
+      <p>“Empatia, ética, sigilo profissional, atendimento multidisciplinar e qualificado.”</p>
+    </div>
+  </div>
 </div>
-<div class="container bg-light" style="height: 50px;"></div>
+
 <div class="container bg-light mt-5">
-    <app-sub-header title="Veja mais"></app-sub-header>
-    <app-post *ngFor="let post of posts" [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">
-              <i class="bi bi-chevron-left"></i>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              <i class="bi bi-chevron-right"></i>
-            </a>
-          </li>
-        </ul>
-      </nav> 
+  <app-sub-header title="Veja mais"></app-sub-header>
+  <app-post *ngFor="let post of posts" [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor"
+    [dataPost]="post.dataPost" [banner]="post.banner"></app-post>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">
+          <i class="bi bi-chevron-left"></i>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
