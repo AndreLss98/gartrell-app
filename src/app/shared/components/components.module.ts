@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { PostComponent } from './post/post.component';
 import { EventoComponent } from './evento/evento.component';
@@ -13,6 +16,7 @@ import { HeaderBannerComponent } from './header-banner/header-banner.component';
 import { SocialMediaContainerComponent } from './social-media-container/social-media-container.component';
 import { SideImgContainerComponent } from './side-img-container/side-img-container.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { RegisterEventFormComponent } from './register-event-form/register-event-form.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +31,13 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     HeaderBannerComponent,
     ServicoCircleComponent,
     SideImgContainerComponent,
+    RegisterEventFormComponent,
     SocialMediaContainerComponent,
   ],
   imports: [
-    CommonModule
+    FormsModule,
+    CommonModule,
+    NgbDatepickerModule
   ],
   exports: [
     PostComponent,
@@ -44,6 +51,7 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     HeaderBannerComponent,
     ServicoCircleComponent,
     SideImgContainerComponent,
+    RegisterEventFormComponent,
     SocialMediaContainerComponent,
   ]
 })
