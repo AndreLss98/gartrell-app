@@ -30,6 +30,14 @@ export class EquipeService {
       sexo: 'f'
     },
     {
+      name: "Ivy Stela Castro e Oliveira Silva",
+      cargo: "Teóloga",
+      cod: '',
+      bio: null,
+      img: null,
+      sexo: 'f'
+    },
+    {
       name: "Guilherme Falcão",
       cargo: "Psicólogo",
       cod: 'CRP - 08/04130',
@@ -75,6 +83,14 @@ export class EquipeService {
       sexo: 'f'
     },
     {
+      name: "Miguel Rios",
+      cargo: "Médico Psiquiatra (FHDF-UNB)",
+      cod: 'CRM - GO/7415',
+      bio: `Especialização em psicologia (UNB) e Dependência Química(UNIFESP); Atualmente, atende na Clínica Jardim América, em Goiânia-GO`,
+      img: 'dr_miguel.jpeg',
+      sexo: 'm'
+    },
+    {
       name: "Maria das Graças Brasil",
       cargo: null,
       cod: 'CRM-GO 1387',
@@ -111,9 +127,12 @@ export class EquipeService {
     {
       name: "Pedro Américo",
       cargo: "Advogado",
-      cod: null,
-      bio: null,
-      img: null,
+      cod: 'OAB/GO n° 49.613',
+      bio: `Advogado, pós-graduado em Direito Processual Civil pela Universidade Federal de Goiás e pós-graduando em Direito Público Aplicado pela Escola Brasileira de Direito; http://lattes.cnpq.br/3281923311903683; Atendimento: online e presencial: 
+     Endereço de e-mail: pedroamerico.adv@gmail.co
+     Endereço de redes sociais (instagram): @pedroamericoms
+     Cidade: Goiânia - GO`,
+      img: 'pedro_americo.jpeg',
       sexo: 'm'
     },
     {
@@ -144,9 +163,46 @@ export class EquipeService {
       name: "Raúl Vitor",
       cargo: "Historiador",
       cod: null,
+      bio: `(Prof. de História do Instituto Federal de Goiás)
+      Doutor em Política, Instituições e Relações de Poder pela UnB
+      Membro da ABC2 – Associação Brasileira de Cristãos na Ciência
+      Contato: soliduspetrus@gmail.com`,
+      img: 'raul_vitor.jpg',
+      sexo: 'm'
+    },
+    {
+      name: "Ana Márcia Guimarões",
+      cargo: "Médica Pediatra do Comportamento e Desenvolvimento",
+      cod: null,
       bio: null,
       img: null,
-      sexo: 'm'
+      sexo: 'f'
+    },
+    {
+      name: "Daniela Alcântara",
+      cargo: "Psicóloga / Esp.",
+      cod: null,
+      bio: null,
+      img: null,
+      sexo: 'f'
+    },
+    {
+      name: "Sandra Regina",
+      cargo: "Neuropsicologia",
+      cod: null,
+      bio: `Educadora
+      Mestre em Educação Cristã (Seminário Teológico de Dallas-USA)
+      Atualmente atua como consultora na área de educacional cristã.`,
+      img: null,
+      sexo: 'f'
+    },
+    {
+      name: "Adriana Schalkwijk Ribeiro (Ma.)",
+      cargo: "Médica (UPE) - Homeopata",
+      cod: 'CRM/MG 49248   RQE 30750',
+      bio: `Mestre em Saúde Pública com ênfase em epidemiologia e toxologia (Florida A&M, USA), Especialista em Saúde da Família (UFMG), Mestrado em Homeopatia (Instituto Hahnemanniano/RJ), Foi professora adjunta, no Calvin University, ensinando cursos de Biologia e Cosmovisão Cristã, Seguiu cursos de Mestrado em Teologia pelo Calvin Seminary, Gran`,
+      img: null,
+      sexo: 'f'
     },
     {
       name: "Uriel Heckert",
@@ -198,12 +254,23 @@ export class EquipeService {
     },
     {
       name: "João Vitor Campos",
-      cargo: null,
+      cargo: 'Engenheiro de Produção (PUC-GO)',
       cod: null,
-      bio: null,
+      bio: `Engenheiro de Segurança do Trabalho (IPOG GO)
+      Experiência em treinamentos e consultorias na área de gestão empresarial, com enfoque em gerenciamento de projetos, processos, controle financeiro, custos empresariais e empreendedorismo
+      Atualmente, é sócio na Angular Projetos e Consultoria.`,
       img: 'joao_vitor_santos.jpg',
       interno: true,
       sexo: 'm'
+    },
+    {
+      name: "Estér Cabral",
+      cargo: "Psicóloga, Especialista",
+      cod: null,
+      bio: null,
+      img: null,
+      interno: true,
+      sexo: 'f'
     }
   ];
 

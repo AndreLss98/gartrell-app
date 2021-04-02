@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.equipe = this.equipeService.equipeInterna.filter(membro => membro.img && membro.interno);
+    this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
 
     this.noticias = [
       { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },

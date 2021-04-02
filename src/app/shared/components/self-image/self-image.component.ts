@@ -19,7 +19,6 @@ export class SelfImageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this._imageUrl)
     if(!this.imageUrl) {
       this.imageUrl = this.sexo == 'm'? DEFAULT_MAN : DEFAULT_WOMAN;
     }
