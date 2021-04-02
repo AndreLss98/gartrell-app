@@ -18,14 +18,16 @@ export class EquipeService {
       Capelã Evangélica TÍt. Do I. I. Emílio Ribas-SP e HSPE
       Diretora geral da ACS
       Atualmente, Diretora Geral da ACS e Capelã - Missionária pelo Supremo Concilio da I. P. B`,
-      img: 'eleny_vassao.jpg'
+      img: 'eleny_vassao.jpg',
+      sexo: 'f'
     },
     {
       name: "Eliane Paixão",
       cargo: "Psicóloga/Neuropsicóloga",
       cod: 'CRP - 09/2238',
       bio: null,
-      img: 'eliane_dias_da_paixao.jpg'
+      img: 'eliane_dias_da_paixao.jpg',
+      sexo: 'f'
     },
     {
       name: "Guilherme Falcão",
@@ -39,7 +41,8 @@ export class EquipeService {
       Membro credenciado da Associação Internacional de Logoterapia e Análise Existencial pelo Instituto Viktor Frankl de Viena
       Pastor da Igreja Batista em Bacacheri/PR
       Atualmente: é Sócio Relações-públicas do Instituto Phileo de Psicologia e da Associação de Logoterapia Viktor E. Frankl`,
-      img: 'guilherme_falcao.jpg'
+      img: 'guilherme_falcao.jpg',
+      sexo: 'm'
     },
     {
       name: "Henrique do Prado Cabral",
@@ -55,7 +58,8 @@ export class EquipeService {
       Perito ad hoc no TRT 18ª Região e TRF 1ª Região – Seção Goiás
       MBA em Gestão em Saúde (FGV)
       Atualmente, diretor técnico da Clínica ATTO ( Hospital-dia), e também da ASCEP em Goiânia-GO.`,
-      img: 'henrique_do_prado_cabral.jpg'
+      img: 'henrique_do_prado_cabral.jpg',
+      sexo: 'm'
     },
     {
       name: "Janine Gomes Cassiano",
@@ -67,7 +71,8 @@ export class EquipeService {
       Autora de artigos e capítulos de livros acadêmicos de Terapia Ocupacional
       Gerontologia e Reabilitação
       Atualmente, é Ministra da Maturidade da Primeira Igreja Batista em Goiânia.`,
-      img: 'janine_gomes_cassiano.jpg'
+      img: 'janine_gomes_cassiano.jpg',
+      sexo: 'f'
     },
     {
       name: "Maria das Graças Brasil",
@@ -78,7 +83,8 @@ export class EquipeService {
       Doutorado em Psiquiatria (UFG)
       Professora no Dep. de Medicina e Dep. de Psicologia (PUC/GO)
       Experiência de mais de 45 anos Medicina, com ênfase em neuropediatria e neuropsiquiatria da Infância e Adolescência`,
-      img: 'maria_das_gracas_nunes_brasil.jpg'
+      img: 'maria_das_gracas_nunes_brasil.jpg',
+      sexo: 'f'
     },
     {
       name: "Neli Freitas",
@@ -87,7 +93,8 @@ export class EquipeService {
       bio: `Educadora
       Mestre em Educação Cristã (Seminário Teológico de Dallas-USA)
       Atualmente atua como consultora na área de educacional cristã`,
-      img: 'neli_maria_de_freitas.jpg'
+      img: 'neli_maria_de_freitas.jpg',
+      sexo: 'f'
     },
     {
       name: "Oseas Heckert",
@@ -98,14 +105,16 @@ export class EquipeService {
       Especialistas nas áreas de: Administração Industrial (Instituto Mauá de Tecnologia), Tecnologia de Internet (CEFET/IBPI), Esp. em Responsabilidade Social e 3º Setor (CEATS-FIA/USP), Gerenciamento da Mudança (Changefirst), Coaching (Integrated Coaching Institute), Teoria Junguiana dos Tipos Psicológicos (Type Resources, PTI/PTE, MBTI)
       Formação e Capacitação em Governança Corporativa no IBGC, em Gestão de Pessoas na ABRH, e em Tipos Psicológicos na Association for Psychological Type International, organismos dos quais é membro
       Atualmente, atua como Engenheiro de Pessoas para o Mundo Corporativo`,
-      img: 'oseas_heckert.jpg'
+      img: 'oseas_heckert.jpg',
+      sexo: 'f'
     },
     {
       name: "Pedro Américo",
       cargo: "Advogado",
       cod: null,
       bio: null,
-      img: null
+      img: null,
+      sexo: 'm'
     },
     {
       name: "Susie Amâncio G. Roure",
@@ -118,7 +127,8 @@ export class EquipeService {
       Vasta experiência na área de Educação e Psicologia, atuando principalmente nos seguintes temas: psicologia do desenvolvimento e da aprendizagem, desenvolvimento moral, disciplina-indisciplina, autoridade, autonomia, ética. educação e formação humana
       Membro atuante na Primeira Igreja Batista de Goiânia-Go
       Atualmente, professora da Graduação e da Pós-graduação em Psicologia (UFG-GO)`,
-      img: 'susie_amancio _g_roure.jpeg'
+      img: 'susie_amancio _g_roure.jpeg',
+      sexo: 'f'
     },
     {
       name: "Tiago Batista de Oliveira",
@@ -127,14 +137,16 @@ export class EquipeService {
       bio: `Médico Psiquiatra
       Ex-Diretor técnico do CREDEQ – Centro Estadual de Referência e Excelência em Dependência Química (Aparecida de Goiânia)
       Atualmente, dá expediente em seu consultório.`,
-      img: 'tiago_batista_de_oliveira.jpg'
+      img: 'tiago_batista_de_oliveira.jpg',
+      sexo: 'm'
     },
     {
       name: "Raúl Vitor",
       cargo: "Historiador",
       cod: null,
       bio: null,
-      img: null
+      img: null,
+      sexo: 'm'
     },
     {
       name: "Uriel Heckert",
@@ -146,14 +158,16 @@ export class EquipeService {
       Prof. de Psiquiatria e de Antropologia Médica (UFJF/Aposentado)
       Membro Pleno do Corpo de Psicólogos e Psiquiatras Cristãos (CPPC)
       Presbítero em disponibilidade na 4ª Igreja Presbiteriana de Juiz de Fora (RJ)`,
-      img: 'uriel_heckert.jpg'
+      img: 'uriel_heckert.jpg',
+      sexo: 'm'
     },
     {
       name: "Vítor Geovanni P. Mello",
       cargo: "Pastor, Físico e Matemático",
       cod: null,
       bio: null,
-      img: null
+      img: null,
+      sexo: 'm'
     },
     {
       name: "Elóide A. A. Botelho",
@@ -161,7 +175,8 @@ export class EquipeService {
       cod: 'CRP 09/3124',
       bio: `Área Cognitivo Comportamental e Processual; Esp. em Neuropsicologia e Avaliação Psicológica; Atende: Adolescentes, jovens e adultos`,
       img: 'eloide_a_a_botelho.jpg',
-      interno: true
+      interno: true,
+      sexo: 'f'
     },
     {
       name: "Máris Eliana Dietz",
@@ -169,7 +184,8 @@ export class EquipeService {
       cod: 'CRP 09/2863',
       bio: `Especialista em TCC, Gestão de Pessoas e Educação Inclusiva`,
       img: 'maris_eliana_dietz.jpg',
-      interno: true
+      interno: true,
+      sexo: 'f'
     },
     {
       name: "Regina de Castro Silva",
@@ -177,7 +193,8 @@ export class EquipeService {
       cod: 'CRP 09/2645',
       bio: `Psicóloga/Neuropsicóloga, especialista em TCC, psicologia hospitalar e da saúde`,
       img: 'regina_de_castro_silva.jpg',
-      interno: true
+      interno: true,
+      sexo: 'f'
     },
     {
       name: "João Vitor Campos",
@@ -185,7 +202,8 @@ export class EquipeService {
       cod: null,
       bio: null,
       img: 'joao_vitor_santos.jpg',
-      interno: true
+      interno: true,
+      sexo: 'm'
     }
   ];
 

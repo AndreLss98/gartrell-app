@@ -21,7 +21,7 @@ export class EquipeComponent implements OnInit {
   ngOnInit(): void {
 
     this.internos = this.equipeService.equipeInterna.filter(membro => membro.interno);
-    this.colaboradores = this.equipeService.equipeInterna.filter(membro => !membro.interno && membro.img);
+    this.colaboradores = this.equipeService.equipeInterna.filter(membro => !membro.interno);
   }
 
   public get colaboradores(): any[]{

@@ -112,7 +112,7 @@
 <!-- Todos os templates utilizado obs: Podem virar componentes para serem reaproveitados -->
 <ng-template #Membro let-membro="membro">
     <div class="member-container">
-        <app-self-image [url]="'assets/home/equipe/' + membro.img" class="mx-2 align-self-center"></app-self-image>
+        <app-self-image [url]="'assets/home/equipe/' + membro.img" class="mx-2 align-self-center" [sexo]="membro.sexo"></app-self-image>
 
         <div class="d-flex justify-content-center flex-column">
             <h6 class="text-light">{{ membro.name }}</h6>
