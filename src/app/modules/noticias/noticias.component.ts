@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NoticiasService } from './noticias.service';
+
 @Component({
   selector: 'app-noticias',
   templateUrl: './noticias.component.html',
@@ -7,28 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasComponent implements OnInit {
 
-  private _noticias: any[] = [];
+  private _noticiasSelected: any;
   
-  constructor() { }
+  constructor(
+    public noticiasService: NoticiasService
+  ) { }
 
   ngOnInit(): void {
-    this.noticias = [
-      { 
-        titulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        resumo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit. Lorem ipsumn dolor sit amet, consecutur adipiscing elit.',
-        autor: 'Karina Queiroz',
-        dataPost: new Date(2020, 1, 22),
-        banner: 'assets/home/noticias/image_placeholder.jpg'
-      }
-    ]
+    
   }
 
-  public get noticias(): any[] {
-    return this._noticias;
+  public get noticiasSelected(): any {
+    return this._noticiasSelected;
   }
 
-  public set noticias(value: any[]) {
-    this._noticias = value;
+  public set noticiasSelected(value: any) {
+    this._noticiasSelected = value;
   }
 
+  public createFunction(noticia: any) {
+    return () => {
+     this.noticiasSelected = noticia;
+     setTimeout(() => {
+       window.location.href = `${window.location.pathname}#PostDetail`;
+     }, 200)
+   }
+ }
 }
