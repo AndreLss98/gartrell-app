@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
 import { NoticiasResolver } from './modules/noticias/noticias.resolver';
+import { ReflexoesResolver } from './modules/reflexoes/reflexoes.resolver';
+import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
 
 const routes: Routes = [
   { 
@@ -15,6 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
     resolve: {
       noticias: NoticiasResolver,
+      reflexoes: ReflexoesResolver,
       acontecimentos: AcontecimentosResolver
     }
   },
@@ -31,7 +33,10 @@ const routes: Routes = [
   },
   {
     path: 'reflexoes',
-    loadChildren: () => import('./modules/reflexoes/reflexoes.module').then(m => m.ReflexoesModule)
+    loadChildren: () => import('./modules/reflexoes/reflexoes.module').then(m => m.ReflexoesModule),
+    resolve: {
+      reflexoes: ReflexoesResolver
+    }
   },
   {
     path: 'institucional',

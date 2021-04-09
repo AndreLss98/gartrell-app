@@ -1,6 +1,6 @@
 <app-header-banner [imgBannerUrl]="'assets/banners/noticias_banner.jpg'"></app-header-banner>
 
-<div class="container d-flex justify-content-center align-items-center flex-column mb-2 mt-5 bg-light">
+<div class="container d-flex justify-content-center align-items-center flex-column my-4 bg-light">
   <app-sub-header title="Notícias" class="w-100"></app-sub-header>
   <ng-container *ngIf="noticiasService.selectedNoticia">
     <app-post-details [post]="noticiasService.selectedNoticia"></app-post-details>

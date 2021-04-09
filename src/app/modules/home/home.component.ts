@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.data);
     this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
+    this.reflexoesService.reflexoes = this.route.snapshot.data.reflexoes.dados;
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
 
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
     }, 200);
   }
 
-  viewReflection(post: any) {
+  viewReflection(post: Post) {
     return () => {
       this.reflexoesService.selectedReflection = post;
       setTimeout(() => {

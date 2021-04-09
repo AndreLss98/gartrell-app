@@ -8,7 +8,6 @@
   <ng-container *ngIf="reflexoesService.selectedReflection">
     <app-sub-header [title]="'Mais Reflexões'" class="w-100"></app-sub-header>
   </ng-container>
-  <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2"
-    [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="createFunction(post)" [categoria]="post.categoria"></app-post>
-  <app-paginator></app-paginator>
+  <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2" [post]="post" [callFunction]="createFunction(post)"></app-post>
+  <app-paginator [length]="qtdPages" (changePage)="onChangePage($event)"></app-paginator>
 </div>
