@@ -5,5 +5,5 @@
   <div class="px-5">
     <app-evento class="my-4" *ngFor="let event of aconteceService.eventos; let i = index" [evento]="event"></app-evento>
   </div>
-   <app-paginator></app-paginator>
+   <app-paginator [length]="qtdPages" (changePage)="onChangePages($event)"></app-paginator>
 </section>

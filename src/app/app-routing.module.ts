@@ -22,7 +22,10 @@ const routes: Routes = [
   },
   {
     path: 'acontece',
-    loadChildren: () => import('./modules/acontece/acontece.module').then(m => m.AconteceModule)
+    loadChildren: () => import('./modules/acontece/acontece.module').then(m => m.AconteceModule),
+    resolve: {
+      acontecimentos: AcontecimentosResolver
+    }
   },
   {
     path: 'reflexoes',
