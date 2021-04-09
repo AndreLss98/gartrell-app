@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Acontecimento } from './../../../models/acontece.model';
+
 @Component({
   selector: 'app-evento',
   templateUrl: './evento.component.html',
@@ -8,7 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EventoComponent implements OnInit {
 
   @Input()
-  public evento: any;
+  public evento: Acontecimento;
 
   @Input()
   public inverse: boolean = false;

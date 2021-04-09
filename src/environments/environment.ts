@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  wpBaseUrl: 'http://ip-72-167-47-98.ip.secureserver.net/wp-json/v1'
 };
 
 /*

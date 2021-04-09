@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
+
 const routes: Routes = [
   { 
     path: '',
@@ -9,7 +11,10 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+    resolve: {
+      acontecimentos: AcontecimentosResolver
+    }
   },
   {
     path: 'servicos',
@@ -38,7 +43,7 @@ const routes: Routes = [
   {
     path:"consulte-conosco",
     loadChildren: () => import('./modules/terapia-online/terapia-online.module').then(m => m.TerapiaOnlineModule)
-  },
+  }
 ];
 
 @NgModule({

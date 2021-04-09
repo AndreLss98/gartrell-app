@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
 import { AconteceService } from '../acontece/acontece.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     public equipeService: EquipeService,
     public servicosService: ServicosService,
     public aconteceService: AconteceService,
@@ -26,7 +27,8 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    console.log(this.route.snapshot.data);
+    this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
 
     this.noticias = [
