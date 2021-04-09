@@ -18,6 +18,18 @@ export class EventoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.configResumoContent();
+    }, 200)
+  }
+
+  private configResumoContent() {
+    const resumo = document.getElementById('resumoContent' + this.evento.id);
+    if (resumo) resumo.innerHTML = this.evento.resumo;
   }
 
 }
