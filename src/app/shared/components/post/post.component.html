@@ -1,18 +1,19 @@
-<div class="row px-2 py-4" style="background-color: white;">
+<div class="row px-2 py-4 bg-body">
     <div class="col-12 col-lg-5 position-relative">
-        <img [src]="banner" width="100%" height="100%" alt="post image">
-        <div *ngIf="categoria" class="bg-dark text-light px-4 py-1 position-absolute">{{ categoria }}</div>
+        <img [src]="post.thumbnail" width="100%" height="100%" alt="post image">
+        <div *ngIf="post.categorias.length" class="bg-dark text-light px-4 py-1 position-absolute">{{ post.categorias[0] }}</div>
     </div>
 
     <div class="col-12 col-lg-7 d-flex flex-column justify-content-between">
-        <h1>{{ titulo }}</h1>
+        <h1>{{ post.titulo }}</h1>
         <div class="line"></div>
-        <h6>{{ resumo }}</h6>
+        
+        <div id="{{ 'postResumo' + post.id }}"></div>
         
         <div class="d-flex justify-content-between align-items-center flex-wrap">
             <div class="d-flex align-items-center icon">
                 <i class="bi bi-box-arrow-in-down-right text-primary mr-1"></i>
-                <p class="m-0">Por {{ autor }} - {{ dataPost | date: 'dd/MM/yyyy' }}</p>
+                <p class="m-0">Por {{ post.autor }} - {{ post.data | date: 'dd/MM/yyyy' }}</p>
             </div>
 
             <app-social-media-container></app-social-media-container>

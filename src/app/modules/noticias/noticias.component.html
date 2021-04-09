@@ -1,17 +1,15 @@
 <app-header-banner [imgBannerUrl]="'assets/banners/noticias_banner.jpg'"></app-header-banner>
 
-<div class="container d-flex justify-content-center align-items-center flex-column mb-2 bg-light" style="margin-top: 20px;">
-  <app-sub-header [title]="'Notícias'" class="w-100"></app-sub-header>
+<div class="container d-flex justify-content-center align-items-center flex-column mb-2 mt-5 bg-light">
+  <app-sub-header title="Notícias" class="w-100"></app-sub-header>
   <ng-container *ngIf="noticiasSelected">
     <app-post-details [post]="noticiasSelected"></app-post-details>
   </ng-container>
   <ng-container *ngIf="noticiasSelected">
-    <app-sub-header [title]="'Mais Notícias'" class="w-100"></app-sub-header>
+    <app-sub-header title="Mais Notícias" class="w-100"></app-sub-header>
   </ng-container>
   <div class="w-100 px-2 mb-2">
-    <app-post *ngFor="let post of noticiasService.noticias"
-      [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner"
-      [callFunction]="createFunction(post)"></app-post>
+    <app-post *ngFor="let post of noticiasService.noticias" [post]="post" [callFunction]="createFunction(post)"></app-post>
   </div>
-  <app-paginator></app-paginator>
+  <app-paginator [length]="pageNumber" (changePage)="onChangePage($event)"></app-paginator>
 </div>

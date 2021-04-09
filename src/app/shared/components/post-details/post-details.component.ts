@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Post } from 'src/app/models/post.model';
+
 @Component({
   selector: 'app-post-details',
   templateUrl: './post-details.component.html',
@@ -8,12 +10,23 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PostDetailsComponent implements OnInit {
 
   @Input()
-  public post: any;
+  public post: Post;
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.configContent();
+    }, 200);
+  }
+
+  public configContent() {
+    const contentContainer = document.getElementById(`postDetail-${this.post.id}`);
+    if (contentContainer) contentContainer.innerHTML = this.post.conteudo;
   }
 
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
+import { NoticiasResolver } from './modules/noticias/noticias.resolver';
 
 const routes: Routes = [
   { 
@@ -37,7 +38,10 @@ const routes: Routes = [
   },
   {
     path: 'noticias',
-    loadChildren: () => import('./modules/noticias/noticias.module').then(m => m.NoticiasModule)
+    loadChildren: () => import('./modules/noticias/noticias.module').then(m => m.NoticiasModule),
+    resolve: {
+      noticias: NoticiasResolver
+    }
   },
   {
     path:"fique-por-dentro",

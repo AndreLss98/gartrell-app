@@ -1,11 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Post } from 'src/app/models/post.model';
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
+
+  @Input()
+  public post: Post;
 
   @Input()
   public titulo: string = '';
@@ -34,6 +39,12 @@ export class PostComponent implements OnInit {
     
   }
 
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.configResumoContent();
+    }, 200);
+  }
+
   onMouseHover(element: HTMLElement) {
     element.classList.remove('btn-light');
     element.classList.add('btn-primary');
@@ -42,6 +53,11 @@ export class PostComponent implements OnInit {
   onMouseLeave(element: HTMLElement) {
     element.classList.remove('btn-primary');
     element.classList.add('btn-light');
+  }
+
+  public configResumoContent() {
+    const resumoContent = document.getElementById(`postResumo${this.post.id}`);
+    if (resumoContent) resumoContent.innerHTML = this.post.resumo;
   }
 
 }
