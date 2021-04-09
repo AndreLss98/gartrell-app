@@ -68,17 +68,17 @@
     </article>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2">
-        <app-sub-header [title]="'Notícias'" class="w-100"></app-sub-header>
+        <app-sub-header title="Notícias" class="w-100"></app-sub-header>
         <div id="noticiasContainer" class="w-100">
-            <app-image-hover *ngFor="let noticia of noticias" [titulo]="noticia.titulo" [subTitulo]="noticia.subTitulo" [bgImg]="noticia.img"></app-image-hover>
+            <app-image-hover *ngFor="let noticia of noticiasService.noticias" [post]="noticia"></app-image-hover>
         </div>
     </article>
 
     <article class="d-flex justify-content-center align-items-center flex-column mb-2 px-4 pb-2 bg-light">
-        <app-sub-header [title]="'Reflexões'" class="w-100"></app-sub-header>
+        <app-sub-header title="Reflexões" class="w-100"></app-sub-header>
         <div class="w-100">
-            <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2"
-                [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="viewReflection(post)" [categoria]="post.categoria"></app-post>
+            <!-- <app-post *ngFor="let post of reflexoesService.reflexoes" class="mx-2"
+                [titulo]="post.titulo" [resumo]="post.resumo" [autor]="post.autor" [dataPost]="post.dataPost" [banner]="post.banner" [callFunction]="viewReflection(post)" [categoria]="post.categoria"></app-post> -->
         </div>
     </article>
 

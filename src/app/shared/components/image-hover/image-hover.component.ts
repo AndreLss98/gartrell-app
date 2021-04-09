@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Post } from 'src/app/models/post.model';
+
 @Component({
   selector: 'app-image-hover',
   templateUrl: './image-hover.component.html',
@@ -8,17 +10,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImageHoverComponent implements OnInit {
 
   @Input()
-  public titulo: string = '';
-
-  @Input()
-  public subTitulo: string = '';
-
-  @Input()
-  public bgImg: string = '';
+  public post: Post;
 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  public configResumo() {
+    const resumoContent = document.getElementById(`imgHoverResumo-${this.post.id}`);
+    if (resumoContent) resumoContent.innerHTML = this.post.resumo;
   }
 
 }

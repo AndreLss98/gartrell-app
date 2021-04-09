@@ -7,7 +7,7 @@
     transition-duration: 500ms;
 
     div.hover-content {
-        div {
+        div.pl-1 {
             border-left: 5px solid var(--primary);
         }
         position: absolute;

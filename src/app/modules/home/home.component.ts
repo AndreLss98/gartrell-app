@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
 import { AconteceService } from '../acontece/acontece.service';
+import { NoticiasService } from '../noticias/noticias.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { ServicosService } from '../servicos/servicos.service';
 
@@ -23,20 +24,16 @@ export class HomeComponent implements OnInit {
     public equipeService: EquipeService,
     public servicosService: ServicosService,
     public aconteceService: AconteceService,
+    public noticiasService: NoticiasService,
     public reflexoesService: ReflexoesService,
   ) { }
 
   ngOnInit(): void {
     console.log(this.route.snapshot.data);
+    this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
+    
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
-
-    this.noticias = [
-      { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },
-      { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },
-      { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' },
-      { img: 'assets/home/noticias/image_placeholder.jpg', titulo: 'Lorem Ipsum Dolor', subTitulo: 'Lorem ipsumn dolor sit amet, consecutur adipiscing elit.' }
-    ]
   }
 
   public get equipe(): any[] {
