@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class NoticiasService {
 
   private _noticias: Post[] = [];
+  private _selectedNoticia: Post;
 
   constructor(
     private http: HttpClient
@@ -23,8 +24,14 @@ export class NoticiasService {
   public get noticias(): Post[] {
     return this._noticias;
   }
-
   public set noticias(value: Post[]) {
     this._noticias = value;
+  }
+
+  public get selectedNoticia(): Post {
+    return this._selectedNoticia;
+  }
+  public set selectedNoticia(value: Post) {
+    this._selectedNoticia = value;
   }
 }

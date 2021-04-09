@@ -2,10 +2,10 @@
 
 <div class="container d-flex justify-content-center align-items-center flex-column mb-2 mt-5 bg-light">
   <app-sub-header title="Notícias" class="w-100"></app-sub-header>
-  <ng-container *ngIf="noticiasSelected">
-    <app-post-details [post]="noticiasSelected"></app-post-details>
+  <ng-container *ngIf="noticiasService.selectedNoticia">
+    <app-post-details [post]="noticiasService.selectedNoticia"></app-post-details>
   </ng-container>
-  <ng-container *ngIf="noticiasSelected">
+  <ng-container *ngIf="noticiasService.selectedNoticia">
     <app-sub-header title="Mais Notícias" class="w-100"></app-sub-header>
   </ng-container>
   <div class="w-100 px-2 mb-2">

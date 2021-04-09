@@ -10,7 +10,6 @@ import { NoticiasService } from './noticias.service';
 })
 export class NoticiasComponent implements OnInit {
 
-  private _noticiasSelected: any;
   private _pageNumber: number = 1;
   
   constructor(
@@ -29,16 +28,9 @@ export class NoticiasComponent implements OnInit {
     this._pageNumber = value;
   }
 
-  public get noticiasSelected(): any {
-    return this._noticiasSelected;
-  }
-  public set noticiasSelected(value: any) {
-    this._noticiasSelected = value;
-  }
-
   public createFunction(noticia: any) {
     return () => {
-      this.noticiasSelected = noticia;
+      this.noticiasService.selectedNoticia = noticia;
       setTimeout(() => {
         window.location.href = `${window.location.pathname}#PostDetail`;
       }, 200);

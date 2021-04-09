@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EquipeService } from 'src/app/shared/services/equipe.service';
+
+import { Post } from 'src/app/models/post.model';
+
 import { AconteceService } from '../acontece/acontece.service';
 import { NoticiasService } from '../noticias/noticias.service';
-import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { ServicosService } from '../servicos/servicos.service';
+import { ReflexoesService } from '../reflexoes/reflexoes.service';
+import { EquipeService } from 'src/app/shared/services/equipe.service';
 
 @Component({
   selector: 'app-home',
@@ -32,7 +35,7 @@ export class HomeComponent implements OnInit {
     console.log(this.route.snapshot.data);
     this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
-    
+
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
   }
 
@@ -68,6 +71,17 @@ export class HomeComponent implements OnInit {
     if (this.selectedMember > 0) --this.selectedMember;
   }
 
+  viewNews(post: Post) {
+    this.noticiasService.selectedNoticia = post;
+    setTimeout(() => {
+      this.router.navigateByUrl('/noticias').then(() => {
+        setTimeout(() => {
+          window.location.href = `${window.location.pathname}#PostDetail`;
+        }, 200);
+      })
+    }, 200);
+  }
+
   viewReflection(post: any) {
     return () => {
       this.reflexoesService.selectedReflection = post;
@@ -77,7 +91,7 @@ export class HomeComponent implements OnInit {
             window.location.href = `${window.location.pathname}#PostDetail`;
           }, 200);
         })
-      }, 200)
+      }, 200);
     }
   }
 }
