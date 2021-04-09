@@ -1,11 +1,14 @@
-img {
+/* img {
     max-height: 400px;
     width: 100%;
-}
+} */
 
 div.self-container {
+    border: 5px;
     width: 200px;
     height: 200px;
     overflow: hidden;
-    border: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
