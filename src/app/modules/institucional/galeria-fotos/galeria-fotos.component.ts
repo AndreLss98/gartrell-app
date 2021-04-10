@@ -7,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GaleriaFotosComponent implements OnInit {
 
-  cards = ["assets/home/banner.jpg", "assets/home/banner.jpg", 
-           "assets/home/banner.jpg", "assets/home/banner.jpg", 
-           "assets/home/banner.jpg","assets/home/banner.jpg"];
+  cards = [
+    { thumbnail: "assets/institucional/galeria_fotos/gp_de_capacitacao.jpeg", nome: "Capacitação - Infância e Adolescência" },
+    { thumbnail: "assets/institucional/galeria_fotos/espaco_instituto_gartrell.jpeg", nome: "Espaço Instituto Gartrell" },
+    { thumbnail: "assets/institucional/galeria_fotos/gp_de_crescimento_ansiedade.jpeg", nome: "Grupo Crescimento - Ansiedade e Depressão" },
+    { thumbnail: "assets/institucional/galeria_fotos/i_jornada_saude_mental.jpeg", nome: "I Jornada de Saúde Mental" },
+    { thumbnail: "assets/institucional/galeria_fotos/ii_jornada_de_saude_mental.jpeg", nome: "II Jornada de Saúde Mental" },
+    { thumbnail: "assets/institucional/galeria_fotos/imprensa_radio_e_tv.jpeg", nome: "Imprensa, Rádio e TV" }
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
-
-
 }

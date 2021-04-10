@@ -2,18 +2,18 @@
 
 <div class="container bg-light"  style="margin-top: 20px;">
   <app-sub-header title="Galeria de fotos"></app-sub-header>
-  <div class="row ml-5" >
-    <div class="col-xl-4 col-lg-4 d-flex flex-column mt-5" *ngFor="let c of cards">
-      <div class="card" style="width: 90%;">
-        <img src="{{c}}" width="100%" height="100%" alt="Image banner of home" />
-        <div class="card-body d-flex flex-column">
-          <span><strong>Nome de evento</strong></span>
+  
+  <div class="row ml-5 mb-4" >
+    <div class="col-xl-4 col-lg-4 d-flex flex-column mt-5" *ngFor="let card of cards">
+      <div class="card w-100">
+        <img [src]="card.thumbnail" width="100%" height="100%" alt="Image banner of home" />
+        <div class="d-flex flex-column pl-1 my-2">
+          <span class="text-break"><strong>{{ card.nome }}</strong></span>
           <span>23/01/2020</span>
         </div>
       </div>
       </div>
   </div>
-
-  <br>
+  
   <app-paginator></app-paginator>
 </div>
