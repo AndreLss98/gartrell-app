@@ -30,9 +30,6 @@ export class AconteceService {
   }
 
   public set eventos(value: any[]) {
-    this._eventos = value.map(acontecimento => {
-      acontecimento.data = new Date(acontecimento.data);
-      return {...acontecimento}
-    });
+    this._eventos = value;
   }
 }

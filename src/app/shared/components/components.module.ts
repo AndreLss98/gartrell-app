@@ -17,6 +17,7 @@ import { SocialMediaContainerComponent } from './social-media-container/social-m
 import { SideImgContainerComponent } from './side-img-container/side-img-container.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { RegisterEventFormComponent } from './register-event-form/register-event-form.component';
+import { BrDatePipe } from '../pipes/br-date.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { RegisterEventFormComponent } from './register-event-form/register-event
     SideImgContainerComponent,
     RegisterEventFormComponent,
     SocialMediaContainerComponent,
+    
+    BrDatePipe,
   ],
   imports: [
     FormsModule,

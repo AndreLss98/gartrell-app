@@ -1,7 +1,7 @@
 export interface Acontecimento {
     id: number;
     titulo: string;
-    data: Date;
+    data: string;
     resumo: string;
     thumbnail: string;
     autor: string;
