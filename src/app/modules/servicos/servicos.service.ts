@@ -11,19 +11,26 @@ export class ServicosService {
       id: 1,
       nome: 'Psiquiatria',
       icone: 'assets/svg/psiquiatria.svg',
-      descricao: 'Indicada para qualquer pessoa (crianças, adolescentes, jovens e adultos) que lida com diferentes formas de sofrimento psíquico ou mental, sejam elas de base orgânica ou funcional, com manifestações leves, moderadas ou graves, em situações de crises agudas ou crônicas.'
+      descricao: `Indicada para qualquer pessoa (crianças, adolescentes, jovens e adultos) que lida com diferentes formas de sofrimento psíquico ou mental, sejam elas de base orgânica ou funcional, com manifestações leves, moderadas ou graves, em situações de crises agudas ou crônicas.
+      O médico psiquiatra atende, faz o diagnóstico, indica ao paciente as diferentes abordagens terapêuticas (se julgar necessário), medica, reabilita, conduz e acompanha a terapia medicamentosa (quando prescrita).  Mais do que tratar doenças, ele cuida de pessoas.`
     },
     {
       id: 2,
       nome: 'Psicologia',
       icone: 'assets/svg/psicologia.svg',
-      descricao: 'Acompanhamento Psicoterápico (Psicoterapia, para todas as idades a partir de 7 anos); Orientação Vocacional/Profissional; Apoio ao Vestibulando, Concurseiro; Colocação/Recolocação Profissional, Readequação/Reorientação de Carreira.'
+      descricao: `Indicada para as mais diversas formas de sofrimento psíquico ou mental, leves, moderados ou elevados, que podem ocasionar grandes e graves prejuízos para a pessoa.
+      O psicólogo investiga e busca compreender todos os processos mentais relativos ao funcionamento psíquico e neuropsíquico do paciente, bem como os processos socioculturais, fisiológicos e biológicos que o acompanham.
+      Atua visando à sua integral habilitação e desenvolvimento global, valorizando e focalizando sempre todo o seu potencial de saúde, inteligência e ação.
+      Com o auxílio da psicoterapia, o paciente identifica em sua pessoa seus aspectos saudáveis, não saudáveis, adoecidos ou disfuncionais. Por meio dela, aprende a reconhecer em si elementos até então desconhecidos, mas que estão na base dos possíveis comportamentos indesejados, das dificuldades, das incertezas e das angústias que o acometem.
+      Oferece acompanhamento psicológico para gestantes (perinatal e pós-natal), para orientá-las em como lidar com a criança em casos de diagnósticos precoces de síndromes ou transtornos de neurodesenvolvimento, a fim de promover e prevenir a saúde mental da criança e contribuir com seu desenvolvimento.`
     },
     {
       id: 3,
       nome: 'Neuropsicologia',
       icone: 'assets/svg/neuropsicologia.svg',
-      descricao: 'Identificar a presença ou não de disfunção cognitiva; auxiliar no diagnóstico diferencial; identificar e compreender quais habilidades estão preservadas, após um dado quadro neurológico, psiquiátrico, neuropsiquiátrico ou de desenvolvimento; acompanhar a evolução do quadro em relação ao tratamento medicamentoso e cirúrgico; acompanhar a evolução da reabilitação; documentar o déficit cognitivo'
+      descricao: `Tem por finalidade: identificar a presença ou não de disfunção cognitiva; auxiliar no diagnóstico diferencial; identificar e compreender quais habilidades estão preservadas, após um dado quadro neurológico, psiquiátrico, neuropsiquiátrico ou de desenvolvimento; acompanhar a evolução do quadro em relação ao tratamento medicamentoso e cirúrgico; acompanhar a evolução da reabilitação; documentar o déficit cognitivo.
+      Por meio desta avaliação, o neuropsicólogo realiza uma aprofundada investigação e análise dos diferentes domínios cognitivos cerebrais do paciente, tais como: atenção, memória, linguagem, percepção, raciocínio, abstração, habilidades motoras, visuoconstrução, aprendizagem, funções executivas, processamento da informação, afeto e humor.
+      Indicada para crianças e adolescentes quando apresentam problemas comportamentais e de aprendizado escolar. Também muito recomendada nos casos de déficits causados por abuso de drogas, álcool e outras substâncias, em lesões cerebrais decorrentes de traumatismos, AVC ou derrame, nas epilepsias e também nas questões forenses (judiciais).`
     },
     {
       id: 4,
@@ -33,21 +40,21 @@ export class ServicosService {
     },
     {
       id: 5,
-      nome: 'Capacitações',
+      nome: 'Capacitações, Palestras Congressos e Eventos',
       icone: 'assets/svg/capacitacoes_icon.svg',
-      descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+      descricao: `Os projetos, as atividades e as ações psicoeducativas desenvolvidas pelo Instituto Gartrell, tem por finalidade a disseminação do conhecimento científico ligado à saúde mental, educação e cidadania, visando a formação de valores nobres e elevados em seus públicos alvos. Tais modalidades de trabalho, podem ser realizadas em escolas, instituições sociais e religiosas, em empresas públicas e privadas de nossa cidade e região.`
     },
     {
       id: 6,
       nome: 'Consultoria',
       icone: 'assets/svg/consultoria_icon.svg',
-      descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+      descricao: 'Direcionada às instituições educacionais e afins, focaliza o processo ensino-aprendizagem do (a) aluno (a), visando a sua formação integral, centrada na excelência acadêmica, ética e cidadania. Objetiva apoiar e capacitar o trabalho desenvolvido pela escola junto ao professor, coordenador, aluno e à sua família.'
     },
     {
       id: 7,
-      nome: 'Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos',
+      nome: 'Parcerias ou Acordos de Cooperação e Serviços',
       icone: 'assets/svg/parcerias_ou_acordos_de_cooperacao.svg',
-      descricao: 'O Instituto Gartrell tem buscado estabelecer PARCERIAS OU ACORDOS DE COOPERAÇÃO com profissionais e instituições de saúde, de educação e com entidades sociais e religiosas verdadeiramente comprometidas com a ética (valores nobres e elevados) e a cidadania, visando à troca de saberes, experiências e a realização conjunta de ações psicoeducativas (ministração de cursos/capacitações, treinamentos, palestras, consultorias, eventos, etc.).'
+      descricao: 'O Instituto Gartrell celebra PARCERIAS OU ACORDOS DE COOPERAÇÃO E SERVIÇOS com profissionais e instituições de saúde e educação, bem como com entidades sociais e religiosas verdadeiramente comprometidas com a ética (valores nobres e elevados) e a cidadania, visando à troca de saberes, experiências e a realização conjunta de ações psicoeducativas (ministração de cursos/capacitações, treinamentos, palestras, consultorias, eventos, etc.) que valorizem e focalizem a saúde física, mental e o bem-estar geral das pessoas em nossa cidade e região.'
     }
   ];
 
