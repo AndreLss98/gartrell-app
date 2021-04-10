@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NoticiasResolver } from './modules/noticias/noticias.resolver';
 import { ReflexoesResolver } from './modules/reflexoes/reflexoes.resolver';
 import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
+import { GetResumosResolver } from './modules/fique-por-dentro/get-resumos.resolver';
 
 const routes: Routes = [
   { 
@@ -17,7 +18,8 @@ const routes: Routes = [
     resolve: {
       noticias: NoticiasResolver,
       reflexoes: ReflexoesResolver,
-      acontecimentos: AcontecimentosResolver
+      acontecimentos: AcontecimentosResolver,
+      resumosFiquePorDentro: GetResumosResolver
     }
   },
   {

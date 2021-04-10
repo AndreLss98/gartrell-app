@@ -1,12 +1,14 @@
 import { of } from 'rxjs';
 import { Injectable } from '@angular/core';
 
+import { Post } from 'src/app/models/post.model';
+
 @Injectable({
   providedIn: 'root'
 })
 export class SociedadeService {
 
-  private _posts: any[] = []
+  private _posts: Post[] = [];
 
   constructor() { }
 
@@ -14,11 +16,11 @@ export class SociedadeService {
     return of(this.posts);
   }
 
-  public get posts(): any[] {
+  public get posts(): Post[] {
     return this._posts;
   }
 
-  public set posts(value: any[]) {
+  public set posts(value: Post[]) {
     this._posts = value;
   }
 }

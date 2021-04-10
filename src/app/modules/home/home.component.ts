@@ -17,7 +17,7 @@ import { EquipeService } from 'src/app/shared/services/equipe.service';
 export class HomeComponent implements OnInit {
 
   private _equipe: any[] = [];
-  private _noticias: any[] = [];
+  private _fiquePordentro: any[] = [];
 
   private _selectedMember: number = 0;
 
@@ -29,7 +29,13 @@ export class HomeComponent implements OnInit {
     public aconteceService: AconteceService,
     public noticiasService: NoticiasService,
     public reflexoesService: ReflexoesService,
-  ) { }
+  ) {
+    this.fiquePordentro = [
+      { id: 80, icone: 'assets/svg/saude_integral.svg', titulo: 'Saúde Integral', resumo: '', link: 'fique-por-dentro/saude-integral' },
+      { id: 74, icone: 'assets/svg/desenvolvimento_humano.svg', titulo: 'Desenvolvimento Humano', resumo: '', link: 'fique-por-dentro/desenvolvimento-humano' },
+      { id: 82, icone: 'assets/svg/sociedade.svg', titulo: 'Sociedade', resumo: '', link: 'fique-por-dentro/sociedade' }
+    ]
+  }
 
   ngOnInit(): void {
     this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
@@ -37,30 +43,31 @@ export class HomeComponent implements OnInit {
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
 
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
+
+    this.fiquePordentro.forEach(page => {
+      page.resumo = this.route.snapshot.data.resumosFiquePorDentro.find((resumo: any) => resumo.id === page.id).resumo
+    })
   }
 
   public get equipe(): any[] {
     return this._equipe;
   }
-
   public set equipe(value: any[]) {
     this._equipe = value;
-  }
-
-  public get noticias(): any[] {
-    return this._noticias;
-  }
-
-  public set noticias(value: any[]) {
-    this._noticias = value;
   }
 
   public get selectedMember(): number {
     return this._selectedMember;
   }
-
   public set selectedMember(value: number) {
     this._selectedMember = value;
+  }
+
+  public get fiquePordentro(): any[] {
+    return this._fiquePordentro;
+  }
+  public set fiquePordentro(value: any[]) {
+    this._fiquePordentro = value;
   }
 
   public nextMember() {
