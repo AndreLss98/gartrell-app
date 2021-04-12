@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { GaleriaFotosService } from './galeria-fotos.service';
 
 @Component({
   selector: 'app-galeria-fotos',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./galeria-fotos.component.scss']
 })
 export class GaleriaFotosComponent implements OnInit {
+
+  private _qtdPages: number = 1;
 
   cards = [
     { thumbnail: "assets/institucional/galeria_fotos/gp_de_capacitacao.jpeg", nome: "Capacitação - Infância e Adolescência" },
@@ -16,9 +21,21 @@ export class GaleriaFotosComponent implements OnInit {
     { thumbnail: "assets/institucional/galeria_fotos/imprensa_radio_e_tv.jpeg", nome: "Imprensa, Rádio e TV" }
   ];
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    public galeriaFotosService: GaleriaFotosService
+  ) { }
 
   ngOnInit(): void {
+    console.log(this.route.snapshot.data);
+    this.galeriaFotosService.galerias = this.route.snapshot.data.galerias.dados;
+    this.qtdPages = this.route.snapshot.data.galerias.quantidadeDePaginas;
+  }
 
+  public get qtdPages(): number {
+    return this._qtdPages;
+  }
+  public set qtdPages(value: number) {
+    this._qtdPages = value;
   }
 }

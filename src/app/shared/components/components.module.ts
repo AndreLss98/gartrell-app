@@ -17,7 +17,7 @@ import { SocialMediaContainerComponent } from './social-media-container/social-m
 import { SideImgContainerComponent } from './side-img-container/side-img-container.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { RegisterEventFormComponent } from './register-event-form/register-event-form.component';
-import { BrDatePipe } from '../pipes/br-date.pipe';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -34,13 +34,12 @@ import { BrDatePipe } from '../pipes/br-date.pipe';
     SideImgContainerComponent,
     RegisterEventFormComponent,
     SocialMediaContainerComponent,
-    
-    BrDatePipe,
   ],
   imports: [
     FormsModule,
     CommonModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    PipesModule
   ],
   exports: [
     PostComponent,
