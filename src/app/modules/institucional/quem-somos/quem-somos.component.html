@@ -1,61 +1,25 @@
 <app-header-banner [imgBannerUrl]="'assets/banners/missao_visao_valores_banner.jpg'"></app-header-banner>
 
 <div class="container mt-4 bg-light px-4 pb-4">
-    <app-sub-header [title]="'Quem Somos'" class="w-100"></app-sub-header>
-    <h4 class="mt-4 text-primary">QUEM SOMOS, O QUE FAZEMOS, COMO FAZEMOS</h4>
-    <p>O Instituto Gartrell, é uma empresa brasileira com endereço fixo em Goiânia/GO, voltada exclusivamente para a saúde mental/saúde integral, com ênfase na medicina preventiva e integrativa, com interfaces com a educação, cidadania, cultura e humanidades, teologia e cultura cristã, trabalho e afins, visando o desenvolvimento global do ser humano. </p>
-    <p>Na área clínica, oferece serviços para todas as faixas etárias em psiquiatria, psicologia, neuropsicologia e em médio prazo também disponibilizará aos seus clientes, atendimento em psicopedagogia, fonoaudiologia, terapia ocupacional e outros que fazem interface como o referido segmento de trabalho.</p>
-    <p>Faz parte de seu portfólio de serviços ministração de palestras, capacitações, cursos, desenvolvimento de grupos de crescimento pessoal, consultoria em recursos humanos, e outras atividades psicoeducativas, visando a disseminação do conhecimento científico e dos valores éticos universais que promovem a saúde, o bem-estar geral e o desenvolvimento pleno das pessoas.</p>
-    <p>Orienta-se, preferencialmente, pela abordagem cognitiva comportamental, mas, considera a visão integradora das diferentes abordagens da psicologia. Seus profissionais são devidamente habilitados, com grande experiência nas suas áreas de atuação, sempre comprometidos e atentos à contínua busca pela excelência na formação teórica, técnica e vivencial, visando o qualificado atendimento de seus clientes, sob os fundamentos da ética e do sigilo profissional.</p>
-    <p>O conceito e o fundamento essencial do Instituto Gartrell é: atuar preventivamente junto às pessoas e a serviço delas. Neste sentido, seu portfólio de serviços apresenta uma breve descrição de suas diversas modalidades de atendimento clínico, bem como de suas atividades sócio educativas.</p>
-    <p>Busca assegurar-se de que o trabalho realizado com seus clientes os conduza a resultados pessoais tangíveis, a partir dos alvos que estabelecem para com as suas demandas. Isso faz, por meio dos marcadores que evidenciam seu crescimento pessoal. Dentre os diversos, alguns importantes a se destacar são:</p>
-    <ul class="ml-5">
-        <li>Adoção de uma mentalidade de vida focada na saúde e não na doença, mediante o cultivo de hábitos saudáveis, tais como: alimentação adequada, sono qualificado, atividade física regular. </li>
-        <li>Habilitação de possíveis dificuldades e inabilidades e ampliação de suas potencialidades, talentos e dons;</li>
-        <li>Habilidade intra e interpessoal que lhes proporcionem convívio saudável consigo mesmos e com as pessoas de seus contextos imediatos;</li>
-        <li>Organização temporo-espacial, mediante a assertividade em suas ações e tomadas de decisões;</li>
-        <li>Postura autônoma e sábia no exercício de seus diversos papéis pessoais, sociais e profissionais, confessionais, etc;</li>
-        <li>Cultivo dos nobres valores universais para o exercício da cidadania, através da ética nas pequenas coisas, no plano pessoal e coletivo, por considerarmos ser esta a mais assertiva maneira de cooperar para a construção e reconstrução do nosso país e da nossa sociedade.</li>
-        <li>Organização do seu projeto de vida, com plano de ação mensurável;</li>
-    </ul>
-
-    <h4 class="mt-4 text-primary"><b>QUEM SOMOS</b></h4>
-    <p>Uma empresa que se dedica às pessoas e à serviço delas.</p>
-
-    <h4 class="mt-4 text-primary"><b>O QUE FAZEMOS</b></h4>
-    <p>Servimos pessoas, promovendo saúde integral.</p>
-
-    <h4 class="mt-4 text-primary"><b>COMO FAZEMOS</b></h4>
-    <p>Consideramos seu ser total na saudável e plena integração do seu ser, saber, fazer, criar, conviver, compartilhar, expressão de sua satisfatória adaptação em cada fase/etapa de seu desenvolvimento global.</p>
-
-    <h4 class="mt-4 text-primary"><b>DECLARAÇÃO DE FÉ</b></h4>
-    <p>O Instituto Gartrell, valoriza a vida e o ser humano, destacando sua singularidade, espontaneidade, expressividade, e expansividade nas suas diversas dimensões em todas as etapas de seu desenvolvimento global.</p>
-    <p>Sua concepção de saúde e bem-estar, de adoecimento, de investigação clínica diagnóstica e habilitação multimodal está fundamentada na ciência. Também reconhece, celebra e busca a devida integração entre a ciência e a fé cristã conforme a especificidade, o papel e a contribuição de cada uma.</p>
-    <p>Ao integrar a verdade da revelação geral, a Ciência e a Fé Cristã, o Instituto Gartrell acredita poder honrar ao Criador e à criatura na prestação dos seus serviços à sociedade contribuindo, assim, para o cumprimento de sua missão: servir pessoas, promovendo saúde integral.</p>
-    <p>Constituem seus pilares e compromisso missional:</p>
-
-    <ol class="ml-5">
-        <li>Atuar com base na ciência, primando pela excelência na qualificação teórica, técnica e prática de sua equipe multiprofissional.</li>
-        <li>Observar e cumprir as leis e a constituição que regem e governa a nossa nação, zelando pela respeitosa relação com os órgãos federais, estaduais e municipais com os quais mantém vínculo, nos limites da natureza de seus serviços.</li>
-        <li>Honrar sua identidade funcional, por meio da zelosa observância dos códigos de ética e de conduta profissional (Conselhos federais e regionais).</li>
-    </ol>
+    <app-sub-header [title]="content.titulo" class="w-100"></app-sub-header>
+    <div id="quemSomosContainer"></div>
 </div>
 
 <div class="d-flex flex-column flex-lg-row mt-4">
-    <app-side-img-container [imgUrl]="'/assets/institucional/quemSomos/Imgcard.png'"></app-side-img-container>
+    <app-side-img-container *ngIf="content.imagem_fundo" [imgUrl]="content.imagem_fundo"></app-side-img-container>
 
     <div class="container-sm  ml-lg-5 mt-1 w-100 w-lg-50 d-flex flex-column justify-content-around">
         <div>
             <h2>Visão</h2>
-            <p>Ser referência na sociedade em seus serviços e projetos voltados para o desenvolvimento humano.</p>
+            <div id="quemSomosVisao"></div>
         </div>
         <div>
             <h2>Missão</h2>
-            <p>Promover saúde, educação e cidadania por meio do desenvolvimento da pessoa em sua capacidade de ser, saber, fazer e conviver.</p>
+            <div id="quemSomosMissao"></div>
         </div>
         <div>
             <h2>Valores</h2>
-            <p>Empatia, ética, sigilo profissional, atendimento multidisciplinar e qualificado.</p>
+            <div id="quemSomosValores"></div>
         </div>
     </div>
 </div>

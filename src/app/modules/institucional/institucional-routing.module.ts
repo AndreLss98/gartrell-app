@@ -10,12 +10,17 @@ import { GaleriaFotosResolver } from './galeria-fotos/galeria-fotos.resolver';
 import { GaleriaDetailsResolver } from './galeria-fotos/galeria-details/galeria-details.resolver';
 import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria-details.component';
 
+import { QuemSomosContentResolver } from './quem-somos/quem-somos-content.resolver';
+
 const routes: Routes = [
   { 
     path: 'identidade-nominal', component: IdentidadeNominalComponent
   },
   { 
-    path: 'quem-somos', component: QuemSomosComponent
+    path: 'quem-somos', component: QuemSomosComponent,
+    resolve: {
+      content: QuemSomosContentResolver
+    }
   },
   { 
     path: 'equipe', component: EquipeComponent
