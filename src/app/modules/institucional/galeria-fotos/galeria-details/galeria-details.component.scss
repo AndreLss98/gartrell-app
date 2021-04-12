@@ -1,0 +1,36 @@
+.card {
+    background-color: #F1F1F1;
+}
+
+.imgContainer {
+    height: 450px;
+    background-size: cover;
+}
+
+h5 {
+    color: #a1a1a1;
+}
+
+@media(max-width: 1200px) {
+    .imgContainer {
+        height: 450px;
+    }
+}
+
+@media(max-width: 991px) {
+    .imgContainer {
+        height: 350px;
+    }
+}
+
+@media(max-width: 600px) {
+    .imgContainer {
+        height: 300px;
+    }
+}
+
+@media(max-width: 400px) {
+    .imgContainer {
+        height: 250px;
+    }
+}

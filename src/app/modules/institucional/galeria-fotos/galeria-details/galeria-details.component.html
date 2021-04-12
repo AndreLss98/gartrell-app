@@ -1,1 +1,15 @@
-<p>galeria-details works!</p>
+<app-header-banner [imgBannerUrl]="'assets/banners/galeria_de_fotos_banner.jpg'"></app-header-banner>
+<div class="container bg-light my-4 py-4">
+    <div class="row px-2">
+        <div class="card col-12 col-sm-10 col-md-8 mx-auto p-0">
+            <div class="imgContainer w-100" [ngStyle]="{backgroundImage: 'url(' + galeria.imagens[selectedImg] + ')' }"></div>
+            <div class="py-2">
+                <h3 class="text-center">
+                    <strong>{{ galeria.titulo_evento }}</strong>
+                </h3>
+                <h5 class="text-center">{{ galeria.data | brDate | date: 'dd/MM/yyyy'}}</h5>
+            </div>
+        </div>
+    </div>
+    <app-paginator [length]="galeria.imagens.length" (changePage)="selectImg($event)"></app-paginator>
+</div>
