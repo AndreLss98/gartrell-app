@@ -7,6 +7,8 @@ import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import {IdentidadeNominalComponent}from './identidade-nominal/identidade-nominal.component'
 
 import { GaleriaFotosResolver } from './galeria-fotos/galeria-fotos.resolver';
+import { GaleriaDetailsResolver } from './galeria-fotos/galeria-details/galeria-details.resolver';
+import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria-details.component';
 
 const routes: Routes = [
   { 
@@ -22,6 +24,12 @@ const routes: Routes = [
     path: 'galeria-fotos', component: GaleriaFotosComponent,
     resolve: {
       galerias: GaleriaFotosResolver
+    }
+  },
+  { 
+    path: 'galeria-fotos/:id', component: GaleriaDetailsComponent,
+    resolve: {
+      galeria: GaleriaDetailsResolver
     }
   },
   // { 

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AconteceResolver } from './acontece-resolver';
+import { AconteceResolver } from './acontece.resolver';
 
 describe('AconteceResolverService', () => {
   let service: AconteceResolver;

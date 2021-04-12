@@ -8,9 +8,10 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { IdentidadeNominalComponent } from './identidade-nominal/identidade-nominal.component';
 import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { PipesModule } from 'src/app/shared/pipes/pipes.module';
+import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria-details.component';
 
 @NgModule({
-  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent, GaleriaFotosComponent],
+  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent, GaleriaFotosComponent, GaleriaDetailsComponent],
   imports: [
     CommonModule,
     ComponentsModule,

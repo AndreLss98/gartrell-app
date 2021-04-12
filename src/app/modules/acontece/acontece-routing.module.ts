@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AconteceResolver } from './acontece-resolver';
+
+import { AconteceResolver } from './acontece.resolver';
 
 import { AconteceComponent } from './acontece.component';
 import { EventDetailsComponent } from './event-details/event-details.component';

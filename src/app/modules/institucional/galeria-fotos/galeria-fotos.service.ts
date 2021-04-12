@@ -16,8 +16,11 @@ export class GaleriaFotosService {
 
   public getAll(pageNumber: number) {
     const params =  new HttpParams().append('pagina', pageNumber.toString()).append('qtdPagina', '6');
-
     return this.http.get(`${environment.wpBaseUrl}/galeria`, { params });
+  }
+
+  public getById(id: number) {
+    return this.http.get(`${environment.wpBaseUrl}/galeria/${id}`);
   }
 
   public get galerias(): Galeria[] {
