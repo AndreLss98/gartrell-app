@@ -1,18 +1,17 @@
-<app-header-banner [imgBannerUrl]="evento.thumbnail"></app-header-banner>
+<app-header-banner [imgBannerUrl]="evento.banner"></app-header-banner>
 <div class="container">
     <app-sub-header [title]="evento.titulo" class="w-100"></app-sub-header>
-    <!-- <p class="text-justify">{{ evento.conteudo }}</p> -->
-    <div id="eventContent"></div>
+    <div id="eventContent" class="text-justify"></div>
     <ng-container *ngIf="evento.palestrantes.length">
         <app-sub-header title="Palestrantes" class="w-100"></app-sub-header>
         <ng-container [ngTemplateOutlet]="Palestrante" [ngTemplateOutletContext]="{
             palestrante: evento.palestrantes[selectedPalestrante - 1]
         }"></ng-container>
     </ng-container>
-    <app-paginator [length]="evento.palestrantes.length" (changePage)="onChangePalestrante($event)"></app-paginator>
+    <app-paginator *ngIf="evento.palestrantes.length" [length]="evento.palestrantes.length" (changePage)="onChangePalestrante($event)"></app-paginator>
 </div>
 
-<div class="container bg-light pb-4">
+<div *ngIf="evento.mostrar_formulario" class="container bg-light pb-4">
     <app-sub-header title="Inscreva-se" class="w-100"></app-sub-header>
     <app-register-event-form></app-register-event-form>
 </div>

@@ -8,6 +8,8 @@ export interface Acontecimento {
     categorias: any[];
     conteudo: string;
     palestrantes: Palestrante[];
+    banner: string;
+    mostrar_formulario: boolean;
 }
 
 export interface Palestrante {
