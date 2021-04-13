@@ -11,10 +11,14 @@ import { GaleriaDetailsResolver } from './galeria-fotos/galeria-details/galeria-
 import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria-details.component';
 
 import { QuemSomosContentResolver } from './quem-somos/quem-somos-content.resolver';
+import { IdentidadeNominalResolver } from './identidade-nominal/identidade-nominal.resolver';
 
 const routes: Routes = [
   { 
-    path: 'identidade-nominal', component: IdentidadeNominalComponent
+    path: 'identidade-nominal', component: IdentidadeNominalComponent,
+    resolve: {
+      content: IdentidadeNominalResolver
+    }
   },
   { 
     path: 'quem-somos', component: QuemSomosComponent,
