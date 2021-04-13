@@ -8,6 +8,7 @@ import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolv
 import { GetResumosResolver } from './modules/fique-por-dentro/get-resumos.resolver';
 import { QuemSomosContentResolver } from './modules/institucional/quem-somos/quem-somos-content.resolver';
 import { EquipeResolver } from './modules/institucional/equipe/equipe.resolver';
+import { ConsultaOnlineResolver } from './modules/terapia-online/consulta-online.resolver';
 
 const routes: Routes = [
   { 
@@ -66,7 +67,10 @@ const routes: Routes = [
   },
   {
     path:"consulte-conosco",
-    loadChildren: () => import('./modules/terapia-online/terapia-online.module').then(m => m.TerapiaOnlineModule)
+    loadChildren: () => import('./modules/terapia-online/terapia-online.module').then(m => m.TerapiaOnlineModule),
+    resolve: {
+      equipe: ConsultaOnlineResolver
+    }
   }
 ];
 

@@ -2,27 +2,12 @@
 
 <div class="container pb-2 bg-light">
   <app-sub-header title="Consulte Conosco" class="w-100"></app-sub-header>
-
-  <div *ngFor="let prof of profissionais" class="row">
-    <div class="col-12 col-lg-3 d-flex justify-content-center">
-      <app-self-image [url]="prof.img"></app-self-image>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column">
-      <h4>{{ prof.nome }}</h4>
-      <h6 class="text-secondary">{{ prof.profissao }}</h6>
-      <p>{{ prof.bio }}</p>
-    </div>
-
-    <div class="bar align-self-center d-none d-md-block"></div>
-
-    <div class="col-5 col-lg-4 d-flex flex-column justify-content-center">
-      <h5>Horário de Atendimento</h5>
-      <h6 class="text-secondary font-weight-bolder">{{ prof.horarioDisponivel }}</h6>
-    </div>
-
-    <div class="line mt-1 mb-4 mx-3 w-100"></div>
+  
+  <div *ngIf="!consultaOnlineService.equipe.length && !consultaOnlineService.parceiros.length" class="row px-4">
+    <h3>Notificação ao público</h3>
+    <p class="text-justify">Prezado (a) internauta, em breve você terá acesso à lista do Grupo de Profissionais Instituto Gartrell, com os seus serviços disponíveis à comunidade em diversas áreas da saúde mental, educação e afins. A mesma, permitirá que você em contato conosco, informando a sua demanda e o profissional desejado, que iremos de imediato repassar a esta o seu contato, para retorno em tempo hábil. Clique no link e deixe-nos a sua mensagem, que logo a retornaremos.</p>
   </div>
 
-  <app-paginator></app-paginator>
+  <app-membro-consulta-online *ngFor="let membro of consultaOnlineService.equipe" [membro]="membro"></app-membro-consulta-online>
+  <app-membro-consulta-online *ngFor="let membro of consultaOnlineService.parceiros" [membro]="membro"></app-membro-consulta-online>
 </div>
