@@ -26,8 +26,9 @@ export class ServicosComponent implements OnInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.route.url.subscribe((params) => {
-        const temp = this.servicoService.servicos.find(servico => servico.id == parseInt(params[0].path));
-        if (temp) this.selectedService = temp;
+        this.servicoService.getById(parseInt(params[0].path)).subscribe((servico: any) => {
+          this.selectedService = servico
+        })
       });
     },)
   }
