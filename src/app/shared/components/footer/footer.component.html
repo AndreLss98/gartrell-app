@@ -5,11 +5,12 @@
                 <div #linksUteis id="linksUteis" class="col-lg-6">
                     <div class="d-flex flex-column text-light">
                         <h2>Links Úteis</h2>
-                        <a href="#" class="text-light">Sociedade, Leis e Normas</a>
-                        <a href="#" class="text-light">Artmed Editora</a>
-                        <a href="#" class="text-light">Associação Brasileira de Medicina e Psicologia Comportamental</a>
-                        <a href="#" class="text-light">Associação Brasileira de Psicologia Escolar e Educacional (ABRAPEE)</a>
-                        <a href="#" class="text-light">Associação Brasileira de Psicologia Organizacional e do Trabalho</a>
+                        <p *ngFor="let link of firstsLinks">
+                            <a [href]="link.link" target="_blank" class="text-light">{{ link.nome }}</a>
+                        </p>
+                        <p>
+                            <a href="institucional/links-uteis" class="text-light font-weight-bold text-decoration-underline">Ver todos</a>
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
