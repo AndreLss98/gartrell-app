@@ -2,6 +2,7 @@ export interface Acontecimento {
     id: number;
     titulo: string;
     data: string;
+    data_evento: string;
     resumo: string;
     thumbnail: string;
     autor: string;
