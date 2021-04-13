@@ -1,8 +1,11 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
 import { SaudeIntegralService } from './saude-integral.service';
 import { DesenvolvimentoHumanoService } from './desenvolvimento-humano.service';
 import { SociedadeService } from './sociedade.service';
+
+import { Post } from 'src/app/shared/models/post.model';
 
 @Component({
   selector: 'app-fique-por-dentro',
@@ -14,8 +17,9 @@ export class FiquePorDentroComponent implements OnInit {
   title: string = '';
   bannerImg: string = '';
 
-  private _posts: any[] = [];
+  private _posts: Post[] = [];
   private _lastPost: any;
+  private _qtdPages: number = 1;
   
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -26,44 +30,82 @@ export class FiquePorDentroComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.activatedRoute.snapshot.data);
+
+    this.saudeIntegralService.posts = this.activatedRoute.snapshot.data.saudeIntegralPosts.dados;
+    this.sociedadeService.posts = this.activatedRoute.snapshot.data.sociedadePosts.dados;
+    this.desenvolvimentoHumanoService.posts = this.activatedRoute.snapshot.data.desenvolvimentoHumanoPosts.dados;
+    
     const route = this.activatedRoute.snapshot.params.item;
+
     if (route === 'saude-integral') {
       this.title = "Saúde Integral";
       this.bannerImg = 'assets/banners/saude_integral_banner.jpg';
       this.posts = this.saudeIntegralService.posts;
+      this.qtdPages = this.activatedRoute.snapshot.data.saudeIntegralPosts.quantidadeDePaginas;
     }else if (route === 'desenvolvimento-humano') {
       this.title = "Desenvolvimento Humano";
       this.bannerImg = 'assets/banners/desenvolvimento_humano_banner.jpg';
       this.posts = this.desenvolvimentoHumanoService.posts;
+      this.qtdPages = this.activatedRoute.snapshot.data.desenvolvimentoHumanoPosts.quantidadeDePaginas;
     }else {
       this.title = "Sociedade";
       this.bannerImg = 'assets/banners/sociedade_banner.jpg';
       this.posts = this.sociedadeService.posts;
+      this.qtdPages = this.activatedRoute.snapshot.data.sociedadePosts.quantidadeDePaginas;
     }
 
-    this.lastPost = this.posts? this.posts[0] : null;
+    if(this.posts) this.lastPost = this.posts[0];
   }
 
-  public get posts(): any[] {
+  public get posts(): Post[] {
     return this._posts;
   }
-
-  public set posts(value: any[]) {
+  public set posts(value: Post[]) {
     this._posts = value;
   }
 
-  public get lastPost(): any {
+  public get lastPost(): Post {
     return this._lastPost;
   }
-
-  public set lastPost(value: any) {
+  public set lastPost(value: Post) {
     this._lastPost = value;
+  }
+
+  public get qtdPages(): number {
+    return this._qtdPages;
+  }
+  public set qtdPages(value: number) {
+    this._qtdPages = value;
   }
 
   callFunction(post: any) {
     return () => {
       this.lastPost = post;
       window.location.href = `${window.location.pathname}#PostDetail`;
+    }
+  }
+
+  changePage(data: any) {
+    const route = this.activatedRoute.snapshot.params.item;
+
+    if (route === 'saude-integral') {
+      this.saudeIntegralService.getPosts(data.currentPage).subscribe((response: any) => {
+        this.saudeIntegralService.posts = response.dados;
+        this.posts = response.dados;
+        
+      });
+    }else if (route === 'desenvolvimento-humano') {
+      this.desenvolvimentoHumanoService.getPosts(data.currentPage).subscribe((response: any) => {
+        this.desenvolvimentoHumanoService.posts = response.dados;
+        this.posts = response.dados;
+        
+      });
+    }else {
+      this.sociedadeService.getPosts(data.currentPage).subscribe((response: any) => {
+        this.sociedadeService.posts = response.dados;
+        this.posts = response.dados;
+        
+      });
     }
   }
 }

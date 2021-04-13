@@ -1,6 +1,6 @@
 <div class="row px-2 py-4 bg-body">
     <div class="col-12 col-lg-5 position-relative">
-        <img [src]="post.thumbnail" width="100%" height="100%" alt="post image">
+        <img [src]="post.thumbnail? post.thumbnail : 'assets/no_thumbnail.jpg'" width="100%" height="100%" alt="post image">
         <div *ngIf="post.categorias.length" class="bg-dark text-light px-4 py-1 position-absolute">{{ post.categorias[0] }}</div>
     </div>
 

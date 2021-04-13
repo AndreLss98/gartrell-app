@@ -23,7 +23,6 @@ export class SaudeIntegralService {
   public get posts(): Post[] {
     return this._posts;
   }
-
   public set posts(value: Post[]) {
     this._posts = value;
   }
