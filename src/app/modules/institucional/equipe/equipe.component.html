@@ -31,11 +31,12 @@
 
 <ng-template #Membro let-membro="membro">
     <div class="member-container">
-        <app-self-image [url]="membro.img? 'assets/home/equipe/' + membro.img : ''" [sexo]="membro.sexo"></app-self-image>
+        <app-self-image [url]="membro.fotografia" [sexo]="membro.sexo"></app-self-image>
+        
         <div class="d-flex justify-content-center flex-column">
-            <h6>{{ membro.name }}</h6>
-            <p class="text-secondary">{{ membro.cargo }}{{ membro.cod? ' ' + membro.cod : '' }}</p>
-            <p>{{ membro.bio }}</p> 
+            <h6>{{ membro.titulo }}</h6>
+            <p class="text-secondary">{{ membro.cargo }}</p>
+            <p>{{ membro.sobre }}</p> 
         </div>
     </div>
     

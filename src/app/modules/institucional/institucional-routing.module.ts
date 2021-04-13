@@ -12,6 +12,7 @@ import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria
 
 import { QuemSomosContentResolver } from './quem-somos/quem-somos-content.resolver';
 import { IdentidadeNominalResolver } from './identidade-nominal/identidade-nominal.resolver';
+import { EquipeResolver } from './equipe/equipe.resolver';
 
 const routes: Routes = [
   { 
@@ -27,7 +28,10 @@ const routes: Routes = [
     }
   },
   { 
-    path: 'equipe', component: EquipeComponent
+    path: 'equipe', component: EquipeComponent,
+    resolve: {
+      membros: EquipeResolver
+    }
   },
   { 
     path: 'galeria-fotos', component: GaleriaFotosComponent,

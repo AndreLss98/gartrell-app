@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { EquipeService } from 'src/app/modules/institucional/equipe/equipe.service';
 
@@ -10,12 +11,13 @@ import { EquipeService } from 'src/app/modules/institucional/equipe/equipe.servi
 export class EquipeComponent implements OnInit {
   
   constructor(
+    private route: ActivatedRoute,
     public equipeService: EquipeService
   ) {
 
   }
 
   ngOnInit(): void {
-  
+    this.equipeService.membros = this.route.snapshot.data.membros;
   }
 }

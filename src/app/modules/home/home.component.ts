@@ -42,12 +42,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.data);
     this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
     this.reflexoesService.reflexoes = this.route.snapshot.data.reflexoes.dados;
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
     this.servicosService.servicos = this.route.snapshot.data.servicos;
-
+    this.equipeService.membros = this.route.snapshot.data.membros;
     this.content.quemSomos = this.route.snapshot.data.quemSomosContent;
     
     this.fiquePordentro.forEach(page => {

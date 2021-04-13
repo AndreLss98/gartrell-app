@@ -7,6 +7,7 @@ import { ReflexoesResolver } from './modules/reflexoes/reflexoes.resolver';
 import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
 import { GetResumosResolver } from './modules/fique-por-dentro/get-resumos.resolver';
 import { QuemSomosContentResolver } from './modules/institucional/quem-somos/quem-somos-content.resolver';
+import { EquipeResolver } from './modules/institucional/equipe/equipe.resolver';
 
 const routes: Routes = [
   { 
@@ -23,7 +24,8 @@ const routes: Routes = [
       acontecimentos: AcontecimentosResolver,
       resumosFiquePorDentro: GetResumosResolver,
       servicos: ServicosResolver,
-      quemSomosContent: QuemSomosContentResolver
+      quemSomosContent: QuemSomosContentResolver,
+      membros: EquipeResolver
     }
   },
   {
