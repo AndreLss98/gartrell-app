@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { NoticiasResolver } from './modules/noticias/noticias.resolver';
+import { ServicosResolver } from './modules/servicos/servicos.resolver';
 import { ReflexoesResolver } from './modules/reflexoes/reflexoes.resolver';
 import { AcontecimentosResolver } from './modules/acontece/acontecimentos-resolver';
 import { GetResumosResolver } from './modules/fique-por-dentro/get-resumos.resolver';
@@ -19,12 +20,16 @@ const routes: Routes = [
       noticias: NoticiasResolver,
       reflexoes: ReflexoesResolver,
       acontecimentos: AcontecimentosResolver,
-      resumosFiquePorDentro: GetResumosResolver
+      resumosFiquePorDentro: GetResumosResolver,
+      servicos: ServicosResolver
     }
   },
   {
     path: 'servicos',
-    loadChildren: () => import('./modules/servicos/servicos.module').then(m => m.HomeModule)
+    loadChildren: () => import('./modules/servicos/servicos.module').then(m => m.HomeModule),
+    resolve: {
+      servicos: ServicosResolver
+    }
   },
   {
     path: 'acontece',

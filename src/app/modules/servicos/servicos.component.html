@@ -2,14 +2,14 @@
 
 <div class="container bg-light mt-4">
     <div class="col flex-column d-flex align-items-center">
-        <app-sub-header [title]="'Serviços'" class="w-100"></app-sub-header>
+        <app-sub-header title="Serviços" class="w-100"></app-sub-header>
         <ng-container *ngIf="selectedService">
             <app-servico-circle [categoria]="selectedService"></app-servico-circle>
-            <p class="text-center">{{ selectedService.descricao }}</p>
+            <div id="servicoSelectedContent" class="text-justify"></div>
         </ng-container>
 
         <div class="row d-flex justify-content-center mt-4">
-            <app-servico-circle *ngFor="let cat of servicoService.servicos" [categoria]="cat" (click)="selectedService = cat"></app-servico-circle>
+            <app-servico-circle *ngFor="let cat of servicoService.servicos" [categoria]="cat" (click)="selectedService = cat" style="cursor: pointer;"></app-servico-circle>
         </div>
     </div>
 </div>

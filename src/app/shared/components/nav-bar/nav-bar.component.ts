@@ -39,13 +39,13 @@ export class NavBarComponent implements OnInit {
       },
       {
         name: "SERVIÇOS", link: "", subMenus: [
-          { name: "Psiquiatria", link: "servicos/1", subMenus: [] },
-          { name: "Psicologia", link: "servicos/2", subMenus: [] },
-          { name: "Neuropsicologia", link: "servicos/3", subMenus: [] },
-          { name: "Grupos de suporte e crescimento pessoal", link: "servicos/4", subMenus: [] },
-          { name: "Capacitações", link: "servicos/5", subMenus: [] },
-          { name: "Consultoria", link: "servicos/6", subMenus: [] },
-          { name: "Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos", link: "servicos/7", subMenus: [] }
+          { name: "Psiquiatria", link: "servicos/133", subMenus: [] },
+          { name: "Psicologia", link: "servicos/136", subMenus: [] },
+          { name: "Neuropsicologia", link: "servicos/138", subMenus: [] },
+          { name: "Grupos de suporte e crescimento pessoal", link: "servicos/139", subMenus: [] },
+          { name: "Capacitações", link: "servicos/140", subMenus: [] },
+          { name: "Consultoria", link: "servicos/141", subMenus: [] },
+          { name: "Parcerias ou Acordos de Cooperação em Serviços, Atividades e Projetos", link: "servicos/142", subMenus: [] }
         ]
       },
       { name: "CONTATO", link: this.goToContactForm(), subMenus: [] }

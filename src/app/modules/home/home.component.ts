@@ -8,6 +8,7 @@ import { NoticiasService } from '../noticias/noticias.service';
 import { ServicosService } from '../servicos/servicos.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
+import { Servico } from 'src/app/models/servico.model';
 
 @Component({
   selector: 'app-home',
@@ -38,15 +39,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.route.snapshot.data);
     this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
     this.reflexoesService.reflexoes = this.route.snapshot.data.reflexoes.dados;
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
+    this.servicosService.servicos = this.route.snapshot.data.servicos;
 
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
-
     this.fiquePordentro.forEach(page => {
       page.resumo = this.route.snapshot.data.resumosFiquePorDentro.find((resumo: any) => resumo.id === page.id).resumo
-    })
+    });
   }
 
   public get equipe(): any[] {

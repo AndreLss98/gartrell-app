@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ServicosService } from './servicos.service';
+import { Servico } from 'src/app/models/servico.model';
 
 @Component({
   selector: 'app-servicos',
@@ -9,28 +10,36 @@ import { ServicosService } from './servicos.service';
 })
 export class ServicosComponent implements OnInit {
 
-  private _selectedService: any;
+  private _selectedService: Servico;
 
   constructor(
     private route: ActivatedRoute,
     public servicoService: ServicosService
   ) {
-    this.route.url.subscribe((params) => {
-        console.log(params[0].path)
-        this.servicoService.getById(parseInt(params[0].path)).subscribe((service) => {
-          this.selectedService = service;
-        });
-    });
-  }
-
-  ngOnInit(): void {
     
   }
 
-  public get selectedService(): any {
+  ngOnInit(): void {
+    this.servicoService.servicos = this.route.snapshot.data.servicos;
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.route.url.subscribe((params) => {
+        const temp = this.servicoService.servicos.find(servico => servico.id == parseInt(params[0].path));
+        if (temp) this.selectedService = temp;
+      });
+    },)
+  }
+
+  public get selectedService(): Servico {
     return this._selectedService;
   }
-  public set selectedService(value: any) {
+  public set selectedService(value: Servico) {
     this._selectedService = value;
+    setTimeout(() => {
+      const content = document.getElementById('servicoSelectedContent');
+      if (content) content.innerHTML = value.descricao;
+    }, 200)
   }
 }
