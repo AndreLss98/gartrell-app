@@ -1,0 +1,12 @@
+<app-header-banner [imgBannerUrl]="'assets/banners/links_banner.jpg'"></app-header-banner>
+
+<div class="container my-4 p-4 bg-light">
+    <app-sub-header title="Links Úteis"></app-sub-header>
+
+    <p *ngFor="let link of linksUteis.linksUteis" class="mb-4">
+        <span class="text-dark font-weight-bold">{{ link.nome }}: </span>
+        <span>
+            <a class="text-secondary font-weight-bold" [href]="link.link" target="_blank">{{ link.link }}</a>
+        </span>
+    </p>
+</div>

@@ -13,6 +13,7 @@ import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria
 import { QuemSomosContentResolver } from './quem-somos/quem-somos-content.resolver';
 import { IdentidadeNominalResolver } from './identidade-nominal/identidade-nominal.resolver';
 import { EquipeResolver } from './equipe/equipe.resolver';
+import { LinksUteisComponent } from './links-uteis/links-uteis.component';
 
 const routes: Routes = [
   { 
@@ -45,9 +46,9 @@ const routes: Routes = [
       galeria: GaleriaDetailsResolver
     }
   },
-  // { 
-  //   path: 'links-uteis', component: COMPONENT
-  // },
+  { 
+    path: 'links-uteis', component: LinksUteisComponent
+  }
 ];
 
 @NgModule({

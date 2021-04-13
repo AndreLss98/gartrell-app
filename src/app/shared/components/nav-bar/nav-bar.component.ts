@@ -24,7 +24,7 @@ export class NavBarComponent implements OnInit {
             ]
           },
           { name: "Galeria de Fotos", link: "institucional/galeria-fotos", subMenus: [] },
-          { name: "Links úteis", link: this.goToLinksUteis(), subMenus: [] }
+          { name: "Links úteis", link: "institucional/links-uteis", subMenus: [] }
         ]
       },
       { name: "ACONTECE", link: "acontece", subMenus: [] },

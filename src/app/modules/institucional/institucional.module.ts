@@ -9,9 +9,10 @@ import { IdentidadeNominalComponent } from './identidade-nominal/identidade-nomi
 import { GaleriaFotosComponent } from './galeria-fotos/galeria-fotos.component';
 import { PipesModule } from 'src/app/shared/pipes/pipes.module';
 import { GaleriaDetailsComponent } from './galeria-fotos/galeria-details/galeria-details.component';
+import { LinksUteisComponent } from './links-uteis/links-uteis.component';
 
 @NgModule({
-  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent, GaleriaFotosComponent, GaleriaDetailsComponent],
+  declarations: [ EquipeComponent, QuemSomosComponent, IdentidadeNominalComponent, GaleriaFotosComponent, GaleriaDetailsComponent, LinksUteisComponent],
   imports: [
     CommonModule,
     ComponentsModule,
