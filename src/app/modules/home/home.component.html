@@ -1,16 +1,9 @@
 <app-header-banner [imgBannerUrl]="'assets/cerebro.jpg'"></app-header-banner>
 
 <section class="container">
-    <article class="d-flex justify-content-center align-items-center flex-column mb-2 px-4 pb-2 bg-light">
-        <app-sub-header title="Quem Somos" class="w-100"></app-sub-header>
-        <p>O Instituto Gartrell, é uma empresa brasileira com endereço fixo em Goiânia/GO,
-            voltada exclusivamente para a saúde, educação e cidadania, com serviços para todas
-            as faixas etárias nas áreas de psiquiatria, psicologia, neuropsicologia, no atual
-            momento e que pretende também em médio prazo, incluir os serviços de psicopedagogia
-            fonoaudiologia, terapia ocupacional e outros que fazem interface como o nosso segmento
-            de trabalho. Atua também com consultoria em educação e desenvolve ações e atividades
-            psicoeducativas, visando a disseminação do conhecimento científico e dos valores éticos
-            universais que promovem a saúde, o bem-estar geral e o desenvolvimento pleno das pessoas.</p>
+    <article *ngIf="content.quemSomos" class="d-flex justify-content-center align-items-center flex-column mb-2 px-4 pb-2 bg-light">
+        <app-sub-header [title]="content.quemSomos.titulo" class="w-100"></app-sub-header>
+        <div id="quemSomosContentHome" class="w-100 text-justify"></div>
 
         <a href="institucional/quem-somos" type="button" class="btn btn-light">
             <i class="bi bi-plus-circle"></i> Ver mais

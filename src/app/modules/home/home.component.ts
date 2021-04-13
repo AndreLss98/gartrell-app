@@ -8,7 +8,7 @@ import { NoticiasService } from '../noticias/noticias.service';
 import { ServicosService } from '../servicos/servicos.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
 import { EquipeService } from 'src/app/shared/services/equipe.service';
-import { Servico } from 'src/app/models/servico.model';
+import { HtmlFilterPipe } from 'src/app/shared/pipes/html-filter.pipe';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +16,15 @@ import { Servico } from 'src/app/models/servico.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+  private _content: any = {
+    quemSomos: null
+  };
 
   private _equipe: any[] = [];
   private _fiquePordentro: any[] = [];
-
   private _selectedMember: number = 0;
+
 
   constructor(
     private router: Router,
@@ -45,10 +49,17 @@ export class HomeComponent implements OnInit {
     this.aconteceService.eventos = this.route.snapshot.data.acontecimentos.dados;
     this.servicosService.servicos = this.route.snapshot.data.servicos;
 
+    this.content.quemSomos = this.route.snapshot.data.quemSomosContent;
+
     this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
+    
     this.fiquePordentro.forEach(page => {
       page.resumo = this.route.snapshot.data.resumosFiquePorDentro.find((resumo: any) => resumo.id === page.id).resumo
     });
+  }
+
+  ngAfterViewInit() {
+    this.initContent();
   }
 
   public get equipe(): any[] {
@@ -70,6 +81,18 @@ export class HomeComponent implements OnInit {
   }
   public set fiquePordentro(value: any[]) {
     this._fiquePordentro = value;
+  }
+
+  public get content(): any {
+    return this._content;
+  }
+  public set content(value: any) {
+    this._content = value;
+  }
+
+  public initContent() {
+    const quemSomosContent = document.getElementById('quemSomosContentHome');
+    if (quemSomosContent) quemSomosContent.innerHTML = HtmlFilterPipe.prototype.transform(this.content.quemSomos.resumo);
   }
 
   public nextMember() {
