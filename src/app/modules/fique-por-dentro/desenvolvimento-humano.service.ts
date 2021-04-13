@@ -1,7 +1,8 @@
-import { of } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Post } from 'src/app/models/post.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +11,13 @@ export class DesenvolvimentoHumanoService {
 
   private _posts: Post[] = [];
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  public getPosts() {
-    return of(this.posts);
+  public getPosts(pageNumber: number) {
+    const params = new HttpParams().append('pagina', pageNumber.toString());
+    return this.http.get(`${environment.wpBaseUrl}/postsdesenpessoal`, { params });
   }
 
   public get posts(): Post[] {

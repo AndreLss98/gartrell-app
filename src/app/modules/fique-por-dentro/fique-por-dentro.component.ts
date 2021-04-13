@@ -25,6 +25,7 @@ export class FiquePorDentroComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.activatedRoute.snapshot.data);
     const route = this.activatedRoute.snapshot.params.item;
     if (route === 'saude-integral') {
       this.title = "Saúde Integral";
