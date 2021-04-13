@@ -2,7 +2,7 @@ import { of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Servico } from 'src/app/models/servico.model';
+import { Servico } from 'src/app/shared/models/servico.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

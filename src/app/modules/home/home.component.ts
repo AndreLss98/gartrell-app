@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Post } from 'src/app/models/post.model';
+import { Post } from 'src/app/shared/models/post.model';
 
 import { AconteceService } from '../acontece/acontece.service';
 import { NoticiasService } from '../noticias/noticias.service';
 import { ServicosService } from '../servicos/servicos.service';
 import { ReflexoesService } from '../reflexoes/reflexoes.service';
-import { EquipeService } from 'src/app/shared/services/equipe.service';
 import { HtmlFilterPipe } from 'src/app/shared/pipes/html-filter.pipe';
+import { EquipeService } from 'src/app/modules/institucional/equipe/equipe.service';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
     quemSomos: null
   };
 
-  private _equipe: any[] = [];
   private _fiquePordentro: any[] = [];
   private _selectedMember: number = 0;
 
@@ -50,8 +49,6 @@ export class HomeComponent implements OnInit {
     this.servicosService.servicos = this.route.snapshot.data.servicos;
 
     this.content.quemSomos = this.route.snapshot.data.quemSomosContent;
-
-    this.equipe = this.equipeService.equipeInterna.filter(membro => membro.interno);
     
     this.fiquePordentro.forEach(page => {
       page.resumo = this.route.snapshot.data.resumosFiquePorDentro.find((resumo: any) => resumo.id === page.id).resumo
@@ -60,13 +57,6 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     this.initContent();
-  }
-
-  public get equipe(): any[] {
-    return this._equipe;
-  }
-  public set equipe(value: any[]) {
-    this._equipe = value;
   }
 
   public get selectedMember(): number {
@@ -96,7 +86,7 @@ export class HomeComponent implements OnInit {
   }
 
   public nextMember() {
-    if (this.selectedMember < this.equipe.length - 1) ++this.selectedMember;
+    if (this.selectedMember < this.equipeService.equipe.length - 1) ++this.selectedMember;
   }
 
   public previousMember() {

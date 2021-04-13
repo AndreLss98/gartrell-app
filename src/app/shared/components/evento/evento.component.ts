@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Acontecimento } from './../../../models/acontece.model';
+import { Acontecimento } from '../../models/acontece.model';
 
 @Component({
   selector: 'app-evento',

@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
 
-import { Galeria } from 'src/app/models/galeria-foto.model';
+import { Galeria } from 'src/app/shared/models/galeria-foto.model';
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReflexoesService } from './reflexoes.service';
 
-import { Post } from 'src/app/models/post.model';
+import { Post } from 'src/app/shared/models/post.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

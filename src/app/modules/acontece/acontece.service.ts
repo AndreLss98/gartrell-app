@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { Acontecimento } from './../../models/acontece.model';
+import { Acontecimento } from '../../shared/models/acontece.model';
 
 import { environment } from 'src/environments/environment';
 

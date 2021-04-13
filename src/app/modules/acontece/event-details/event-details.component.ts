@@ -1,7 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
-import { Acontecimento } from './../../../models/acontece.model';
+import { Acontecimento } from 'src/app/shared/models/acontece.model';
 
 @Component({
   selector: 'app-event-details',

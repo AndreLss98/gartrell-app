@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Galeria } from 'src/app/models/galeria-foto.model';
+import { Galeria } from 'src/app/shared/models/galeria-foto.model';
 
 @Component({
   selector: 'app-galeria-details',

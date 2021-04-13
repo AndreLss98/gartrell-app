@@ -1,7 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
 import { ServicosService } from './servicos.service';
-import { Servico } from 'src/app/models/servico.model';
+import { Servico } from 'src/app/shared/models/servico.model';
 
 @Component({
   selector: 'app-servicos',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Post } from 'src/app/models/post.model';
+import { Post } from 'src/app/shared/models/post.model';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { environment } from './../../../environments/environment';

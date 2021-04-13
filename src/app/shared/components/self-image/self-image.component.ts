@@ -1,3 +1,4 @@
+import { Sexo } from './../../enums/sexo.enum';
 import { Component, Input, OnInit } from '@angular/core';
 
 const DEFAULT_MAN = 'assets/avatar_man.png';
@@ -14,13 +15,13 @@ export class SelfImageComponent implements OnInit {
   public _imageUrl: string = '';
   
   @Input('sexo')
-  public _sexo: string = '';
+  public _sexo: Sexo;
   
   constructor() { }
 
   ngOnInit(): void {
     if(!this.imageUrl) {
-      this.imageUrl = this.sexo == 'm'? DEFAULT_MAN : DEFAULT_WOMAN;
+      this.imageUrl = this.sexo == Sexo.Masculino? DEFAULT_MAN : DEFAULT_WOMAN;
     }
   }
 
@@ -32,11 +33,11 @@ export class SelfImageComponent implements OnInit {
     this._imageUrl = value;
   }
 
-  public get sexo(): string {
+  public get sexo(): Sexo {
     return this._sexo;
   }
 
-  public set sexo(value: string) {
+  public set sexo(value: Sexo) {
     this._sexo = value;
   }
 }
