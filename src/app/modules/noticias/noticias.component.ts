@@ -41,8 +41,8 @@ export class NoticiasComponent implements OnInit {
   public createFunction(noticia: Post) {
     return () => {
       this.noticiasService.selectedNoticia = noticia;
-      this.filteredList = this.noticiasService.noticias.filter(post => post.id !== noticia.id);
 
+      this.filteredList = this.noticiasService.noticias.filter(post => post.id !== noticia.id);
       setTimeout(() => {
         window.location.href = `${window.location.pathname}#PostDetail`;
       }, 200);

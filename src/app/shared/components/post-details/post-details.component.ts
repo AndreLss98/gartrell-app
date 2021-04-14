@@ -9,8 +9,7 @@ import { Post } from 'src/app/shared/models/post.model';
 })
 export class PostDetailsComponent implements OnInit {
 
-  @Input()
-  public post: Post;
+  private _post: Post;
 
   constructor() { }
 
@@ -18,7 +17,14 @@ export class PostDetailsComponent implements OnInit {
 
   }
 
-  ngAfterViewInit() {
+  public get post(): Post {
+    return this._post;
+  }
+
+  @Input('post')
+  public set post(value: Post) {
+    this._post = value;
+
     setTimeout(() => {
       this.configContent();
     }, 200);
