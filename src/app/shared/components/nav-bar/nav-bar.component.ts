@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { RedesSociaisService } from '../../services/redes-sociais.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,7 @@ export class NavBarComponent implements OnInit {
 
   private _menu: any[] = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public redesSociaisService: RedesSociaisService) {
 
     this.menu = [
       {
@@ -59,6 +60,15 @@ export class NavBarComponent implements OnInit {
         event.stopPropagation();
       })
     }
+
+    this.redesSociaisService.getAll().subscribe((response: any) => {
+      this.redesSociaisService.facebook = response.facebook;
+      this.redesSociaisService.instagram = response.instagram;
+      this.redesSociaisService.twitter = response.twitter;
+      this.redesSociaisService.linkdin = response.linkdin;
+      this.redesSociaisService.youtube = response.youtube;
+      this.redesSociaisService.numero_whatsapp = response.numero_whatsapp;
+    });
   }
 
   goToTerapiaOnline() {
