@@ -7,7 +7,7 @@
             <div class="evento-info">
                 <div class="data border border-3 d-flex align-items-center flex-column mb-2">
                     <span class="text-secondary">{{ evento.data_evento | brDate | date: 'dd' }}</span>
-                    <p class="text-dark">{{ evento.data_evento | brDate | date: 'MMMM' }}</p>
+                    <p class="text-dark">{{ evento.data_evento | brDate | date: 'MMMM' | titlecase }}</p>
                 </div>
     
                 <div>
@@ -29,7 +29,7 @@
             <div class="evento-info">
                 <div class="data border border-3 d-flex align-items-center flex-column mb-2">
                     <span class="text-secondary">{{ evento.data_evento | brDate | date: 'dd' }}</span>
-                    <p class="text-dark">{{ evento.data_evento | brDate | date: 'MMMM' }}</p>
+                    <p class="text-dark">{{ evento.data_evento | brDate | date: 'MMMM' | titlecase}}</p>
                 </div>
     
                 <div>
