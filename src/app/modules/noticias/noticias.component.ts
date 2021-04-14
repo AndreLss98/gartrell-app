@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Post } from 'src/app/shared/models/post.model';
 
 import { NoticiasService } from './noticias.service';
 
@@ -11,6 +12,7 @@ import { NoticiasService } from './noticias.service';
 export class NoticiasComponent implements OnInit {
 
   private _pageNumber: number = 1;
+  private _filteredList: Post[] = [];
   
   constructor(
     private route: ActivatedRoute,
@@ -19,6 +21,7 @@ export class NoticiasComponent implements OnInit {
 
   ngOnInit(): void {
     this.noticiasService.noticias = this.route.snapshot.data.noticias.dados;
+    this.filteredList = this.noticiasService.noticias;
   }
 
   public get pageNumber(): number {
@@ -28,9 +31,18 @@ export class NoticiasComponent implements OnInit {
     this._pageNumber = value;
   }
 
-  public createFunction(noticia: any) {
+  public get filteredList(): Post[] {
+    return this._filteredList;
+  }
+  public set filteredList(value: Post[]) {
+    this._filteredList = value;
+  }
+
+  public createFunction(noticia: Post) {
     return () => {
       this.noticiasService.selectedNoticia = noticia;
+      this.filteredList = this.noticiasService.noticias.filter(post => post.id !== noticia.id);
+
       setTimeout(() => {
         window.location.href = `${window.location.pathname}#PostDetail`;
       }, 200);
@@ -39,7 +51,8 @@ export class NoticiasComponent implements OnInit {
 
   public onChangePage(data: any) {
     this.noticiasService.getNoticias(data.currentPage).subscribe((response: any) => {
-      this.noticiasService.noticias = response.daddos;
+      this.filteredList = this.noticiasService.noticias = response.dados;
+      this.noticiasService.selectedNoticia = (null as any);
     });
   }
 }

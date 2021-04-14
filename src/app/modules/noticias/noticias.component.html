@@ -9,7 +9,7 @@
     <app-sub-header title="Mais Notícias" class="w-100"></app-sub-header>
   </ng-container>
   <div class="w-100 px-2 mb-2">
-    <app-post *ngFor="let post of noticiasService.noticias" [post]="post" [callFunction]="createFunction(post)"></app-post>
+    <app-post *ngFor="let post of filteredList" [post]="post" [callFunction]="createFunction(post)"></app-post>
   </div>
   <app-paginator [length]="pageNumber" (changePage)="onChangePage($event)"></app-paginator>
 </div>

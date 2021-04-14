@@ -18,6 +18,7 @@ export class FiquePorDentroComponent implements OnInit {
   bannerImg: string = '';
 
   private _posts: Post[] = [];
+  private _filteredList: Post[] = [];
   private _lastPost: any;
   private _qtdPages: number = 1;
   
@@ -29,7 +30,6 @@ export class FiquePorDentroComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.activatedRoute.snapshot.data);
 
     this.saudeIntegralService.posts = this.activatedRoute.snapshot.data.saudeIntegralPosts.dados;
     this.sociedadeService.posts = this.activatedRoute.snapshot.data.sociedadePosts.dados;
@@ -40,21 +40,24 @@ export class FiquePorDentroComponent implements OnInit {
     if (route === 'saude-integral') {
       this.title = "Saúde Integral";
       this.bannerImg = 'assets/banners/saude_integral_banner.jpg';
-      this.posts = this.saudeIntegralService.posts;
+      this.filteredList = this.posts = this.saudeIntegralService.posts;
       this.qtdPages = this.activatedRoute.snapshot.data.saudeIntegralPosts.quantidadeDePaginas;
     }else if (route === 'desenvolvimento-humano') {
       this.title = "Desenvolvimento Humano";
       this.bannerImg = 'assets/banners/desenvolvimento_humano_banner.jpg';
-      this.posts = this.desenvolvimentoHumanoService.posts;
+      this.filteredList = this.posts = this.desenvolvimentoHumanoService.posts;
       this.qtdPages = this.activatedRoute.snapshot.data.desenvolvimentoHumanoPosts.quantidadeDePaginas;
     }else {
       this.title = "Sociedade";
       this.bannerImg = 'assets/banners/sociedade_banner.jpg';
-      this.posts = this.sociedadeService.posts;
+      this.filteredList = this.posts = this.sociedadeService.posts;
       this.qtdPages = this.activatedRoute.snapshot.data.sociedadePosts.quantidadeDePaginas;
     }
 
-    if(this.posts) this.lastPost = this.posts[0];
+    if(this.posts) {
+      this.lastPost = this.posts[0];
+      this.filteredList = this.posts.filter(post => post.id !== this.lastPost.id);
+    }
   }
 
   public get posts(): Post[] {
@@ -78,9 +81,18 @@ export class FiquePorDentroComponent implements OnInit {
     this._qtdPages = value;
   }
 
+  public get filteredList(): Post[] {
+    return this._filteredList;
+  }
+  public set filteredList(value: Post[]) {
+    this._filteredList = value;
+  }
+
   callFunction(post: any) {
     return () => {
       this.lastPost = post;
+      this.filteredList = this.posts.filter(el => el.id !== post.id);
+
       window.location.href = `${window.location.pathname}#PostDetail`;
     }
   }
@@ -91,20 +103,35 @@ export class FiquePorDentroComponent implements OnInit {
     if (route === 'saude-integral') {
       this.saudeIntegralService.getPosts(data.currentPage).subscribe((response: any) => {
         this.saudeIntegralService.posts = response.dados;
-        this.posts = response.dados;
-        
+        this.filteredList = this.posts = response.dados;
+        this.qtdPages = response.quantidadeDePaginas;
+
+        if(this.posts) {
+          this.lastPost = this.posts[0];
+          this.filteredList = this.posts.filter(post => post.id !== this.lastPost.id);
+        }
       });
     }else if (route === 'desenvolvimento-humano') {
       this.desenvolvimentoHumanoService.getPosts(data.currentPage).subscribe((response: any) => {
         this.desenvolvimentoHumanoService.posts = response.dados;
-        this.posts = response.dados;
+        this.filteredList = this.posts = response.dados;
+        this.qtdPages = response.quantidadeDePaginas;
         
+        if(this.posts) {
+          this.lastPost = this.posts[0];
+          this.filteredList = this.posts.filter(post => post.id !== this.lastPost.id);
+        }
       });
     }else {
       this.sociedadeService.getPosts(data.currentPage).subscribe((response: any) => {
         this.sociedadeService.posts = response.dados;
-        this.posts = response.dados;
-        
+        this.filteredList = this.posts = response.dados;
+        this.qtdPages = response.quantidadeDePaginas;
+
+        if(this.posts) {
+          this.lastPost = this.posts[0];
+          this.filteredList = this.posts.filter(post => post.id !== this.lastPost.id);
+        }
       });
     }
   }
