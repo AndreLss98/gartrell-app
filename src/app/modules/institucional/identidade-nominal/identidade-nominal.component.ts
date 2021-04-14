@@ -17,6 +17,10 @@ export class IdentidadeNominalComponent implements OnInit {
     this.content = this.route.snapshot.data.content;
   }
 
+  ngAfterViewInit() {
+    this.initContent();
+  }
+
   public get content(): any {
     return this._content;
   }
